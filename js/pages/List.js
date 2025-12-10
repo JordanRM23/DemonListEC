@@ -98,30 +98,34 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>Submission Requirements</h3>
-                    <p>
-                        Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
+                    <h3>Reglas para los Records</h3>
                     </p>
                     <p>
-                        Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
+                        Ser Ecuatoriano
                     </p>
                     <p>
-                        Have either source audio or clicks/taps in the video. Edited audio only does not count
+                        Para enviar un récord, el jugador necesita un vídeo para demostrar su legitimidad.
                     </p>
                     <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this
+                        Se requerirán clics para TODOS los registros de Extreme Demon; las dificultades Insane Demon y inferiores no requerirán clics.
                     </p>
                     <p>
-                        The recording must also show the player hit the endwall, or the completion will be invalidated.
+                        Si se descubre que un jugador hace trampa, será eliminado de la lista y eventualmente podrá hablar con un moderador al respecto.
                     </p>
                     <p>
-                        Do not use secret routes or bug routes
+                        El porcentaje mínimo para tener un registro aceptado en cualquier nivel de la lista es de al menos el ??%-
                     </p>
                     <p>
-                        Do not use easy modes, only a record of the unmodified level qualifies
+                        Si tu record ya está aceptado en Pointercrate o en la AREDL, te aceptaremos el record.
                     </p>
                     <p>
-                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
+                        No utilices secret way ni bugs que genere la completion de algun nivel.
+                    </p>
+                    <p>
+                        Completar el nivel en una version más fácil, nerfeada, o con un LDM exagerado que haga el nivel mas fácil no está permitido.
+                    </p>
+                    <p>
+                        Si tiene alguna pregunta, comuníquese con un miembro del staff de GDEC en Discord.
                     </p>
                 </div>
             </div>
