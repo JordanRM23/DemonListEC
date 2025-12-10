@@ -1,18 +1,12 @@
 {
-    "id": 57436521,
-    "name": "SampleLevel1",
-    "author": "LevelUploader",
-    "creators": ["Creator1", "Creator2", "Creator3"],
-    "verifier": "Verifier",
-    "verification": "https://www.youtube.com/watch?v=ISTl28wKSXc",
+    "id": 86084399,
+    "name": "LIMBO",
+    "author": "Zephyr",
+    "creators": ["Evasium" , "Djoxy" , "Pennutoh" , "Failure444" , "Ryder" , "Lumpy" , "LIEB" , "SleyGD" , "Jenkins" , "Juhou" , "GrenadeofTacos" , "Th04" , "Findexi" , "Pokechatt" , "para" , "Th31" , "MindCap" , "Jeyzor" , "Giron" , "KWMS" , "Temp" , "nyab" , "Surv" , "matty2003" , "Goose" , "Stormfly" , "Vismuth" , "CuLuC" , "ZephiroX" , "pocke" , "xStep" , "weoweoteo" , "KrmaL" , "crohn44" , "Saria" , "flash"],
+    "verifier": "Zephyr",
+    "verification": "https://www.youtube.com/watch?v=88wi122Bu44&t=14s",
     "percentToQualify": 56,
     "password": "Not Copyable",
     "records": [
-        {
-            "user": "Sample_Victor_1",
-            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
-            "percent": 100,
-            "hz": 360
-        }
     ]
 }
