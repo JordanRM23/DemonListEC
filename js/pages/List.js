@@ -87,9 +87,6 @@ export default {
                     </div>
                     <div class="og">
                         <p class="type-label-md">Ranking ECUADOR de <a href="https://aredl.net/profile/country/218" target="_blank">The All Rated Extreme Demons List </a></p>
-                        </p>
-                    <p>
-                         <p class="type-label-md">Ranking <a href="https://pointercrate.com/demonlist/statsviewer/?player=42057" target="_blank">pointercrate</a></p>
                     </div>
                     <template v-if="editors">
                         <h3>List Editors</h3>
