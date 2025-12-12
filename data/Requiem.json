@@ -1,0 +1,18 @@
+{
+    "id": 52303420,
+    "name": "Requiem",
+    "author": "Zephyr",
+    "creators": ["Lithifusion"],
+    "verifier": "Zephyr",
+    "verification": "https://www.youtube.com/watch?v=WUSqcScovS0",
+    "percentToQualify": "100",
+    "password": "Not Copyable",
+    "records": [
+        {
+            "user": "Bluedastupid",
+            "link": "https://www.youtube.com/watch?v=lUjlLf20sU8",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}

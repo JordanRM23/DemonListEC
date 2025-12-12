@@ -1,0 +1,42 @@
+{
+    "id": 26681070,
+    "name": "Sonic Wave",
+    "author": "Edgar214",
+    "creators": ["Cyclic"],
+    "verifier": "Edgar214",
+    "verification": "https://www.youtube.com/watch?v=hjcWVq15dhg",
+    "percentToQualify": "100",
+    "password": "112516",
+    "records": [
+         {
+            "user": "llepllonav",
+            "link": "https://www.youtube.com/watch?v=dpbds5PIyvE",
+            "percent": 100,
+            "hz": 360
+         },
+         {
+            "user": "KenethGD",
+            "link": "https://www.youtube.com/watch?v=wQ3ORkJNDWo",
+            "percent": 100,
+            "hz": 360
+         },
+         {
+            "user": "RaymanNinja",
+            "link": "https://www.youtube.com/watch?v=vmttIy0ZhyE",
+            "percent": 100,
+            "hz": 360
+         },
+         {
+            "user": "Stevensitos999",
+            "link": "https://www.youtube.com/watch?v=8_gCTQ13XWU",
+            "percent": 100,
+            "hz": 360
+         },
+         {
+            "user": "iMarcoFC",
+            "link": "https://www.twitch.tv/videos/1945483342",
+            "percent": 100,
+            "hz": 360
+         }
+    ]
+}
