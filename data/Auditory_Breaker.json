@@ -1,0 +1,37 @@
+{
+    "id": 51791710,
+    "name": "Auditory Breaker",
+    "author": "LazerBlitz",
+    "creators": ["LazerBlitz" , "Cyclic" , "Manix648"],
+    "verifier": "RaymanNinja",
+    "verification": "https://www.youtube.com/watch?v=zuoATJEHGZY",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+          {
+            "user": "llepllonav",
+            "link": "https://www.youtube.com/watch?v=xN4P7pAFops",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Stevensitos999",
+            "link": "https://www.youtube.com/watch?v=bsLcxGNGHSI",
+            "percent": 100,
+            "hz": 120
+        },
+        {
+            "user": "ItzNixo",
+            "link": "https://www.youtube.com/watch?v=Md6FZUv6iWk",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Milo",
+            "link": "https://www.youtube.com/watch?v=09ITucllVY8",
+            "percent": 100,
+            "hz": 360
+        }
+
+    ]
+}
