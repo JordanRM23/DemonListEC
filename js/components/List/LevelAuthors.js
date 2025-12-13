@@ -32,7 +32,7 @@ export default {
                 </p>
             </template>
             <template v-else>
-                <div class="type-title-sm">Creatores</div>
+                <div class="type-title-sm">Creadores</div>
                 <p class="type-body">
                     <template v-for="(creator, index) in creators" :key="\`creator-\$\{creator\}\`">
                         <span >{{ creator }}</span

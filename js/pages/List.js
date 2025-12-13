@@ -86,7 +86,7 @@ export default {
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
                     <div class="og">
-                        <p class="type-label-md">Ranking ECUADOR de <a href="https://aredl.net/profile/country/218" target="_blank">The All Rated Extreme Demons List </a></p>
+                        <p class="type-label-md">Ranking ECUADOR en la <a href="https://aredl.net/profile/country/218" target="_blank">The All Rated Extreme Demons List </a></p>
                     </div>
                     <template v-if="editors">
                         <h3>List Editors</h3>
