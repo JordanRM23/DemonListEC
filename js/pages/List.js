@@ -43,7 +43,7 @@ export default {
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
                         <li>
-                            <div class="type-title-sm">Points when completed</div>
+                            <div class="type-title-sm">Puntos al completar</div>
                             <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
                         </li>
                         <li>
@@ -56,9 +56,9 @@ export default {
                         </li>
                     </ul>
                     <h2>Records</h2>
-                    <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected +1 <= 150"><strong>100%</strong> or better to qualify</p>
-                    <p v-else>This level does not accept new records.</p>
+                    <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> o mas para calificar</p>
+                    <p v-else-if="selected +1 <= 150"><strong>100%</strong> o mas para calificar</p>
+                    <p v-else>Este nivel no acepta nuevos records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
                             <td class="percent">
@@ -164,18 +164,18 @@ export default {
         // Error handling
         if (!this.list) {
             this.errors = [
-                "Failed to load list. Retry in a few minutes or notify list staff.",
+                "No se pudo cargar la lista. Inténtalo de nuevo en unos minutos o avisa al staff de la lista.",
             ];
         } else {
             this.errors.push(
                 ...this.list
                     .filter(([_, err]) => err)
                     .map(([_, err]) => {
-                        return `Failed to load level. (${err}.json)`;
+                        return `No se pudo cargar el nivel. (${err}.json)`;
                     })
             );
             if (!this.editors) {
-                this.errors.push("Failed to load list editors.");
+                this.errors.push("No se pudo cargar los editores de la lista.");
             }
         }
 
