@@ -113,7 +113,7 @@ export default {
                         Si se descubre que un jugador hace trampa, será eliminado de la lista y eventualmente podrá hablar con un moderador al respecto.
                     </p>
                     <p>
-                        El porcentaje mínimo para tener un registro aceptado en cualquier nivel de la lista es de al menos el ??%-
+                        El porcentaje mínimo para tener un registro aceptado en cualquier nivel de la lista se refleja en cada nivel.
                     </p>
                     <p>
                         Si tu record ya está aceptado en Pointercrate o en la AREDL, te aceptaremos el record.
