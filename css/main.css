@@ -1,6 +1,6 @@
 :root {
     --color-background: #0B2C6D;
-    --color-on-background: black;
+    --color-on-background: rgb(255, 255, 255);
     --color-background-hover: rgb(255, 247, 0);
     --color-on-background-hover: black;
     --color-primary: #E6FF00;
