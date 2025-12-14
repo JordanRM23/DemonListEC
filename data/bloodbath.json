@@ -1,0 +1,42 @@
+{
+    "id": 10565740,
+    "name": "Bloodbath",
+    "author": "Riot",
+    "creators": ["Asonicmen" , "Evasium" , "Crack" , "Riot" , "GgB0y" , "Michigun" , "Etzer" , "Giron" , "Havok" , "weoweoteo" , "Vermillion"],
+    "verifier": "Edgar214",
+    "verification": "https://www.youtube.com/watch?v=mmyBDeRqy0w",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Danolex",
+            "link": "https://www.youtube.com/watch?v=-Gpw2ZplDNk",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=GV6vZ2YLL5o",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Pachi",
+            "link": "https://www.youtube.com/watch?v=Kw1RAolB8ek",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "ItzNixo",
+            "link": "https://www.youtube.com/watch?v=wo5G4bPd60k",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Zephyr",
+            "link": "https://www.youtube.com/watch?v=ys9ub0jk05Y",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}

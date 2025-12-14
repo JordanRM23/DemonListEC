@@ -1,0 +1,18 @@
+{
+    "id": 111,
+    "name": "Epsilon",
+    "author": "Team Proxima",
+    "creators": ["SirHadoken" , "Pennutoh" , "Cosmicsabre" , "Cybronaut" , "Juhou" , "LeoCreatorX" , "Drift" ,"Matterz" , "sqrl" , "Jozhii" , "Hynaedon" , "SlimJim" , "leo32601" , "MaxiKD" , "BIANOX" , "Balloons" , "Lqah" , "Splash" , "Eggnog" , "Vulcan"],
+    "verifier": "Locked",
+    "verification": "https://www.youtube.com/watch?v=AkSKTieU3D8",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Zephyr",
+            "link": "https://www.youtube.com/watch?v=WYDU5AbnzCA&t=2s",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
