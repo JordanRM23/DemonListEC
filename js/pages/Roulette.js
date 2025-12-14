@@ -27,7 +27,7 @@ export default {
                     <Btn @click.native.prevent="onStart">{{ levels.length === 0 ? 'Start' : 'Restart'}}</Btn>
                 </form>
                 <p class="type-label-md" style="color: #aaa">
-                    The roulette saves automatically.
+                    La ruleta se guarda automáticamente.
                 </p>
                 <form class="save">
                     <p>Manual Load/Save</p>
@@ -159,7 +159,7 @@ export default {
         getYoutubeIdFromUrl,
         async onStart() {
             if (this.isActive) {
-                this.showToast('Give up before starting a new roulette.');
+                this.showToast('Ríndete antes de empezar una nueva ruleta.');
                 return;
             }
 
@@ -174,7 +174,7 @@ export default {
             if (fullList.filter(([_, err]) => err).length > 0) {
                 this.loading = false;
                 this.showToast(
-                    'List is currently broken. Wait until it\'s fixed to start a roulette.',
+                    'Chuta, algo explotó por aquí… ya lo revisamos',
                 );
                 return;
             }
@@ -218,7 +218,7 @@ export default {
                 this.percentage <= this.currentPercentage ||
                 this.percentage > 100
             ) {
-                this.showToast('Invalid percentage.');
+                this.showToast('Porcentaje no válido.');
                 return;
             }
 
@@ -268,7 +268,7 @@ export default {
                 this.showRemaining = false;
                 this.percentage = undefined;
             } catch {
-                this.showToast('Invalid file.');
+                this.showToast('Archivo no válido.');
                 return;
             }
         },
