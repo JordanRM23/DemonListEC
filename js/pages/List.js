@@ -128,6 +128,7 @@ export default {
                         Si tiene alguna pregunta, comuníquese con un miembro del staff de GDEC en Discord.
                     </p>
                     <p>
+                    </p>
 					<h3>Leaderboard</h3>
                     <p>
                         #1 - EduChavez | 277461 Stars
