@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+		{
+            "user": "PISIPxd",
+            "link": "https://youtu.be/hBj91348f-Y",
+            "percent": 100,
+            "hz": 360
+        },
     ]
 }
