@@ -3,14 +3,14 @@
     "name": "Tantrum",
     "author": "DanZmeN",
     "creators": ["Yendis" , "ItsMezzo" , "DanZmeN" , "BitZel2" , "SpooFy" , "ViralDL" , "REDACTED" , "flash" , "BlueRimz"],
-    "verifier": "Jampy12",
-    "verification": "https://youtu.be/9U-x9uKTtBY?si=_j3KRRKXCJwpNpWF",
+    "verifier": "Locked",
+    "verification": "https://www.youtube.com/watch?v=5hzQ4IVs2hA",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
 		{
-            "user": "Locked",
-            "link": "https://youtu.be/5hzQ4IVs2hA",
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=9U-x9uKTtBY",
             "percent": 100,
             "hz": 360
         }
