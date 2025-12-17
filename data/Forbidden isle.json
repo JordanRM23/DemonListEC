@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+		{
+            "user": "OMAGI",
+            "link": "https://youtu.be/lLW0PKbBOfA?si=pKt3OAktd-uief9p",
+            "percent": 100,
+            "hz": 360
+        }
     ]
 }
