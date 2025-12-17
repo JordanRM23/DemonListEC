@@ -31,6 +31,12 @@
             "link": "https://www.youtube.com/watch?v=lkq9WIBgq2Y&ab_channel=ItzNixo",
             "percent": 100,
             "hz": 360
+        },
+		{
+            "user": "sk008",
+            "link": "https://youtu.be/olRMJBKPnQw?si=Z3hc1KXnQ9CqrDYy",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
