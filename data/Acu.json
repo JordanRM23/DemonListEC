@@ -3,29 +3,11 @@
     "name": "Acu",
     "author": "Neigefeu",
     "creators": ["Neigefeu"],
-    "verifier": "Jampy12",
-    "verification": "https://youtu.be/Nt6hqz1xjtQ",
+    "verifier": "sk008",
+    "verification": "https://www.youtube.com/watch?v=olRMJBKPnQw",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
-		{
-            "user": "EABH",
-            "link": "https://youtu.be/Po5K8TincqU",
-            "percent": 100,
-            "hz": 360
-        },
-		{
-            "user": "Carlospata",
-            "link": "https://vm.tiktok.com/ZMAv3fXR1/",
-            "percent": 100,
-            "hz": 360
-        },
-		{
-            "user": "Milo",
-            "link": "https://youtu.be/GxH9p56Sqxw",
-            "percent": 100,
-            "hz": 360
-        },
 		{
             "user": "ItzNixo",
             "link": "https://www.youtube.com/watch?v=lkq9WIBgq2Y&ab_channel=ItzNixo",
@@ -33,8 +15,26 @@
             "hz": 360
         },
 		{
-            "user": "sk008",
-            "link": "https://youtu.be/olRMJBKPnQw?si=Z3hc1KXnQ9CqrDYy",
+            "user": "EABH",
+            "link": "https://www.youtube.com/watch?v=Po5K8TincqU",
+            "percent": 100,
+            "hz": 360
+        },
+		{
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=Nt6hqz1xjtQ",
+            "percent": 100,
+            "hz": 360
+        },
+		{
+            "user": "Milo",
+            "link": "https://www.youtube.com/watch?v=GxH9p56Sqxw",
+            "percent": 100,
+            "hz": 360
+        },
+		{
+            "user": "Carlospata",
+            "link": "https://www.tiktok.com/@.carlospata_/video/7573378626767342866?_r=1&_t=ZM-91SAERkv9Vk",
             "percent": 100,
             "hz": 360
         }
