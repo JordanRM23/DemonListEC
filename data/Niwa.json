@@ -3,26 +3,26 @@
     "name": "Niwa",
     "author": "Teno",
     "creators": ["KrazyGFX" , "Mrgm" , "peng" , "Blaze" , "Teno" , "Pedro" , "Aranda" , "BeClan" , "Titoalper" , "Asuith" , "Genoxide"],
-    "verifier": "Jampy12",
-    "verification": "https://www.youtube.com/watch?v=7peUigxg9KE",
+    "verifier": "Pachi",
+    "verification": "https://www.youtube.com/watch?v=ox73lW8be0c",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
 		{
-            "user": "Milo",
-            "link": "https://youtu.be/p42uD15Yfv4",
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=7peUigxg9KE",
             "percent": 100,
             "hz": 360
         },
 		{
             "user": "ItzNixo",
-            "link": "https://youtu.be/tpgVJ1wFa84?si=ulnDEkcnWf2HzcYO",
+            "link": "https://www.youtube.com/watch?v=tpgVJ1wFa84",
             "percent": 100,
             "hz": 360
         },
 		{
-            "user": "Pachi",
-            "link": "https://youtu.be/ox73lW8be0c?si=fOB5AYRGV9v1ianu",
+            "user": "Milo",
+            "link": "https://www.youtube.com/watch?v=p42uD15Yfv4",
             "percent": 100,
             "hz": 360
         }
