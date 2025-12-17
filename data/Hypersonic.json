@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+		{
+            "user": "ibuprofeno",
+            "link": "https://www.youtube.com/watch?v=mJnWGjzkm2k&t=4s",
+            "percent": 100,
+            "hz": 360
+        }
     ]
 }
