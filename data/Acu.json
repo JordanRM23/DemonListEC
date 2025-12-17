@@ -25,6 +25,12 @@
             "link": "https://youtu.be/GxH9p56Sqxw",
             "percent": 100,
             "hz": 360
+        },
+		{
+            "user": "ItzNixo",
+            "link": "https://www.youtube.com/watch?v=lkq9WIBgq2Y&ab_channel=ItzNixo",
+            "percent": 100,
+            "hz": 360
         }
     ]
 }
