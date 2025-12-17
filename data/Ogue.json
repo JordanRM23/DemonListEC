@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+		{
+            "user": "Pachi",
+            "link": "https://www.youtube.com/watch?v=YfYs0OWk1R8",
+            "percent": 100,
+            "hz": 360
+        }
     ]
 }
