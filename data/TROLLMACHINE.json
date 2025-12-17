@@ -6,7 +6,13 @@
     "verifier": "sk008",
     "verification": "https://youtu.be/g7XJRPVxyEI",
     "percentToQualify": "100",
-    "password": "Free to copy",
+    "password": "Free to play",
     "records": [
+		{
+            "user": "MrJhony's",
+            "link": "https://youtu.be/fa-XKDMz5ck?si=0t9FrvmTNHHFqriW",
+            "percent": 100,
+            "hz": 360
+        }
     ]
 }
