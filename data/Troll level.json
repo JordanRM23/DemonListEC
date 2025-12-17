@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+		{
+            "user": "MrJhony's",
+            "link": "https://youtu.be/sBQRAeky04g?si=lpQ-adTUzzfxeu01",
+            "percent": 100,
+            "hz": 360
+        }
     ]
 }
