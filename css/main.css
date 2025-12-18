@@ -3,7 +3,7 @@
     --color-on-background: rgb(0, 0, 0);
     --color-background-hover: #eee;
     --color-on-background-hover: black;
-    --color-primary: #E6FF00;
+    --color-primary: #ffe500;
     --color-on-primary: rgb(0, 0, 0);
     --color-error: #de0000;
     --color-on-error: white;
@@ -50,8 +50,8 @@ header {
     display: flex;
     padding-inline: calc(25vw - 10rem);
     height: 4.5rem;
-    background: linear-gradient(to right, #FFDD11, blue, red);
-    color: #eee;
+    background: linear-gradient(to right, #FCD116, #FCD116, #003893, #CE1126);
+    color: #000000;
     position: relative;
 }
 @media screen and (min-width: 1366px) {
