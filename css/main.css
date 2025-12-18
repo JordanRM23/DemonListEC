@@ -51,7 +51,7 @@ header {
     padding-inline: calc(25vw - 10rem);
     height: 4.5rem;
     background: linear-gradient(to right, #FFDD11, blue, red);
-    color: var(--color-on-primary);
+    color: #eee;
     position: relative;
 }
 @media screen and (min-width: 1366px) {
