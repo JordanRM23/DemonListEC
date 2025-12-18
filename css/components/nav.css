@@ -11,7 +11,7 @@
     transition: border-color 100ms ease;
 }
 .nav .nav__tab.router-link-active {
-    border-color: var(--color-on-primary);
+    border-color: #000000
 }
 .nav .nav__tab:hover {
     border-color: var(--color-on-primary);
