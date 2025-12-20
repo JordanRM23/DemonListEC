@@ -3,11 +3,17 @@
     "name": "Acu",
     "author": "Neigefeu",
     "creators": ["Neigefeu"],
-    "verifier": "sk008",
-    "verification": "https://www.youtube.com/watch?v=olRMJBKPnQw",
+    "verifier": "pachi",
+    "verification": "https://www.youtube.com/watch?v=PlmIxmV87SQ",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "sk008",
+            "link": "https://www.youtube.com/watch?v=olRMJBKPnQw",
+            "percent": 100,
+            "hz": 360
+        },
 		{
             "user": "ItzNixo",
             "link": "https://www.youtube.com/watch?v=lkq9WIBgq2Y&ab_channel=ItzNixo",
