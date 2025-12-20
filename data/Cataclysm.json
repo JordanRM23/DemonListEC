@@ -3,11 +3,17 @@
     "name": "Cataclysm",
     "author": "Ggb0y",
     "creators": ["Ggb0y"],
-    "verifier": "Stevensitos999",
-    "verification": "https://youtu.be/4abuKV6O_-w",
+    "verifier": "RaymanNinja",
+    "verification": "https://www.youtube.com/watch?v=xJFKYcZr3R4&list=PLTAVj4jn6Ls8MUByyyaGgyEmm370Em-iK&index=16",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Stevensitos999",
+            "link": "https://youtu.be/4abuKV6O_-w",
+            "percent": 100,
+            "hz": 360
+        },
         {
             "user": "sk008",
             "link": "https://youtu.be/LFw4Kv46m8Q",
