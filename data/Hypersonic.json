@@ -3,11 +3,17 @@
     "name": "HyperSonic",
     "author": "ViPriN",
     "creators": ["ZenthicAlpha" , "Vlacc" , "Serponge" , "Nasgubb" , "Evasium22" , "ViPriN" , "Rustam" , "Pan" , "Terron" , "Etzer" , "Dudex" , "Manix648"],
-    "verifier": "Jampy12",
-    "verification": "https://www.youtube.com/watch?v=Z9-nbYdAOkk",
+    "verifier": "Ale321p",
+    "verification": "https://www.youtube.com/watch?v=YvOxaIOXb6M&list=PLCudlowQyG2qLE59nkSYZcStXdDR-WGds&index=5",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=Z9-nbYdAOkk",
+            "percent": 100,
+            "hz": 360
+        },
 		{
             "user": "ibuprofeno",
             "link": "https://www.youtube.com/watch?v=mJnWGjzkm2k&t=4s",
