@@ -9,6 +9,12 @@
     "password": "Free to copy",
     "records": [
         {
+            "user": "SuperKeneth",
+            "link": "https://www.youtube.com/watch?v=lQEKnU84EuQ&t",
+            "percent": 100,
+            "hz": 360
+        },
+        {
             "user": "Ale321p",
             "link": "https://www.youtube.com/watch?v=YvOxaIOXb6M&list=PLCudlowQyG2qLE59nkSYZcStXdDR-WGds&index=5",
             "percent": 100,
