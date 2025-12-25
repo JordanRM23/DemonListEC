@@ -9,6 +9,12 @@
     "password": "Free To Copy",
     "records": [
         {
+            "user": "KenethGD",
+            "link": "https://www.youtube.com/watch?v=3FJZFnp1tCo",
+            "percent": 100,
+            "hz": 360
+        },
+        {
             "user": "Danolex",
             "link": "https://www.youtube.com/watch?v=-Gpw2ZplDNk",
             "percent": 100,

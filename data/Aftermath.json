@@ -3,11 +3,17 @@
     "name": "Aftermath",
     "author": "Exenity",
     "creators": ["Findexi" , "Bassiegames" , "Rhythmic" , "Exenity" , "REDACTED" , "Knobbelboy" , "Squizz" , "Vultra" , "Waze"],
-    "verifier": "Zaidre",
-    "verification": "https://youtu.be/tcRihIMo3u4",
+    "verifier": "KenethGD",
+    "verification": "https://www.youtube.com/watch?v=iYItnXs91is",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Zaidre",
+            "link": "https://youtu.be/tcRihIMo3u4",
+            "percent": 100,
+            "hz": 360
+        },
 		{
             "user": "ItzNixo",
             "link": "https://youtu.be/4IPmJWDk-KY",
