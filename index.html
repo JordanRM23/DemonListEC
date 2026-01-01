@@ -67,11 +67,10 @@
                         <img src="/assets/discord.svg" alt="Discord Logo" />
                     </a>
                     <!-- List record submission form, add a link to replace the '#' when putting a link to your list submission form-->
-                    <a
-                        class="nav__cta type-label-lg"
-                        href="https://discord.com/invite/JskKyjzmws"
-                        target="_blank"
-                        >Enviar Records</a>
+                     
+                    <span class="nav__cta type-label-lg">
+                    </router-link to="/submit" @click="store.closeMobileNav()">
+                            >Enviar Records</a>
                     <a
                         class="nav__cta type-label-lg"
                         href="https://discord.com/oauth2/authorize?client_id=1455715205458690121&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&scope=identify+email"
