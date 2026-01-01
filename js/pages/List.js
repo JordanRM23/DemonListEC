@@ -107,7 +107,7 @@ export default {
                         Para enviar un récord, el jugador necesita un vídeo para demostrar su legitimidad.
                     </p>
                     <p>
-                        Se requerirán clics para TODOS los registros de Extreme Demon; las dificultades Insane Demon y inferiores no requerirán clics.
+                        Los récords no serán aceptados si no tienen clics audibles claros en todo momento. Discutan cualquier discrepancia con un moderador.
                     </p>
                     <p>
                         Si se descubre que un jugador hace trampa, será eliminado de la lista y eventualmente podrá hablar con un moderador al respecto.
@@ -116,7 +116,7 @@ export default {
                         El porcentaje mínimo para tener un registro aceptado en cualquier nivel de la lista se refleja en cada nivel.
                     </p>
                     <p>
-                        Si tu record ya está aceptado en Pointercrate o en la AREDL, te aceptaremos el record.
+                        Si tu record ya está aceptado en Pointercrate, AREDL o Global Demonlist, te aceptaremos el record (aunque pueden haber excepciones).
                     </p>
                     <p>
                         No utilices secret way ni bugs que genere la completion de algun nivel.
