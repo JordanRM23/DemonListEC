@@ -12,25 +12,19 @@
             "user": "KenethGD",
             "link": "https://www.youtube.com/watch?v=lQEKnU84EuQ&t",
             "percent": 100,
-            "hz": 360
+            "hz": 60
         },
         {
             "user": "Ale321p",
             "link": "https://www.youtube.com/watch?v=YvOxaIOXb6M&list=PLCudlowQyG2qLE59nkSYZcStXdDR-WGds&index=5",
             "percent": 100,
-            "hz": 360
+            "hz": 60
         },
         {
             "user": "Jampy12",
             "link": "https://www.youtube.com/watch?v=Z9-nbYdAOkk",
             "percent": 100,
-            "hz": 360
-        },
-		{
-            "user": "ibuprofeno",
-            "link": "https://www.youtube.com/watch?v=mJnWGjzkm2k&t=4s",
-            "percent": 100,
-            "hz": 360
+            "hz": 60
         }
     ]
 }
