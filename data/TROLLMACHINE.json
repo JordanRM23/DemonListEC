@@ -3,16 +3,16 @@
     "name": "TROLLMACHINE",
     "author": "TROLLM4CHINE",
     "creators": ["RT" , "Tsuzuito" , "Luvery" , "TROLLM4CHINE" , "Lagnugg" , "Vitchrose" , "LATEO" , "Ishgiru"],
-    "verifier": "sk008",
-    "verification": "https://youtu.be/g7XJRPVxyEI",
+    "verifier": "Zephyr",
+    "verification": "https://www.youtube.com/watch?v=TPXG9778NIo",
     "percentToQualify": "100",
     "password": "Free to play",
     "records": [
 		{
-            "user": "Zephyr",
-            "link": "https://www.youtube.com/watch?v=TPXG9778NIo",
+            "user": "sk008",
+            "link": "https://www.youtube.com/watch?v=g7XJRPVxyEI",
             "percent": 100,
-            "hz": 360
+            "hz": 240
         },
         {
             "user": "MrJhony's",
