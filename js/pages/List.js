@@ -116,6 +116,9 @@ export default {
                         El porcentaje mínimo para tener un registro aceptado en cualquier nivel de la lista se refleja en cada nivel.
                     </p>
                     <p>
+                        Si tu video fue grabado después del 1/1/2026, tu récord debe incluir los cheats indicator en la End Screen de forma OBLIGATORIA.
+                    </p>
+                    <p>
                         Si tu record ya está aceptado en Pointercrate, AREDL o Global Demonlist, te aceptaremos el record (aunque pueden haber excepciones).
                     </p>
                     <p>
