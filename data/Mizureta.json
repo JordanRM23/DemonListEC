@@ -3,16 +3,10 @@
     "name": "Mizureta",
     "author": "dutchiee",
     "creators": ["Graded" , "peng" , "Tom163" , "Xenith" , "D3ltex" , "humbjumb" , "Daydream" , "Horizontal1" , "TriplasH" , "zoxical" , "Samzaya" , "Kacurro" , "Zentraa" , "Vendas" , "Pedro" , "IcyConey" , "dutchiee"],
-    "verifier": "ibuprofeno",
-    "verification": "https://www.youtube.com/watch?v=4Il6igYssEQ",
+    "verifier": "OMAGI",
+    "verification": "https://www.youtube.com/watch?v=_duHNQuEn6c",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
-		{
-            "user": "OMAGI",
-            "link": "https://youtu.be/_duHNQuEn6c?si=h6quFohfxhs_XC6Y",
-            "percent": 100,
-            "hz": 360
-        }
     ]
 }
