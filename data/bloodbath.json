@@ -12,7 +12,7 @@
             "user": "KenethGD",
             "link": "https://www.youtube.com/watch?v=3FJZFnp1tCo",
             "percent": 100,
-            "hz": 360
+            "hz": 144
         },
         {
             "user": "Danolex",
@@ -24,31 +24,32 @@
             "user": "Jampy12",
             "link": "https://www.youtube.com/watch?v=GV6vZ2YLL5o",
             "percent": 100,
-            "hz": 360
+            "hz": 60
         },
         {
             "user": "Pachi",
             "link": "https://www.youtube.com/watch?v=Kw1RAolB8ek",
             "percent": 100,
-            "hz": 360
+            "hz": 144
         },
         {
             "user": "ItzNixo",
             "link": "https://www.youtube.com/watch?v=wo5G4bPd60k",
             "percent": 100,
-            "hz": 360
+            "hz": 60
         },
         {
             "user": "Zephyr",
             "link": "https://www.youtube.com/watch?v=ys9ub0jk05Y",
             "percent": 100,
-            "hz": 360
+            "hz": 576
         },
 		{
             "user": "Bronwyn",
             "link": "https://youtu.be/mmyBDeRqy0w",
             "percent": 100,
-            "hz": 360
+            "hz": 60
         }
     ]
 }
+
