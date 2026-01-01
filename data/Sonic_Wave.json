@@ -18,31 +18,31 @@
             "user": "KenethGD",
             "link": "https://www.youtube.com/watch?v=wQ3ORkJNDWo",
             "percent": 100,
-            "hz": 360
+            "hz": 144
          },
          {
             "user": "RaymanNinja",
             "link": "https://www.youtube.com/watch?v=vmttIy0ZhyE",
             "percent": 100,
-            "hz": 360
+            "hz": 280
          },
          {
             "user": "Stevensitos999",
             "link": "https://www.youtube.com/watch?v=8_gCTQ13XWU",
             "percent": 100,
-            "hz": 360
+            "hz": 288
          },
          {
             "user": "iMarcoFC",
             "link": "https://www.twitch.tv/videos/1945483342",
             "percent": 100,
-            "hz": 360
+            "hz": 300
          },
 		 {
             "user": "Bronwyn",
             "link": "https://youtu.be/kCnkag8DtqA?si=9wLMUKc5b9im1OLJ",
             "percent": 100,
-            "hz": 360
+            "hz": 60
          }
     ]
 }
