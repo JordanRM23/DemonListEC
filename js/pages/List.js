@@ -132,10 +132,6 @@ export default {
                     </p>
                     <p>
                     </p>
-					<h3>Leaderboard</h3>
-                    <p>
-                        #1 - EduChavez | 277,461 Stars
-                    </p>
                     <div class="og">
                     <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" target="_blank">TheShittyList</a></p>
                 </div>
