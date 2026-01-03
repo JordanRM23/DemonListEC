@@ -28,7 +28,14 @@ export default {
                     <table class="board">
                         <tr v-for="(ientry, i) in leaderboard" :key="ientry.user">
                             <td class="rank">
-                                <p class="type-label-lg">#{{ i + 1 }}</p>
+                                <p class="type-label-lg">
+                                    <span
+                                        class="player-name"
+                                        :class="getNameClass(ientry.total)"
+                                    >
+                                        #{{ i + 1 }}
+                                    </span>
+                                </p>
                             </td>
                             <td class="total">
                                 <p class="type-label-lg">{{ localize(ientry.total) }}</p>
@@ -48,22 +55,22 @@ export default {
                 </div>
                 <div class="player-container">
                     <div class="player" v-if="entry">
-                        <h1 v-if="entry">
-    <span
-        class="player-name"
-        :class="getNameClass(entry.total)"
-    >
-        #{{ selected + 1 }} {{ entry.user }}
-    </span>
-</h1>
-                        <h3 v-if="entry">
-    <span
-        class="player-name"
-        :class="getNameClass(entry.total)"
-    >
-        {{ localize(entry.total) }} puntos
-    </span>
-</h3>
+                        <h1>
+                            <span
+                                class="player-name"
+                                :class="getNameClass(entry.total)"
+                            >
+                                #{{ selected + 1 }} {{ entry.user }}
+                            </span>
+                        </h1>
+                        <h3>
+                            <span
+                                class="player-name"
+                                :class="getNameClass(entry.total)"
+                            >
+                                {{ localize(entry.total) }} puntos
+                            </span>
+                        </h3>
 
                         <h2 v-if="entry.verified.length > 0">
                             First Victor ({{ entry.verified.length}})
