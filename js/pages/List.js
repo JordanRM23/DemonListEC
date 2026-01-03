@@ -24,85 +24,37 @@ export default {
             <div class="list-container">
                 <table class="list" v-if="list">
                     <tbody>
-                        <!-- Texto sobre el TOP 1: Lista Principal (dorado) -->
-                        <tr class="list-section-row" v-if="list.length">
-                            <td colspan="2">
-                                <span class="list-section-title level-pos-top50">
-                                    Lista Principal
-                                </span>
-                            </td>
-                        </tr>
+                        <tr v-for="([level, err], i) in list" :key="i">
+                            <!-- ENCABEZOS DE SECCIÓN -->
+                            <template v-if="i === 0">
+                                <tr class="list-section-row">
+                                    <td colspan="2">
+                                        <span class="list-section-title level-pos-top50">
+                                            Lista Principal
+                                        </span>
+                                    </td>
+                                </tr>
+                            </template>
+                            <template v-if="i === 50">
+                                <tr class="list-section-row">
+                                    <td colspan="2">
+                                        <span class="list-section-title level-pos-51-100">
+                                            Lista Secundaria
+                                        </span>
+                                    </td>
+                                </tr>
+                            </template>
+                            <template v-if="i === 100">
+                                <tr class="list-section-row">
+                                    <td colspan="2">
+                                        <span class="list-section-title level-pos-101-150">
+                                            Lista Extendida
+                                        </span>
+                                    </td>
+                                </tr>
+                            </template>
 
-                        <!-- Filas 1–50 -->
-                        <tr v-for="([level, err], i) in list" :key="'main-' + i" v-if="i < 50">
-                            <td class="rank">
-                                <p class="type-label-lg">
-                                    <span
-                                        v-if="i + 1 <= 150"
-                                        :class="getLevelPosClass(i + 1)"
-                                    >
-                                        #{{ i + 1 }}
-                                    </span>
-                                    <span v-else>Legacy</span>
-                                </p>
-                            </td>
-                            <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                                <button @click="selected = i">
-                                    <span
-                                        class="type-label-lg"
-                                        :class="getLevelPosClass(i + 1)"
-                                    >
-                                        {{ level?.name || \`Error (\${err}.json)\` }}
-                                    </span>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <!-- Texto sobre el 51: Lista Secundaria (plateado) -->
-                        <tr class="list-section-row" v-if="list.length > 50">
-                            <td colspan="2">
-                                <span class="list-section-title level-pos-51-100">
-                                    Lista Secundaria
-                                </span>
-                            </td>
-                        </tr>
-
-                        <!-- Filas 51–100 -->
-                        <tr v-for="([level, err], i) in list" :key="'sec-' + i" v-if="i >= 50 && i < 100">
-                            <td class="rank">
-                                <p class="type-label-lg">
-                                    <span
-                                        v-if="i + 1 <= 150"
-                                        :class="getLevelPosClass(i + 1)"
-                                    >
-                                        #{{ i + 1 }}
-                                    </span>
-                                    <span v-else>Legacy</span>
-                                </p>
-                            </td>
-                            <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                                <button @click="selected = i">
-                                    <span
-                                        class="type-label-lg"
-                                        :class="getLevelPosClass(i + 1)"
-                                    >
-                                        {{ level?.name || \`Error (\${err}.json)\` }}
-                                    </span>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <!-- Texto sobre el 101: Lista Extendida (bronce) -->
-                        <tr class="list-section-row" v-if="list.length > 100">
-                            <td colspan="2">
-                                <span class="list-section-title level-pos-101-150">
-                                    Lista Extendida
-                                </span>
-                            </td>
-                        </tr>
-
-                        <!-- Filas 101+ (incluye legacy) -->
-                        <tr v-for="([level, err], i) in list" :key="'ext-' + i" v-if="i >= 100">
+                            <!-- FILA NORMAL DEL NIVEL -->
                             <td class="rank">
                                 <p class="type-label-lg">
                                     <span
@@ -263,11 +215,9 @@ export default {
         },
     },
     async mounted() {
-        // Hide loading spinner
         this.list = await fetchList();
         this.editors = await fetchEditors();
 
-        // Error handling
         if (!this.list) {
             this.errors = [
                 "No se pudo cargar la lista. Inténtalo de nuevo en unos minutos o avisa al staff de la lista.",
