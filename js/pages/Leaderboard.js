@@ -38,7 +38,14 @@ export default {
                                 </p>
                             </td>
                             <td class="total">
-                                <p class="type-label-lg">{{ localize(ientry.total) }}</p>
+                                <p class="type-label-lg">
+                                    <span
+                                        class="player-name"
+                                        :class="getNameClass(ientry.total)"
+                                    >
+                                        {{ localize(ientry.total) }}
+                                    </span>
+                                </p>
                             </td>
                             <td class="user" :class="{ 'active': selected == i }">
                                 <button @click="selected = i">
@@ -46,7 +53,7 @@ export default {
                                         class="type-label-lg player-name"
                                         :class="getNameClass(ientry.total)"
                                     >
-                                        {{ ientry.user }} ({{ getTierLabel(ientry.total) }})
+                                        {{ ientry.user }} ({{ getRankLabel(ientry.total) }})
                                     </span>
                                 </button>
                             </td>
@@ -60,7 +67,7 @@ export default {
                                 class="player-name"
                                 :class="getNameClass(entry.total)"
                             >
-                                #{{ selected + 1 }} {{ entry.user }} ({{ getTierLabel(entry.total) }})
+                                #{{ selected + 1 }} {{ entry.user }} ({{ getRankLabel(entry.total) }})
                             </span>
                         </h1>
                         <h3>
@@ -149,7 +156,7 @@ export default {
         getNameClass(total) {
             total = Number(total) || 0;
 
-            if (total >= 20000) return 'rank-20000';  // rojo furia
+            if (total >= 20000) return 'rank-20000';  // rojo fuego
             if (total >= 10000) return 'rank-10000';
             if (total >= 9000)  return 'rank-9000';
             if (total >= 8000)  return 'rank-8000';
@@ -162,21 +169,21 @@ export default {
             if (total >= 1000)  return 'rank-1000';
             return 'rank-0';
         },
-        getTierLabel(total) {
+        getRankLabel(total) {
             total = Number(total) || 0;
 
-            if (total >= 20000) return 'Tier X+';
-            if (total >= 10000) return 'Tier X';
-            if (total >= 9000)  return 'Tier 9';
-            if (total >= 8000)  return 'Tier 8';
-            if (total >= 7000)  return 'Tier 7';
-            if (total >= 6000)  return 'Tier 6';
-            if (total >= 5000)  return 'Tier 5';
-            if (total >= 4000)  return 'Tier 4';
-            if (total >= 3000)  return 'Tier 3';
-            if (total >= 2000)  return 'Tier 2';
-            if (total >= 1000)  return 'Tier 1';
-            return 'Tier 0';
+            if (total >= 20000) return 'Rango X+';
+            if (total >= 10000) return 'Rango X';
+            if (total >= 9000)  return 'Rango 9';
+            if (total >= 8000)  return 'Rango 8';
+            if (total >= 7000)  return 'Rango 7';
+            if (total >= 6000)  return 'Rango 6';
+            if (total >= 5000)  return 'Rango 5';
+            if (total >= 4000)  return 'Rango 4';
+            if (total >= 3000)  return 'Rango 3';
+            if (total >= 2000)  return 'Rango 2';
+            if (total >= 1000)  return 'Rango 1';
+            return 'Rango 0';
         },
     },
 };
