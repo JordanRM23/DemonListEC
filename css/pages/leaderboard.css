@@ -207,7 +207,7 @@
 .rank-20000 {
     color: #ff0000 !important;
     text-shadow:
-        0 0 10px rgba(255,0,0,1),
-        0 0 22px rgba(255,80,80,1);
+        0 0 10px rgba(255, 0, 0, 1),
+        0 0 22px rgba(255, 0, 0, 1);
     animation: glowPulse 1s ease-in-out infinite;
 }
