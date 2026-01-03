@@ -25,8 +25,13 @@ export default {
                 <table class="list" v-if="list">
                     <tr v-for="([level, err], i) in list">
                         <td class="rank">
-                            <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
-                            <p v-else class="type-label-lg">Legacy</p>
+                            <p
+                                class="type-label-lg"
+                                :class="getLevelPosClass(i + 1)"
+                            >
+                                <span v-if="i + 1 <= 150">#{{ i + 1 }}</span>
+                                <span v-else>Legacy</span>
+                            </p>
                         </td>
                         <td class="level" :class="{ 'active': selected == i, 'error': !level }">
                             <button @click="selected = i">
@@ -44,7 +49,13 @@ export default {
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Puntos al completar</div>
-                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                            <p>
+                                {{
+                                    selected + 1 <= 150
+                                        ? score(selected + 1, 100, level.percentToQualify)
+                                        : 0
+                                }}
+                            </p>
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
@@ -191,5 +202,11 @@ export default {
     methods: {
         embed,
         score,
+        getLevelPosClass(pos) {
+            if (pos >= 1 && pos <= 50)   return 'level-pos-top50';
+            if (pos >= 51 && pos <= 100) return 'level-pos-51-100';
+            if (pos >= 101 && pos <= 150) return 'level-pos-101-150';
+            return 'level-pos-151plus';
+        },
     },
 };
