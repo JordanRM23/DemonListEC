@@ -106,6 +106,7 @@
     transform: scale(1.03);
 }
 
+/* Animaciones generales (para otros rangos) */
 @keyframes glowPulse {
     0%, 100% { text-shadow: 0 0 4px rgba(255,255,255,0.3); }
     50%      { text-shadow: 0 0 10px rgba(255,255,255,0.9); }
@@ -119,24 +120,30 @@
 /* Animaciones fuego para 20k+ */
 @keyframes fireGradient {
     0%   { background-position: 0% 50%; }
+    25%  { background-position: 50% 30%; }
     50%  { background-position: 100% 50%; }
+    75%  { background-position: 50% 70%; }
     100% { background-position: 0% 50%; }
 }
+
 @keyframes fireFlicker {
     0% {
         text-shadow:
-            0 0 4px rgba(255, 0, 0, 0.7),
-            0 0 10px rgba(255, 80, 0, 0.7);
+            0 0 3px rgba(255, 0, 0, 0.8),
+            0 0 6px rgba(255, 80, 0, 0.8),
+            0 0 12px rgba(255, 160, 0, 0.8);
     }
     50% {
         text-shadow:
-            0 0 10px rgba(255, 0, 0, 1),
-            0 0 20px rgba(255, 120, 0, 1);
+            0 0 6px rgba(255, 0, 0, 1),
+            0 0 14px rgba(255, 120, 0, 1),
+            0 0 26px rgba(255, 200, 0, 1);
     }
     100% {
         text-shadow:
-            0 0 5px rgba(255, 0, 0, 0.8),
-            0 0 12px rgba(255, 60, 0, 0.8);
+            0 0 4px rgba(255, 0, 0, 0.9),
+            0 0 10px rgba(255, 90, 0, 0.9),
+            0 0 18px rgba(255, 180, 0, 0.9);
     }
 }
 
@@ -227,23 +234,27 @@
     animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
 }
 
-/* 20000+: Rojo fuego (Rango X+) */
+/* 20000+: Texto de fuego (Rango X+) */
 .rank-20000 {
     background: linear-gradient(
-        -45deg,
+        -60deg,
         #ff0000,
         #ff6a00,
-        #ff0000,
-        #ff6a00
+        #ffd500,
+        #ff6a00,
+        #ff0000
     );
-    background-size: 400% 400%;
+    background-size: 500% 500%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 
     text-shadow:
-        0 0 6px rgba(255, 0, 0, 0.9),
-        0 0 14px rgba(255, 80, 0, 0.9);
+        0 0 4px rgba(255, 0, 0, 0.9),
+        0 0 10px rgba(255, 90, 0, 0.9),
+        0 0 18px rgba(255, 180, 0, 0.9);
 
-    animation: fireGradient 1.4s linear infinite, fireFlicker 0.18s ease-in-out infinite;
+    animation:
+        fireGradient 1.3s linear infinite,
+        fireFlicker 0.12s ease-in-out infinite;
 }
