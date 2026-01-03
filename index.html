@@ -69,6 +69,36 @@
                         Login
                     </a>
                 </div>
+                <div class="search-container">
+                <input
+                 type="text"
+                 id="searchInput"
+                 placeholder="Buscar nivel..."
+                  onkeyup="searchItems()"
+                 />
+                 </div>
+
+                 <ul id="itemList">
+                 <li class="item">Bloodbath</li>
+                 <li class="item">Acu</li>
+                 <li class="item">Slaughterhouse</li>
+                 <li class="item">Cataclysm</li>
+                 <li class="item">Tartarus</li>
+                </ul>
+
+                <script>
+              function searchItems() {
+              const input = document.getElementById("searchInput");
+              const filter = input.value.toLowerCase();
+              const items = document.getElementsByClassName("item");
+
+              for (let i = 0; i < items.length; i++) {
+              const text = items[i].textContent.toLowerCase();
+              items[i].style.display = text.includes(filter) ? "" : "none";
+    }
+}
+</script>
+
             </nav>
         </header>
         <router-view></router-view>
