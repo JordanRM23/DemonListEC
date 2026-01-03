@@ -17,6 +17,12 @@
     text-align: end;
     padding-right: 1rem;
 }
+/* dar espacio para que no se “corten” los números */
+.page-list .list .rank .type-label-lg {
+    min-width: 4.5rem;
+    display: inline-block;
+}
+
 .page-list .list .level {
     width: 100%;
 }
