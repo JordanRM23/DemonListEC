@@ -126,3 +126,46 @@
 .page-list .meta .editors li a:hover {
     text-decoration: underline;
 }
+
+/* ==== COLORES POR POSICIÓN (TOP / LEGACY) ==== */
+
+/* Top 1–50: dorado con gradiente tipo oro */
+.level-pos-top50 {
+    background: linear-gradient(
+        90deg,
+        #ffd700,
+        #ffec8b,
+        #ffd700
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* 51–100: bronce brillante con algo de gradiente */
+.level-pos-51-100 {
+    background: linear-gradient(
+        90deg,
+        #cd7f32,
+        #e0a86a,
+        #cd7f32
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* 101–150: bronce simple (sin tanto brillo) */
+.level-pos-101-150 {
+    color: #cd7f32;
+    font-weight: 600;
+}
+
+/* 151+: blanco / color por defecto */
+.level-pos-151plus {
+    color: inherit;
+}
