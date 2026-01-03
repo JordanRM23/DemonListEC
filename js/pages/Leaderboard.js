@@ -56,7 +56,14 @@ export default {
         #{{ selected + 1 }} {{ entry.user }}
     </span>
 </h1>
-                        <h3>{{ localize(entry.total) }} puntos</h3>
+                        <h3 v-if="entry">
+    <span
+        class="player-name"
+        :class="getNameClass(entry.total)"
+    >
+        {{ localize(entry.total) }} puntos
+    </span>
+</h3>
 
                         <h2 v-if="entry.verified.length > 0">
                             First Victor ({{ entry.verified.length}})
