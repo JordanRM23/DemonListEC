@@ -10,16 +10,16 @@
     --color-on-error: white;
 }
 
+/* ===== OCULTAR SCROLLBAR GLOBAL ===== */
+
 html,
 body {
     height: 100%;
-
-    /* ocultar scrollbars pero mantener scroll */
     -ms-overflow-style: none;  /* IE/Edge antiguos */
     scrollbar-width: none;     /* Firefox */
 }
 
-/* Chrome, Safari, Opera, Edge Chromium */
+/* Chrome, Safari, Edge (Chromium), Opera */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
@@ -79,8 +79,15 @@ main {
     column-gap: 2rem;
 }
 
+/* ===== SECCIONES SCROLLABLES SIN BARRA ===== */
+
 main > div {
     overflow-y: auto;
+    scrollbar-width: none;  /* Firefox */
+}
+
+main > div::-webkit-scrollbar {
+    display: none;          /* WebKit */
 }
 
 .spinner {
