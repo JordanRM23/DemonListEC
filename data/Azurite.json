@@ -1,16 +1,22 @@
 {
     "id": 62214792,
-    "name": "Azurite",
+    "name": "Azurite (Sillow)",
     "author": "Sillow",
     "creators": ["Sillow"],
-    "verifier": "Jampy12",
-    "verification": "https://youtu.be/3aKp8T2s6VE?si=aBN-qYnKhSsk-NVl",
+    "verifier": "Zephyr",
+    "verification": "https://www.youtube.com/watch?v=KBdk1JN9mUo",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
 		{
             "user": "ItzNixo",
             "link": "https://www.youtube.com/watch?v=-s3SkwVfKHc&t=1s",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=3aKp8T2s6VE",
             "percent": 100,
             "hz": 240
         }
