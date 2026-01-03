@@ -80,7 +80,12 @@ export default {
                         </h3>
 
                         <h2 v-if="entry.verified.length > 0">
-                            First Victor ({{ entry.verified.length}})
+                            <span
+                                class="player-name"
+                                :class="getNameClass(entry.total)"
+                            >
+                                First Victor ({{ entry.verified.length}})
+                            </span>
                         </h2>
                         <table class="table" v-if="entry.verified.length > 0">
                             <tr v-for="score in entry.verified" :key="'v-' + score.level + score.rank">
@@ -99,7 +104,12 @@ export default {
                         </table>
 
                         <h2 v-if="entry.completed.length > 0">
-                            Completado ({{ entry.completed.length }})
+                            <span
+                                class="player-name"
+                                :class="getNameClass(entry.total)"
+                            >
+                                Completado ({{ entry.completed.length }})
+                            </span>
                         </h2>
                         <table class="table" v-if="entry.completed.length > 0">
                             <tr v-for="score in entry.completed" :key="'c-' + score.level + score.rank">
@@ -118,7 +128,12 @@ export default {
                         </table>
 
                         <h2 v-if="entry.progressed.length > 0">
-                            Progreso ({{ entry.progressed.length}})
+                            <span
+                                class="player-name"
+                                :class="getNameClass(entry.total)"
+                            >
+                                Progreso ({{ entry.progressed.length}})
+                            </span>
                         </h2>
                         <table class="table" v-if="entry.progressed.length > 0">
                             <tr v-for="score in entry.progressed" :key="'p-' + score.level + score.rank">
@@ -156,7 +171,7 @@ export default {
         getNameClass(total) {
             total = Number(total) || 0;
 
-            if (total >= 20000) return 'rank-20000';  // rojo fuego
+            if (total >= 20000) return 'rank-20000';  // rojo gradiente
             if (total >= 10000) return 'rank-10000';
             if (total >= 9000)  return 'rank-9000';
             if (total >= 8000)  return 'rank-8000';
