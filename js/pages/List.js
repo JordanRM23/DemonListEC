@@ -23,29 +23,67 @@ export default {
         <main v-else class="page-list">
             <div class="list-container">
                 <table class="list" v-if="list">
-                    <tr v-for="([level, err], i) in list">
-                        <td class="rank">
-                            <p class="type-label-lg">
-                                <span
-                                    v-if="i + 1 <= 150"
-                                    :class="getLevelPosClass(i + 1)"
-                                >
-                                    #{{ i + 1 }}
+                    <tbody>
+                        <!-- Título Lista Principal antes del top 1 -->
+                        <tr class="list-section-row" v-if="list.length">
+                            <td colspan="2">
+                                <span class="list-section-title list-section-main">
+                                    Lista Principal
                                 </span>
-                                <span v-else>Legacy</span>
-                            </p>
-                        </td>
-                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                            <button @click="selected = i">
-                                <span
-                                    class="type-label-lg"
-                                    :class="getLevelPosClass(i + 1)"
-                                >
-                                    {{ level?.name || \`Error (\${err}.json)\` }}
-                                </span>
-                            </button>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
+
+                        <template v-for="([level, err], i) in list" :key="i">
+                            <!-- Título Lista Secundaria justo antes del 51 -->
+                            <tr
+                                v-if="i === 50"
+                                class="list-section-row"
+                            >
+                                <td colspan="2">
+                                    <span class="list-section-title list-section-secondary">
+                                        Lista Secundaria
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- Título Lista de Legado justo antes del 101 -->
+                            <tr
+                                v-if="i === 100"
+                                class="list-section-row"
+                            >
+                                <td colspan="2">
+                                    <span class="list-section-title list-section-legacy">
+                                        Lista de Legado
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- Fila normal del nivel -->
+                            <tr>
+                                <td class="rank">
+                                    <p class="type-label-lg">
+                                        <span
+                                            v-if="i + 1 <= 150"
+                                            :class="getLevelPosClass(i + 1)"
+                                        >
+                                            #{{ i + 1 }}
+                                        </span>
+                                        <span v-else>Legacy</span>
+                                    </p>
+                                </td>
+                                <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                                    <button @click="selected = i">
+                                        <span
+                                            class="type-label-lg"
+                                            :class="getLevelPosClass(i + 1)"
+                                        >
+                                            {{ level?.name || \`Error (\${err}.json)\` }}
+                                        </span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
                 </table>
             </div>
             <div class="level-container">
@@ -151,7 +189,8 @@ export default {
                     <p>
                     </p>
                     <div class="og">
-                    <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" target="_blank">TheShittyList</a></p>
+                        <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" target="_blank">TheShittyList</a></p>
+                    </div>
                 </div>
             </div>
         </main>
@@ -196,7 +235,7 @@ export default {
                 ...this.list
                     .filter(([_, err]) => err)
                     .map(([_, err]) => {
-                        return `No se pudo cargar el nivel. (${err}.json)`;
+                        return \`No se pudo cargar el nivel. (\${err}.json)\`;
                     })
             );
             if (!this.editors) {
