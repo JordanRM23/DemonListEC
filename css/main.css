@@ -13,6 +13,16 @@
 html,
 body {
     height: 100%;
+
+    /* ocultar scrollbars pero mantener scroll */
+    -ms-overflow-style: none;  /* IE/Edge antiguos */
+    scrollbar-width: none;     /* Firefox */
+}
+
+/* Chrome, Safari, Opera, Edge Chromium */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -41,12 +51,14 @@ header {
     color: #000000;
     position: relative;
 }
+
 @media screen and (min-width: 1366px) {
     header {
         display: grid;
         padding-inline: 0;
     }
 }
+
 header .logo {
     justify-self: end;
     align-self: center;
@@ -54,6 +66,7 @@ header .logo {
     align-items: flex-end;
     gap: 1rem;
 }
+
 header .nav {
     flex: 1;
 }
@@ -65,6 +78,7 @@ main {
     grid-template-rows: minmax(0, 1fr);
     column-gap: 2rem;
 }
+
 main > div {
     overflow-y: auto;
 }
