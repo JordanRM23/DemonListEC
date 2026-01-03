@@ -48,15 +48,14 @@ export default {
                 </div>
                 <div class="player-container">
                     <div class="player" v-if="entry">
-                        <h1>
-                            #{{ selected + 1 }}
-                            <span
-                                class="player-name"
-                                :class="getNameClass(entry.total)"
-                            >
-                                {{ entry.user }}
-                            </span>
-                        </h1>
+                        <h1 v-if="entry">
+    <span
+        class="player-name"
+        :class="getNameClass(entry.total)"
+    >
+        #{{ selected + 1 }} {{ entry.user }}
+    </span>
+</h1>
                         <h3>{{ localize(entry.total) }} puntos</h3>
 
                         <h2 v-if="entry.verified.length > 0">
