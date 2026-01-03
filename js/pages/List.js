@@ -23,29 +23,51 @@ export default {
         <main v-else class="page-list">
             <div class="list-container">
                 <table class="list" v-if="list">
-                    <tr v-for="([level, err], i) in list">
-                        <td class="rank">
-                            <p class="type-label-lg">
-                                <span
-                                    v-if="i + 1 <= 150"
-                                    :class="getLevelPosClass(i + 1)"
-                                >
-                                    #{{ i + 1 }}
+                    <tbody>
+                        <tr v-for="([level, err], i) in list" :key="i">
+                            <!-- Celda de título de sección -->
+                            <td v-if="i === 0" colspan="2" class="list-section-cell">
+                                <span class="list-section-title level-pos-top50">
+                                    Lista Principal
                                 </span>
-                                <span v-else>Legacy</span>
-                            </p>
-                        </td>
-                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                            <button @click="selected = i">
-                                <span
-                                    class="type-label-lg"
-                                    :class="getLevelPosClass(i + 1)"
-                                >
-                                    {{ level?.name || \`Error (\${err}.json)\` }}
+                            </td>
+                            <td v-else-if="i === 50" colspan="2" class="list-section-cell">
+                                <span class="list-section-title level-pos-51-100">
+                                    Lista Secundaria
                                 </span>
-                            </button>
-                        </td>
-                    </tr>
+                            </td>
+                            <td v-else-if="i === 100" colspan="2" class="list-section-cell">
+                                <span class="list-section-title level-pos-101-150">
+                                    Lista Extendida
+                                </span>
+                            </td>
+
+                            <!-- Fila normal de la lista -->
+                            <template v-else>
+                                <td class="rank">
+                                    <p class="type-label-lg">
+                                        <span
+                                            v-if="i + 1 <= 150"
+                                            :class="getLevelPosClass(i + 1)"
+                                        >
+                                            #{{ i + 1 }}
+                                        </span>
+                                        <span v-else>Legacy</span>
+                                    </p>
+                                </td>
+                                <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                                    <button @click="selected = i">
+                                        <span
+                                            class="type-label-lg"
+                                            :class="getLevelPosClass(i + 1)"
+                                        >
+                                            {{ level?.name || \`Error (\${err}.json)\` }}
+                                        </span>
+                                    </button>
+                                </td>
+                            </template>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div class="level-container">
@@ -196,7 +218,7 @@ export default {
                 ...this.list
                     .filter(([_, err]) => err)
                     .map(([_, err]) => {
-                        return `No se pudo cargar el nivel. (${err}.json)`;
+                        return \`No se pudo cargar el nivel. (\${err}.json)\`;
                     })
             );
             if (!this.editors) {
