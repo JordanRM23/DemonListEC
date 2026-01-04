@@ -28,7 +28,9 @@ export default {
             <tr v-if="list.length > 0">
                 <td colspan="2" class="list-section-cell">
                     <span class="list-section-title level-pos-top50">
+
                         Lista Principal
+                        
                     </span>
                 </td>
             </tr>
@@ -38,7 +40,9 @@ export default {
                     <tr>
                         <td colspan="2" class="list-section-cell">
                             <span class="list-section-title level-pos-51-100">
+
                                 Lista Secundaria
+
                             </span>
                         </td>
                     </tr>
@@ -49,7 +53,9 @@ export default {
                     <tr>
                         <td colspan="2" class="list-section-cell">
                             <span class="list-section-title level-pos-101-150">
+
                                 Lista Extendida
+
                             </span>
                         </td>
                     </tr>
