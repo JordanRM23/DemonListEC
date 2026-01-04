@@ -46,7 +46,7 @@ main {
 header {
     display: flex;
     padding-inline: calc(25vw - 10rem);
-    height: 4.5rem;
+    height: 4rem;
     background: linear-gradient(to right, #FCD116, #FCD116, #003893, #CE1126);
     color: #000000;
     position: relative;
