@@ -79,6 +79,7 @@ export default {
                             </span>
                         </h3>
 
+                        <!-- ===== FIRST VICTOR ===== -->
                         <h2 v-if="entry.verified.length > 0">
                             <span
                                 class="player-name"
@@ -88,13 +89,28 @@ export default {
                             </span>
                         </h2>
                         <table class="table" v-if="entry.verified.length > 0">
-                            <tr v-for="score in entry.verified" :key="'v-' + score.level + score.rank">
+                            <tr
+                                v-for="score in entry.verified"
+                                :key="'v-' + score.level + score.rank"
+                            >
                                 <td class="rank">
-                                    <p>#{{ score.rank }}</p>
+                                    <p>
+                                        <span
+                                            :class="getLevelPosClass(score.rank)"
+                                        >
+                                            #{{ score.rank }}
+                                        </span>
+                                    </p>
                                 </td>
                                 <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">
-                                        {{ score.level }}
+                                    <a
+                                        class="type-label-lg"
+                                        target="_blank"
+                                        :href="score.link"
+                                    >
+                                        <span :class="getLevelPosClass(score.rank)">
+                                            {{ score.level }}
+                                        </span>
                                     </a>
                                 </td>
                                 <td class="score">
@@ -103,6 +119,7 @@ export default {
                             </tr>
                         </table>
 
+                        <!-- ===== COMPLETADO ===== -->
                         <h2 v-if="entry.completed.length > 0">
                             <span
                                 class="player-name"
@@ -112,13 +129,28 @@ export default {
                             </span>
                         </h2>
                         <table class="table" v-if="entry.completed.length > 0">
-                            <tr v-for="score in entry.completed" :key="'c-' + score.level + score.rank">
+                            <tr
+                                v-for="score in entry.completed"
+                                :key="'c-' + score.level + score.rank"
+                            >
                                 <td class="rank">
-                                    <p>#{{ score.rank }}</p>
+                                    <p>
+                                        <span
+                                            :class="getLevelPosClass(score.rank)"
+                                        >
+                                            #{{ score.rank }}
+                                        </span>
+                                    </p>
                                 </td>
                                 <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">
-                                        {{ score.level }}
+                                    <a
+                                        class="type-label-lg"
+                                        target="_blank"
+                                        :href="score.link"
+                                    >
+                                        <span :class="getLevelPosClass(score.rank)">
+                                            {{ score.level }}
+                                        </span>
                                     </a>
                                 </td>
                                 <td class="score">
@@ -127,6 +159,7 @@ export default {
                             </tr>
                         </table>
 
+                        <!-- ===== PROGRESO ===== -->
                         <h2 v-if="entry.progressed.length > 0">
                             <span
                                 class="player-name"
@@ -136,13 +169,28 @@ export default {
                             </span>
                         </h2>
                         <table class="table" v-if="entry.progressed.length > 0">
-                            <tr v-for="score in entry.progressed" :key="'p-' + score.level + score.rank">
+                            <tr
+                                v-for="score in entry.progressed"
+                                :key="'p-' + score.level + score.rank"
+                            >
                                 <td class="rank">
-                                    <p>#{{ score.rank }}</p>
+                                    <p>
+                                        <span
+                                            :class="getLevelPosClass(score.rank)"
+                                        >
+                                            #{{ score.rank }}
+                                        </span>
+                                    </p>
                                 </td>
                                 <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">
-                                        {{ score.percent }}% {{ score.level }}
+                                    <a
+                                        class="type-label-lg"
+                                        target="_blank"
+                                        :href="score.link"
+                                    >
+                                        <span :class="getLevelPosClass(score.rank)">
+                                            {{ score.percent }}% {{ score.level }}
+                                        </span>
                                     </a>
                                 </td>
                                 <td class="score">
@@ -199,6 +247,15 @@ export default {
             if (total >= 2000)  return 'Rango 2';
             if (total >= 1000)  return 'Rango 1';
             return 'Rango 0';
+        },
+        // === NUEVO: mismo helper que usas en la lista de niveles ===
+        getLevelPosClass(pos) {
+            pos = Number(pos) || 0;
+
+            if (pos >= 1 && pos <= 50)   return 'level-pos-top50';
+            if (pos >= 51 && pos <= 100) return 'level-pos-51-100';
+            if (pos >= 101 && pos <= 150) return 'level-pos-101-150';
+            return 'level-pos-151plus';
         },
     },
 };
