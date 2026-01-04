@@ -1,42 +1,23 @@
-/* ===== Layout general de la página de lista ===== */
-
-.page-list {
-    display: grid;
-    grid-template-columns: 18rem minmax(0, 1fr) 22rem;
-    align-items: flex-start;
-    gap: 0;
-}
-
-/* columnas */
-
 .page-list .list-container,
 .page-list .level-container,
 .page-list .meta-container {
     padding-block: 2rem;
 }
-
 .page-list .list-container {
     padding-inline: 1rem;
 }
-
 .page-list .meta-container {
     padding-right: 2rem;
 }
 
-/* ===== Tabla de la lista (ranks + niveles) ===== */
-
 .page-list .list {
     table-layout: auto;
-    width: 100%;
-    border-collapse: collapse;
 }
-
 .page-list .list .rank {
     text-align: end;
     padding-right: 1rem;
 }
-
-/* Dar espacio para que no se “corten” los números */
+/* dar espacio para que no se “corten” los números */
 .page-list .list .rank .type-label-lg {
     min-width: 4.5rem;
     display: inline-block;
@@ -45,7 +26,6 @@
 .page-list .list .level {
     width: 100%;
 }
-
 .page-list .list .level button {
     background-color: var(--color-background);
     color: var(--color-on-background);
@@ -57,38 +37,19 @@
     overflow-wrap: anywhere;
     cursor: pointer;
 }
-
 .page-list .list .level.error button {
     color: var(--color-error);
     cursor: not-allowed;
     text-decoration: line-through;
 }
-
 .page-list .list .level button:hover {
     background-color: var(--color-background-hover);
     color: var(--color-on-background-hover);
 }
-
 .page-list .list .level.active button {
     background-color: var(--color-primary);
     color: var(--color-on-primary);
 }
-
-/* ===== Títulos de secciones de la lista ===== */
-/* Se usan junto con level-pos-top50 / 51-100 / 101-150 */
-
-.list-section-cell {
-    padding: 0.75rem 0 0.25rem;
-}
-
-.list-section-title {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-/* ===== Panel central del nivel ===== */
-
 .page-list .level-container .level {
     display: flex;
     flex-direction: column;
@@ -96,113 +57,89 @@
     padding-right: 2rem;
     max-width: 48rem;
 }
-
 .page-list .level-container .level .level-authors {
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-auto-rows: max-content;
     gap: 1rem;
 }
-
 .page-list .level-container .level .video {
     aspect-ratio: 16/9;
-    width: 100%;
 }
-
 .page-list .level-container .level .stats {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
     gap: 2rem;
 }
-
 .page-list .level-container .level .stats li {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
-
 .page-list .level-container .level .records {
     table-layout: fixed;
-    width: 100%;
 }
-
 .page-list .level-container .level .records tr td:not(:last-child) {
     padding-right: 1rem;
 }
-
 .page-list .level-container .level .records .percent,
 .page-list .level-container .level .records .user,
 .page-list .level-container .level .records .hz {
     padding-block: 1rem;
 }
-
 .page-list .level-container .level .records .user {
     width: 100%;
 }
-
 .page-list .level-container .level .records .percent,
 .page-list .level-container .level .records .hz {
     text-align: end;
 }
-
-/* Hover links */
-
 .page-list .meta-container .og a:hover,
 .page-list .level-container .level .records a:hover {
     text-decoration: underline;
 }
-
-/* ===== Columna derecha (meta) ===== */
-
 .page-list .meta {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-
 .page-list .meta .errors {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-
 .page-list .meta .errors .error {
     padding: 1rem;
     background-color: var(--color-error);
     color: var(--color-on-error);
     border-radius: 0.5rem;
 }
-
 .page-list .meta .editors {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
-
 .page-list .meta .editors li {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
-
 .page-list .meta .editors li img {
     height: 1.25rem;
 }
-
 .page-list .meta .editors li a:hover {
     text-decoration: underline;
 }
 
-/* ===== Animaciones para brillos ===== */
+/* ==== ANIMACIONES PARA BRILLOS ==== */
 
 /* mismas que usas en leaderboard para el dorado */
 @keyframes glowPulse {
     0%, 100% { text-shadow: 0 0 4px rgba(255,255,255,0.3); }
     50%      { text-shadow: 0 0 10px rgba(255,255,255,0.9); }
 }
-
 @keyframes gradientHero {
     0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
@@ -215,9 +152,9 @@
     100% { background-position: 100% 50%; }
 }
 
-/* ===== Colores por posición (TOP / LEGACY) ===== */
+/* ==== COLORES POR POSICIÓN (TOP / LEGACY) ==== */
 
-/* Top 1–50: dorado */
+/* Top 1–50: EXACTAMENTE el mismo dorado que rank-10000 */
 .level-pos-top50 {
     background: linear-gradient(
         -45deg,
@@ -236,10 +173,10 @@
         0 0 18px rgba(255,215,0,0.9);
 
     font-weight: 700;
-    animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
+    animation: gradientHero 2s linear infinite, glowPulse 2s.ease-in-out infinite;
 }
 
-/* 51–100: plata */
+/* 51–100: “plata” (gris claro) con glow más suave */
 .level-pos-51-100 {
     background: linear-gradient(
         90deg,
@@ -247,7 +184,7 @@
         #f5f5f5,
         #d0d0d0,
         #f5f5f5,
-        #b0b0b
+        #b0b0b0
     );
     background-size: 220% 220%;
     -webkit-background-clip: text;
@@ -262,19 +199,22 @@
     animation: silverSweep 3s linear infinite;
 }
 
-/* 101–150: bronce */
+/* 101–150: bronce simple (sin tanto brillo) */
 .level-pos-101-150 {
     color: #cd7f32;
     font-weight: 600;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
 }
 
-/* 151+: por defecto */
+/* 151+: blanco / color por defecto */
 .level-pos-151plus {
     color: inherit;
     text-shadow: none;
 }
-.list-section-cell {
+
+/* ===== Títulos de secciones de la lista ===== */
+
+.list-section-row td {
     padding: 0.75rem 0 0.25rem;
 }
 
@@ -283,4 +223,3 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
-
