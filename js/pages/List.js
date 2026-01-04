@@ -25,24 +25,12 @@ export default {
                 <table class="list" v-if="list">
                     <tr v-for="([level, err], i) in list">
                         <td class="rank">
-                            <p class="type-label-lg">
-                                <span
-                                    v-if="i + 1 <= 150"
-                                    :class="getLevelPosClass(i + 1)"
-                                >
-                                    #{{ i + 1 }}
-                                </span>
-                                <span v-else>Legacy</span>
-                            </p>
+                            <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-else class="type-label-lg">Legacy</p>
                         </td>
                         <td class="level" :class="{ 'active': selected == i, 'error': !level }">
                             <button @click="selected = i">
-                                <span
-                                    class="type-label-lg"
-                                    :class="getLevelPosClass(i + 1)"
-                                >
-                                    {{ level?.name || \`Error (\${err}.json)\` }}
-                                </span>
+                                <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                             </button>
                         </td>
                     </tr>
@@ -56,13 +44,7 @@ export default {
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Puntos al completar</div>
-                            <p>
-                                {{
-                                    selected + 1 <= 150
-                                        ? score(selected + 1, 100, level.percentToQualify)
-                                        : 0
-                                }}
-                            </p>
+                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
@@ -209,11 +191,5 @@ export default {
     methods: {
         embed,
         score,
-        getLevelPosClass(pos) {
-            if (pos >= 1 && pos <= 50)   return 'level-pos-top50';
-            if (pos >= 51 && pos <= 100) return 'level-pos-51-100';
-            if (pos >= 101 && pos <= 150) return 'level-pos-101-150';
-            return 'level-pos-151plus';
-        },
     },
 };
