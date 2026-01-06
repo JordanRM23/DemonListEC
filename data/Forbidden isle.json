@@ -3,11 +3,17 @@
     "name": "Forbidden Isle",
     "author": "Sillow",
     "creators": ["Sillow"],
-    "verifier": "EABH",
-    "verification": "https://youtu.be/WTJjRAPFiFo",
+    "verifier": "venomioo",
+    "verification": "https://www.youtube.com/watch?v=DE_A8cGgl1M",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "EABH",
+            "link": "https://www.youtube.com/watch?v=Po5K8TincqU",
+            "percent": 100,
+            "hz": 144
+        },
 		{
             "user": "OMAGI",
             "link": "https://youtu.be/lLW0PKbBOfA?si=pKt3OAktd-uief9p",
