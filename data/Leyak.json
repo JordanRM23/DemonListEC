@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "357196",
     "records": [
+        {
+            "user": "milo",
+            "link": "https://www.youtube.com/watch?v=B5g2x1B63y8",
+            "percent": 100,
+            "hz": 120
+        }
     ]
 }
