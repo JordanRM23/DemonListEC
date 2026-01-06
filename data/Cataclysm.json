@@ -9,6 +9,12 @@
     "password": "Free to copy",
     "records": [
         {
+            "user": "venomioo",
+            "link": "https://www.youtube.com/watch?v=KIn7YdqjbPI",
+            "percent": 100,
+            "hz": 240
+        },
+        {
             "user": "RaymanNinja",
             "link": "https://www.youtube.com/watch?v=xJFKYcZr3R4&list=PLTAVj4jn6Ls8MUByyyaGgyEmm370Em-iK&index=16",
             "percent": 100,
