@@ -3,10 +3,16 @@
     "name": "Plasma Pulse III",
     "author": "xSmokes",
     "creators": ["xSmokes" , "Giron" , "Forcall"],
-    "verifier": "Zephyr",
-    "verification": "https://www.youtube.com/watch?v=PQU07aaztrw",
+    "verifier": "venomioo",
+    "verification": "https://www.youtube.com/watch?v=D7qL6f4o0GA",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {    
+            "user": "Zephyr",
+            "link": "https://www.youtube.com/watch?v=PQU07aaztrw",
+            "percent": 100,
+            "hz": 480
+        }
     ]
 }
