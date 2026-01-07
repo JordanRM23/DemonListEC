@@ -116,48 +116,38 @@
     50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
-/* Animación simple para mover gradientes */
 @keyframes fireGradient {
     0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* 0 – 999: Gris muerto */
-.rank-0 {
-    color: #9E9E9E !important;
-}
+/* 0 – 999 */
+.rank-0 { color: #9E9E9E !important; }
 
-/* 1000 – 1999: Marrón sucio */
-.rank-1000 {
-    color: #8D6E63 !important;
-}
+/* 1000 – 1999 */
+.rank-1000 { color: #8D6E63 !important; }
 
-/* 2000 – 2999: Gris oscuro */
-.rank-2000 {
-    color: #616161 !important;
-}
+/* 2000 – 2999 */
+.rank-2000 { color: #616161 !important; }
 
-/* 3000 – 3999: Verde opaco */
-.rank-3000 {
-    color: #4CAF50 !important;
-}
+/* 3000 – 3999 */
+.rank-3000 { color: #4CAF50 !important; }
 
-/* 4000 – 4999: Verde intenso – borde simple */
+/* 4000 – 4999 */
 .rank-4000 {
     color: #2E7D32 !important;
     -webkit-text-stroke: 1px #1B5E20;
 }
 
-/* 5000 – 5999: Azul estándar – borde + sombra leve */
+/* 5000 – 5999 */
 .rank-5000 {
     color: #2196F3 !important;
     -webkit-text-stroke: 1px #0D47A1;
     text-shadow: 0 0 6px rgba(33,150,243,0.7);
 }
 
-/* 6000 – 6999: Azul eléctrico – glow suave */
+/* 6000 – 6999 */
 .rank-6000 {
     color: #00B0FF !important;
     text-shadow:
@@ -165,7 +155,7 @@
         0 0 12px rgba(0,176,255,0.6);
 }
 
-/* 7000 – 7999: Morado épico – glow + pulso lento */
+/* 7000 – 7999 (Rango X) */
 .rank-7000 {
     color: #9C27B0 !important;
     text-shadow:
@@ -174,7 +164,7 @@
     animation: glowPulse 2.5s ease-in-out infinite;
 }
 
-/* 8000 – 8999: Dorado – glow fuerte + borde grueso */
+/* 8000 – 8999 */
 .rank-8000 {
     color: #FFD700 !important;
     -webkit-text-stroke: 2px #B8860B;
@@ -183,7 +173,7 @@
         0 0 20px rgba(255,215,0,0.9);
 }
 
-/* 9000 – 9999: Rojo legendario – glow animado */
+/* 9000 – 9999 */
 .rank-9000 {
     color: #FF1744 !important;
     text-shadow:
@@ -192,15 +182,9 @@
     animation: glowPulse 1.5s ease-in-out infinite;
 }
 
-/* 10000+: Blanco / Dorado – animación especial 👑 */
+/* 10000+ */
 .rank-10000 {
-    background: linear-gradient(
-        -45deg,
-        #FFFFFF,
-        #FFD700,
-        #FFFFFF,
-        #FFD700
-    );
+    background: linear-gradient(-45deg,#FFFFFF,#FFD700,#FFFFFF,#FFD700);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -211,18 +195,40 @@
     animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
 }
 
-/* 20000+: Rojo con gradiente (Rango X+ sin glow) */
+/* 20000+ */
 .rank-20000 {
-    background: linear-gradient(
-        -45deg,
-        #ff0000,
-        #ff3333,
-        #ff0000
-    );
+    background: linear-gradient(-45deg,#ff0000,#ff3333,#ff0000);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
     animation: fireGradient 1.2s linear infinite;
+}
+
+/* ============================= */
+/* OVERRIDE FINAL: SOLO RANGO X TIENE GLOW */
+/* ============================= */
+
+.rank-0,
+.rank-1000,
+.rank-2000,
+.rank-3000,
+.rank-4000,
+.rank-5000,
+.rank-6000,
+.rank-8000,
+.rank-9000,
+.rank-10000,
+.rank-20000 {
+    text-shadow: none !important;
+    animation: none !important;
+}
+
+/* Rango X permitido */
+.rank-7000 {
+    text-shadow:
+        0 0 6px rgba(156,39,176,0.9),
+        0 0 14px rgba(156,39,176,0.7);
+    animation: glowPulse 2.5s ease-in-out infinite;
 }
