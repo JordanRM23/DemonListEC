@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=n1de0ZzXMoU",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }

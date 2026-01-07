@@ -1,0 +1,24 @@
+{
+    "id": 69108628,
+    "name": "Broken Signal",
+    "author": "Grax",
+    "creators": ["Grax"],
+    "verifier": "Zaidre",
+    "verification": "https://www.youtube.com/watch?v=d7Y3rNOgYkU",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=o6TjrI051cM",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "h3nkzx",
+            "link": "https://www.youtube.com/watch?v=f60PTYJieto&t=1s",
+            "percent": 100,
+            "hz": 140
+        }
+    ]
+}
