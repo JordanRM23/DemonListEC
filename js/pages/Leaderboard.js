@@ -1,219 +1,136 @@
-.page-leaderboard-container {
-    display: block;
-}
+import { fetchLeaderboard } from '../content.js';
+import { localize } from '../util.js';
 
-.page-leaderboard {
-    height: 100%;
-    display: grid;
-    grid-template-columns: minmax(24rem, 2fr) 3fr;
-    grid-template-rows: max-content 1fr;
-    column-gap: 2rem;
-    max-width: 80rem;
-    margin: 0 auto;
-}
+import Spinner from '../components/Spinner.js';
 
-.page-leaderboard > div {
-    overflow-y: auto;
-}
+export default {
+    components: {
+        Spinner,
+    },
+    data: () => ({
+        leaderboard: [],
+        loading: true,
+        selected: 0,
+        err: [],
+    }),
+    template: `
+        <main v-if="loading">
+            <Spinner></Spinner>
+        </main>
+        <main v-else class="page-leaderboard-container">
+            <div class="page-leaderboard">
+                <div class="error-container">
+                    <p class="error" v-if="err.length > 0">
+                        La leaderboard quedó medio chueco, estos niveles no cargaron: {{ err.join(', ') }}
+                    </p>
+                </div>
+                <div class="board-container">
+                    <table class="board">
+                        <tr v-for="(ientry, i) in leaderboard" :key="ientry.user">
+                            <td class="rank">
+                                <p class="type-label-lg">
+                                    <span
+                                        class="player-name"
+                                        :class="getNameClass(ientry.total)"
+                                    >
+                                        #{{ i + 1 }}
+                                    </span>
+                                </p>
+                            </td>
+                            <td class="total">
+                                <p class="type-label-lg">
+                                    <span
+                                        class="player-name"
+                                        :class="getNameClass(ientry.total)"
+                                    >
+                                        {{ localize(ientry.total) }}
+                                    </span>
+                                </p>
+                            </td>
+                            <td class="user" :class="{ 'active': selected == i }">
+                                <button @click="selected = i">
+                                    <span
+                                        class="type-label-lg player-name"
+                                        :class="getNameClass(ientry.total)"
+                                    >
+                                        {{ ientry.user }} ({{ getRankLabel(ientry.total) }})
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
-.page-leaderboard .error-container {
-    grid-row: 1;
-    grid-column: 1 / span 2;
-}
+                <div class="player-container">
+                    <div class="player" v-if="entry">
+                        <h1>
+                            <span
+                                class="player-name"
+                                :class="getNameClass(entry.total)"
+                            >
+                                #{{ selected + 1 }} {{ entry.user }} ({{ getRankLabel(entry.total) }})
+                            </span>
+                        </h1>
 
-.page-leaderboard .error-container .error {
-    padding: 1rem;
-    background-color: var(--color-error);
-    color: var(--color-on-error);
-}
+                        <h3>
+                            <span
+                                class="player-name"
+                                :class="getNameClass(entry.total)"
+                            >
+                                {{ localize(entry.total) }} puntos
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+    `,
+    computed: {
+        entry() {
+            return this.leaderboard[this.selected];
+        },
+    },
+    async mounted() {
+        const [leaderboard, err] = await fetchLeaderboard();
+        this.leaderboard = leaderboard;
+        this.err = err;
+        this.loading = false;
+    },
+    methods: {
+        localize,
+        getNameClass(total) {
+            total = Number(total) || 0;
 
-.page-leaderboard .board-container,
-.page-leaderboard .player-container {
-    grid-row: 2;
-    padding-block: 2rem;
-}
+            if (total >= 14000) return 'rank-14000';
+            if (total >= 7000)  return 'rank-7000';
+            if (total >= 6500)  return 'rank-6500';
+            if (total >= 5750)  return 'rank-5750';
+            if (total >= 5000)  return 'rank-5000';
+            if (total >= 4250)  return 'rank-4250';
+            if (total >= 3500)  return 'rank-3500';
+            if (total >= 2750)  return 'rank-2750';
+            if (total >= 2000)  return 'rank-2000';
+            if (total >= 1250)  return 'rank-1250';
+            if (total >= 500)   return 'rank-500';
 
-.page-leaderboard .board-container {
-    padding-inline: 1rem;
-}
+            return 'rank-0';
+        },
+        getRankLabel(total) {
+            total = Number(total) || 0;
 
-.page-leaderboard .board {
-    table-layout: auto;
-    display: block;
-    width: 100%;
-}
+            if (total >= 14000) return 'Rango X+';
+            if (total >= 7000)  return 'Rango X';
+            if (total >= 6500)  return 'Rango 9';
+            if (total >= 5750)  return 'Rango 8';
+            if (total >= 5000)  return 'Rango 7';
+            if (total >= 4250)  return 'Rango 6';
+            if (total >= 3500)  return 'Rango 5';
+            if (total >= 2750)  return 'Rango 4';
+            if (total >= 2000)  return 'Rango 3';
+            if (total >= 1250)  return 'Rango 2';
+            if (total >= 500)   return 'Rango 1';
 
-.page-leaderboard .board .rank {
-    padding-block: 1rem;
-    text-align: end;
-}
-
-.page-leaderboard .board .total {
-    padding: 1rem;
-    text-align: end;
-}
-
-.page-leaderboard .board .user {
-    width: 100%;
-}
-
-.page-leaderboard .board .user button {
-    background-color: var(--color-background);
-    color: inherit;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    text-align: start;
-    overflow-wrap: anywhere;
-}
-
-.page-leaderboard .board .user button:hover {
-    background-color: var(--color-background-hover);
-    cursor: pointer;
-}
-
-.page-leaderboard .board .user.active button {
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
-}
-
-.page-leaderboard .player {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding-right: 2rem;
-}
-
-/* ========================= */
-/*        PLAYER NAME        */
-/* ========================= */
-
-.player-name {
-    color: inherit !important;
-    transition: transform 0.2s ease;
-}
-
-.player-name:hover {
-    transform: scale(1.03);
-}
-
-/* ========================= */
-/*        ANIMATIONS         */
-/* ========================= */
-
-@keyframes fireGradient {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* ========================= */
-/*          RANGOS           */
-/* ========================= */
-
-/* Rango 0 */
-.rank-0 {
-    color: #9E9E9E !important;
-}
-
-/* Rango 1 */
-.rank-500 {
-    color: #BDBDBD !important;
-}
-
-/* Rango 2 */
-.rank-1250 {
-    color: #8D6E63 !important;
-}
-
-/* Rango 3 */
-.rank-2000 {
-    color: #616161 !important;
-}
-
-/* Rango 4 */
-.rank-2750 {
-    color: #4CAF50 !important;
-}
-
-/* Rango 5 */
-.rank-3500 {
-    color: #2E7D32 !important;
-    -webkit-text-stroke: 1px #1B5E20;
-}
-
-/* Rango 6 */
-.rank-4250 {
-    color: #2196F3 !important;
-    -webkit-text-stroke: 1px #0D47A1;
-}
-
-/* Rango 7 */
-.rank-5000 {
-    color: #00B0FF !important;
-}
-
-/* Rango 8 */
-.rank-5750 {
-    color: #9C27B0 !important;
-}
-
-/* Rango 9 */
-.rank-6500 {
-    color: #FFD700 !important;
-    -webkit-text-stroke: 1px #B8860B;
-}
-
-/* ========================= */
-/*      👑 RANGO X 👑        */
-/*  MISMO DORADO TOP-50 GD   */
-/* ========================= */
-
-.rank-7000 {
-    background: linear-gradient(
-        #FFD700,
-        #FFFFFF,
-        #FFD700,
-        #FFFFFF,
-        #FFD700
-    );
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* ========================= */
-/*      🔥 RANGO X+ 🔥       */
-/* ========================= */
-
-.rank-14000 {
-    background: linear-gradient(
-        -45deg,
-        #ff0000,
-        #ff3333,
-        #ff0000
-    );
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fireGradient 1.2s linear infinite;
-    /* ===== FIX GLOBAL VISIBILIDAD ===== */
-
-/* Garantiza color base si el gradiente falla */
-.player-name {
-    color: #e0e0e0;
-}
-
-/* En botones activos fuerza contraste */
-.page-leaderboard .board .user.active .player-name {
-    color: var(--color-on-primary) !important;
-    -webkit-text-fill-color: initial;
-}
-
-/* Evita texto invisible en spans con gradiente */
-.player-name[class*="rank-"] {
-    display: inline-block;
-}
-}
+            return 'Rango 0';
+        },
+    },
+};
