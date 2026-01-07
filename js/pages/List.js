@@ -49,7 +49,11 @@ export default {
                 </table>
             </div>
             <div class="level-container">
-                <div class="level" v-if="level">
+                <div
+  class="level"
+  v-if="level"
+  :class="getLevelPosClass(selected + 1)"
+>
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
