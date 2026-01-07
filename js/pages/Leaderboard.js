@@ -199,4 +199,21 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fireGradient 1.2s linear infinite;
+    /* ===== FIX GLOBAL VISIBILIDAD ===== */
+
+/* Garantiza color base si el gradiente falla */
+.player-name {
+    color: #e0e0e0;
+}
+
+/* En botones activos fuerza contraste */
+.page-leaderboard .board .user.active .player-name {
+    color: var(--color-on-primary) !important;
+    -webkit-text-fill-color: initial;
+}
+
+/* Evita texto invisible en spans con gradiente */
+.player-name[class*="rank-"] {
+    display: inline-block;
+}
 }
