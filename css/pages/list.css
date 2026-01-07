@@ -196,7 +196,7 @@
         0 0 10px rgba(200, 200, 200, 0.7);
 
     font-weight: 600;
-    animation: silverSweep 3s linear infinite;
+    animation: silverSweep 3s linear infinite, glowPulse 2s ease-in-out infinite;
 }
 
 /* 101–150: bronce simple (sin tanto brillo) */
