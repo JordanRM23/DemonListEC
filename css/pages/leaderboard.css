@@ -92,15 +92,11 @@
     text-decoration: underline;
 }
 
-/* ==== NOMBRES / RANGOS ==== */
+/* ==== BASE ==== */
 
 .player-name {
     transition: transform 0.2s ease, filter 0.2s ease;
     color: inherit !important;
-}
-.page-leaderboard .board .user button,
-.page-leaderboard .board .user.active button {
-    color: inherit;
 }
 .player-name:hover {
     transform: scale(1.03);
@@ -122,53 +118,53 @@
     100% { background-position: 0% 50%; }
 }
 
-/* ==== RANGOS ==== */
+/* ==== RANGOS (COLORES FORZADOS EN .player-name) ==== */
 
-.rank-0 {
+.player-name.rank-0 {
     color: #9E9E9E !important;
 }
 
-.rank-1000 {
+.player-name.rank-1000 {
     color: #8D6E63 !important;
 }
 
-.rank-2000 {
+.player-name.rank-2000 {
     color: #616161 !important;
 }
 
-.rank-3000 {
+.player-name.rank-3000 {
     color: #4CAF50 !important;
 }
 
-.rank-4000 {
+.player-name.rank-4000 {
     color: #2E7D32 !important;
     -webkit-text-stroke: 1px #1B5E20;
 }
 
-.rank-5000 {
+.player-name.rank-5000 {
     color: #2196F3 !important;
     -webkit-text-stroke: 1px #0D47A1;
 }
 
-.rank-6000 {
+.player-name.rank-6000 {
     color: #00B0FF !important;
 }
 
-.rank-7000 {
+.player-name.rank-7000 {
     color: #9C27B0 !important;
 }
 
-.rank-8000 {
+.player-name.rank-8000 {
     color: #FFD700 !important;
     -webkit-text-stroke: 2px #B8860B;
 }
 
-.rank-9000 {
+.player-name.rank-9000 {
     color: #FF1744 !important;
 }
 
 /* ==== RANGO X (ÚNICO CON GLOW) ==== */
-.rank-10000 {
+.player-name.rank-10000 {
     background: linear-gradient(
         -45deg,
         #FFFFFF,
@@ -187,7 +183,7 @@
 }
 
 /* ==== RANGO X+ (SIN GLOW) ==== */
-.rank-20000 {
+.player-name.rank-20000 {
     background: linear-gradient(
         -45deg,
         #ff0000,
@@ -199,23 +195,4 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fireGradient 1.2s linear infinite;
-}
-
-/* ==== FIX FINAL: FORZAR COLORES (NO BORRA NADA) ==== */
-.rank-0,
-.rank-1000,
-.rank-2000,
-.rank-3000,
-.rank-4000,
-.rank-5000,
-.rank-6000,
-.rank-7000,
-.rank-8000,
-.rank-9000 {
-    color: unset !important;
-}
-
-.rank-10000,
-.rank-20000 {
-    -webkit-text-fill-color: transparent !important;
 }
