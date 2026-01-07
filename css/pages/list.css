@@ -173,7 +173,7 @@
         0 0 18px rgba(255,215,0,0.9);
 
     font-weight: 700;
-    animation: gradientHero 2s linear infinite, glowPulse 2s.ease-in-out infinite;
+    animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
 }
 
 /* 51–100: “plata” (gris claro) con glow más suave */
