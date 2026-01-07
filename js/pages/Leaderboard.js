@@ -171,33 +171,33 @@ export default {
         getNameClass(total) {
             total = Number(total) || 0;
 
-            if (total >= 20000) return 'rank-20000';  // rojo gradiente
-            if (total >= 10000) return 'rank-10000';
-            if (total >= 9000)  return 'rank-9000';
-            if (total >= 8000)  return 'rank-8000';
-            if (total >= 7000)  return 'rank-7000';
-            if (total >= 6000)  return 'rank-6000';
+            if (total >= 14000) return 'rank-14000';  // rojo gradiente
+            if (total >= 7000) return 'rank-7000';
+            if (total >= 6500)  return 'rank-6500';
+            if (total >= 5750)  return 'rank-5750';
             if (total >= 5000)  return 'rank-5000';
-            if (total >= 4000)  return 'rank-4000';
-            if (total >= 3000)  return 'rank-3000';
+            if (total >= 4250)  return 'rank-4250';
+            if (total >= 3500)  return 'rank-3500';
+            if (total >= 2750)  return 'rank-2750';
             if (total >= 2000)  return 'rank-2000';
-            if (total >= 1000)  return 'rank-1000';
+            if (total >= 1250)  return 'rank-1250';
+            if (total >= 500)  return 'rank-500';
             return 'rank-0';
         },
         getRankLabel(total) {
             total = Number(total) || 0;
 
-            if (total >= 20000) return 'Rango X+';
-            if (total >= 10000) return 'Rango X';
-            if (total >= 9000)  return 'Rango 9';
-            if (total >= 8000)  return 'Rango 8';
-            if (total >= 7000)  return 'Rango 7';
-            if (total >= 6000)  return 'Rango 6';
-            if (total >= 5000)  return 'Rango 5';
-            if (total >= 4000)  return 'Rango 4';
-            if (total >= 3000)  return 'Rango 3';
-            if (total >= 2000)  return 'Rango 2';
-            if (total >= 1000)  return 'Rango 1';
+            if (total >= 14000) return 'Rango X+';
+            if (total >= 7000) return 'Rango X';
+            if (total >= 6500)  return 'Rango 9';
+            if (total >= 5750)  return 'Rango 8';
+            if (total >= 5000)  return 'Rango 7';
+            if (total >= 4250)  return 'Rango 6';
+            if (total >= 3500)  return 'Rango 5';
+            if (total >= 2750)  return 'Rango 4';
+            if (total >= 2000)  return 'Rango 3';
+            if (total >= 1250)  return 'Rango 2';
+            if (total >= 500)  return 'Rango 1';
             return 'Rango 0';
         },
     },
