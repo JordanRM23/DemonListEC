@@ -98,10 +98,7 @@
 .page-leaderboard .player .table a {
     padding-block: 1rem;
 }
-.page-leaderboard .board .user button,
-.page-leaderboard .board .user.active button {
-    color: inherit;
-}
+
 .page-leaderboard .player .table .rank p,
 .page-leaderboard .player .table .score p {
     text-align: end;
