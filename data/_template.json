@@ -1,0 +1,37 @@
+{
+    "id": "912",
+    "name": "name",
+    "subtitle": "optional",
+    "description": "description",
+    "publisher": "publisher",
+    "creators": ["creator 1", "creator 2"],
+    "verifier": "verifier",
+    /* "verification": "https://youtu.be/wq4k1V1K52g", */
+    "videos": [
+        {
+            "name": "verification",
+            "url": "https://youtu.be/wq4k1V1K52g"
+        },
+            {
+            "name": "old version",
+            "url": "https://youtu.be/atgjKEgSqSU"
+        }
+    ],
+    "percentToQualify": "100",
+    /* tags */
+    "records": [
+        {
+            "user": "user 1",
+            "link": "link",
+            "percent": 100,
+            "hz": 360,
+            "mobile": true
+        },
+        {
+            "user": "user 2",
+            "link": "link",
+            "percent": 100,
+            "hz": 360
+        }
+    ]
+}
