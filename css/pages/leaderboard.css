@@ -203,19 +203,6 @@
         0 0 18px rgba(253, 216, 53, 0.4);
 
     animation: gradientHero 2s linear infinite;
-};
-    background-size: 400% 400%;
-
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-shadow:
-        0 0 4px rgba(253, 216, 53, 0.8),
-        0 0 10px rgba(253, 216, 53, 0.6),
-        0 0 18px rgba(253, 216, 53, 0.4);
-
-    animation: gradientHero 2s linear infinite;
 }
 
 /* ===== RANGO X+ (NEGRO + BORDE ROJO + GLOW ANIMADO) ===== */
@@ -245,10 +232,24 @@
 }
 
 .rank-14000 {
-    color: #000000;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    animation: redPulse 2s ease-in-out infinite;
+    background: linear-gradient(
+        -45deg,
+        #FFFFFF,
+        #FFD700,
+        #FFFFFF,
+        #FFD700
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.9),
+        0 0 18px rgba(255,215,0,0.9);
+
+    font-weight: 700;
+    animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
 }
 
 /* ===== ANIMACIONES ===== */
