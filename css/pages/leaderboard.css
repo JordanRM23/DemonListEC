@@ -186,10 +186,10 @@
 .rank-7000 {
     background: linear-gradient(
         -45deg,
-        #FFFFFF,
-        #FFD700,
-        #FFFFFF,
-        #FFD700
+        #fdd835,
+        #fff176,
+        #fdd835,
+        #fff176
     );
     background-size: 400% 400%;
     -webkit-background-clip: text;
