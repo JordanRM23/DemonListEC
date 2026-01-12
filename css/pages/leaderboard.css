@@ -16,6 +16,24 @@
     overflow-y: auto;
 }
 
+/* ===== OCULTAR SCROLLBARS (SIN DESACTIVAR SCROLL) ===== */
+
+/* Chrome, Edge, Safari */
+.page-leaderboard > div::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/* Firefox */
+.page-leaderboard > div {
+    scrollbar-width: none;
+}
+
+/* IE / Edge legacy */
+.page-leaderboard > div {
+    -ms-overflow-style: none;
+}
+
 .page-leaderboard .error-container {
     grid-row: 1;
     grid-column: 1 / span 2;
@@ -180,30 +198,7 @@
     animation: gradientHero 2s linear infinite;
 }
 
-/* ===== RANGO X+ (MODIFICADO SOLO AQUÍ) ===== */
-
-.rank-14000 {
-    color: #000000 !important;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    animation: redPulse 2s ease-in-out infinite;
-}
-
-/* ===== ANIMACIONES ===== */
-
-@keyframes gradientHero {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes fireGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* ===== ANIMACIÓN X+ NUEVA ===== */
+/* ===== RANGO X+ (NEGRO + BORDE ROJO + GLOW ANIMADO) ===== */
 
 @keyframes redPulse {
     0% {
@@ -227,4 +222,19 @@
             0 0 14px rgba(255, 0, 0, 0.9),
             0 0 30px rgba(255, 0, 0, 0.8);
     }
+}
+
+.rank-14000 {
+    color: #000000;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    animation: redPulse 2s ease-in-out infinite;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes gradientHero {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
