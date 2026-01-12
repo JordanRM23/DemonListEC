@@ -94,7 +94,9 @@ export default {
                         <table class="table" v-if="entry.verified.length > 0">
                             <tr v-for="score in entry.verified" :key="'v-' + score.level + score.rank">
                                 <td class="rank">
-                                    <p>#{{ score.rank }}</p>
+                                    <p :class="getLevelPosClass(score.rank)">
+                                        #{{ score.rank }}
+                                    </p>
                                 </td>
                                 <td class="level">
                                     <a
@@ -107,7 +109,9 @@ export default {
                                     </a>
                                 </td>
                                 <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
+                                    <p :class="getLevelPosClass(score.rank)">
+                                        +{{ localize(score.score) }}
+                                    </p>
                                 </td>
                             </tr>
                         </table>
@@ -124,7 +128,9 @@ export default {
                         <table class="table" v-if="entry.completed.length > 0">
                             <tr v-for="score in entry.completed" :key="'c-' + score.level + score.rank">
                                 <td class="rank">
-                                    <p>#{{ score.rank }}</p>
+                                    <p :class="getLevelPosClass(score.rank)">
+                                        #{{ score.rank }}
+                                    </p>
                                 </td>
                                 <td class="level">
                                     <a
@@ -137,7 +143,9 @@ export default {
                                     </a>
                                 </td>
                                 <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
+                                    <p :class="getLevelPosClass(score.rank)">
+                                        +{{ localize(score.score) }}
+                                    </p>
                                 </td>
                             </tr>
                         </table>
@@ -154,7 +162,9 @@ export default {
                         <table class="table" v-if="entry.progressed.length > 0">
                             <tr v-for="score in entry.progressed" :key="'p-' + score.level + score.rank">
                                 <td class="rank">
-                                    <p>#{{ score.rank }}</p>
+                                    <p :class="getLevelPosClass(score.rank)">
+                                        #{{ score.rank }}
+                                    </p>
                                 </td>
                                 <td class="level">
                                     <a
@@ -167,7 +177,9 @@ export default {
                                     </a>
                                 </td>
                                 <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
+                                    <p :class="getLevelPosClass(score.rank)">
+                                        +{{ localize(score.score) }}
+                                    </p>
                                 </td>
                             </tr>
                         </table>
