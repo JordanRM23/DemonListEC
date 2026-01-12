@@ -18,13 +18,53 @@
         <link rel="stylesheet" type="text/css" href="/css/components/nav.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/btn.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/tabs.css" />
+
         <style>
+            /* ===== FONDO NEGRO PARA TODA LA PÁGINA ===== */
+            html, body, #app, header, main, router-view {
+                background-color: #000000; /* negro puro */
+                color: #ffffff; /* texto blanco por defecto */
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+
             .search-container { position: relative; margin: 0 15px; display: flex; align-items: center; }
-            .search-input { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 6px 12px; border-radius: 4px; outline: none; font-family: 'Lexend Deca', sans-serif; width: 160px; }
-            .search-results { position: absolute; top: 45px; left: 0; right: 0; background: #000; border: 1px solid #444; border-radius: 4px; max-height: 250px; overflow-y: auto; z-index: 9999; display: none; }
-            .search-item { padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #222; display: block; text-decoration: none; color: #fff; font-size: 13px; }
+            .search-input { 
+                background: rgba(255, 255, 255, 0.1); 
+                border: 1px solid rgba(255, 255, 255, 0.2); 
+                color: white; 
+                padding: 6px 12px; 
+                border-radius: 4px; 
+                outline: none; 
+                font-family: 'Lexend Deca', sans-serif; 
+                width: 160px; 
+            }
+            .search-results { 
+                position: absolute; 
+                top: 45px; 
+                left: 0; 
+                right: 0; 
+                background: #000; 
+                border: 1px solid #444; 
+                border-radius: 4px; 
+                max-height: 250px; 
+                overflow-y: auto; 
+                z-index: 9999; 
+                display: none; 
+            }
+            .search-item { 
+                padding: 10px 15px; 
+                cursor: pointer; 
+                border-bottom: 1px solid #222; 
+                display: block; 
+                text-decoration: none; 
+                color: #fff; 
+                font-size: 13px; 
+            }
             .search-item:hover { background: #333; }
         </style>
+
         <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
         <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
         <script type="module" src="/js/main.js"></script>
@@ -36,88 +76,76 @@
                 <h2 style="line-height: 4rem;">DLEC</h2>
                 <p style="line-height: 4rem;">v1.1.0</p>
             </div>
-			<nav class="nav">
-				<router-link class="nav__tab" to="/">
-					<span class="type-label-lg">Lista</span>
-				</router-link>
-				<router-link class="nav__tab" to="/leaderboard">
-					<span class="type-label-lg">Jugadores</span>
-				</router-link>
-				<router-link class="nav__tab" to="/roulette">
-					<span class="type-label-lg">Ruleta</span>
-				</router-link>
+            <nav class="nav">
+                <router-link class="nav__tab" to="/"><span class="type-label-lg">Lista</span></router-link>
+                <router-link class="nav__tab" to="/leaderboard"><span class="type-label-lg">Jugadores</span></router-link>
+                <router-link class="nav__tab" to="/roulette"><span class="type-label-lg">Ruleta</span></router-link>
 
-				<div class="search-container">
-					<input type="text" placeholder="Buscar..." id="levelSearch" class="search-input" autocomplete="off">
-					<div id="searchResults" class="search-results"></div>
-				</div>
+                <div class="search-container">
+                    <input type="text" placeholder="Buscar..." id="levelSearch" class="search-input" autocomplete="off">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
 
-				<div class="Spinner"></div>
+                <div class="Spinner"></div>
 
-				<div class="nav__actions">
-					<a class="nav__icon" href="https://discord.gg/JskKyjzmws" target="_blank">
-						<img src="/assets/discord.svg" alt="Discord Logo" />
-					</a>
-					<a class="nav__cta type-label-lg" href="https://discord.com/invite/JskKyjzmws" target="_blank">
-						Enviar Records
-
-					<a
-                        class="nav__cta type-label-lg"  href="#">
-						Login
-						
-					</a>
-				</div>
-			</nav>
+                <div class="nav__actions">
+                    <a class="nav__icon" href="https://discord.gg/JskKyjzmws" target="_blank">
+                        <img src="/assets/discord.svg" alt="Discord Logo" />
+                    </a>
+                    <a class="nav__cta type-label-lg" href="https://discord.com/invite/JskKyjzmws" target="_blank">Enviar Records</a>
+                    <a class="nav__cta type-label-lg" href="#">Login</a>
+                </div>
+            </nav>
         </header>
         <router-view></router-view>
-		<script>
-			window.onload = async () => {
-				const input = document.getElementById('levelSearch');
-				const results = document.getElementById('searchResults');
-				if (!input || !results) return;
 
-				let levels = [];
-				try {
-					const res = await fetch('./data/_list.json');
-					levels = await res.json();
-				} catch (e) {}
+        <script>
+            window.onload = async () => {
+                const input = document.getElementById('levelSearch');
+                const results = document.getElementById('searchResults');
+                if (!input || !results) return;
 
-				input.addEventListener('input', (e) => {
-					const val = e.target.value.toLowerCase().trim();
-					results.innerHTML = '';
-					if (val.length < 1) { results.style.display = 'none'; return; }
+                let levels = [];
+                try {
+                    const res = await fetch('./data/_list.json');
+                    levels = await res.json();
+                } catch (e) {}
 
-					const filtered = levels.filter(n => n.toLowerCase().replace(/_/g, ' ').includes(val));
+                input.addEventListener('input', (e) => {
+                    const val = e.target.value.toLowerCase().trim();
+                    results.innerHTML = '';
+                    if (val.length < 1) { results.style.display = 'none'; return; }
 
-					if (filtered.length > 0) {
-						results.style.display = 'block';
-						filtered.forEach(lvl => {
-							const a = document.createElement('a');
-							a.className = 'search-item';
-							a.href = 'javascript:void(0)';
-							a.textContent = lvl.replace(/_/g, ' ');
-							
-							a.onclick = () => {
-								const index = levels.indexOf(lvl);
-								results.style.display = 'none';
-								input.value = '';
+                    const filtered = levels.filter(n => n.toLowerCase().replace(/_/g, ' ').includes(val));
 
-								// Buscamos todos los botones de la lista en la pantalla
-								const buttons = document.querySelectorAll('.list button');
-								if (buttons[index]) {
-									buttons[index].click(); // Simula el clic real
-									buttons[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
-								}
-							};
-							results.appendChild(a);
-						});
-					} else { results.style.display = 'none'; }
-				});
+                    if (filtered.length > 0) {
+                        results.style.display = 'block';
+                        filtered.forEach(lvl => {
+                            const a = document.createElement('a');
+                            a.className = 'search-item';
+                            a.href = 'javascript:void(0)';
+                            a.textContent = lvl.replace(/_/g, ' ');
 
-				document.addEventListener('click', (e) => {
-					if (!input.contains(e.target)) results.style.display = 'none';
-				});
-			};
-		</script>
+                            a.onclick = () => {
+                                const index = levels.indexOf(lvl);
+                                results.style.display = 'none';
+                                input.value = '';
+
+                                const buttons = document.querySelectorAll('.list button');
+                                if (buttons[index]) {
+                                    buttons[index].click();
+                                    buttons[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }
+                            };
+                            results.appendChild(a);
+                        });
+                    } else { results.style.display = 'none'; }
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (!input.contains(e.target)) results.style.display = 'none';
+                });
+            };
+        </script>
     </body>
 </html>
