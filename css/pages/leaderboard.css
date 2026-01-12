@@ -183,55 +183,8 @@
     color: #8e24aa !important;
 }
 
+/* ===== RANGO 7000 (ahora dorado épico como el anterior 14000) ===== */
 .rank-7000 {
-    background: linear-gradient(
-        -45deg,
-        #fdd835,
-        #fff9c4,
-        #fdd835,
-        #fff9c4
-    );
-    background-size: 400% 400%;
-
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-shadow:
-        0 0 4px rgba(253, 216, 53, 0.8),
-        0 0 10px rgba(253, 216, 53, 0.6),
-        0 0 18px rgba(253, 216, 53, 0.4);
-
-    animation: gradientHero 2s linear infinite;
-}
-
-/* ===== RANGO X+ (NEGRO + BORDE ROJO + GLOW ANIMADO) ===== */
-
-@keyframes redPulse {
-    0% {
-        text-shadow:
-            0 0 2px #ff0000,
-            0 0 6px #ff0000,
-            0 0 14px rgba(255, 0, 0, 0.9),
-            0 0 30px rgba(255, 0, 0, 0.8);
-    }
-    50% {
-        text-shadow:
-            0 0 4px #ff4444,
-            0 0 10px #ff4444,
-            0 0 22px rgba(255, 68, 68, 1),
-            0 0 45px rgba(255, 0, 0, 1);
-    }
-    100% {
-        text-shadow:
-            0 0 2px #ff0000,
-            0 0 6px #ff0000,
-            0 0 14px rgba(255, 0, 0, 0.9),
-            0 0 30px rgba(255, 0, 0, 0.8);
-    }
-}
-
-.rank-14000 {
     background: linear-gradient(
         -45deg,
         #FFFFFF,
@@ -250,6 +203,38 @@
 
     font-weight: 700;
     animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
+}
+
+/* ===== RANGO 14000 (ahora blanco con glow rojo épico) ===== */
+@keyframes whiteRedPulse {
+    0% {
+        text-shadow:
+            0 0 4px #ff0000,
+            0 0 10px #ff0000,
+            0 0 20px rgba(255,0,0,0.9),
+            0 0 40px rgba(255,0,0,0.8);
+    }
+    50% {
+        text-shadow:
+            0 0 8px #ff4444,
+            0 0 20px #ff4444,
+            0 0 40px rgba(255,68,68,1),
+            0 0 70px rgba(255,0,0,1);
+    }
+    100% {
+        text-shadow:
+            0 0 4px #ff0000,
+            0 0 10px #ff0000,
+            0 0 20px rgba(255,0,0,0.9),
+            0 0 40px rgba(255,0,0,0.8);
+    }
+}
+
+.rank-14000 {
+    color: #FFFFFF; /* blanco base */
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    animation: whiteRedPulse 2s ease-in-out infinite;
 }
 
 /* ===== ANIMACIONES ===== */
