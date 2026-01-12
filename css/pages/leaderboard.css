@@ -180,18 +180,13 @@
     animation: gradientHero 2s linear infinite;
 }
 
+/* ===== RANGO X+ (MODIFICADO SOLO AQUÍ) ===== */
+
 .rank-14000 {
-    background: linear-gradient(
-        -45deg,
-        #ff0000,
-        #ff4444,
-        #ff0000
-    );
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fireGradient 1.2s linear infinite;
+    color: #000000 !important;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    animation: redPulse 2s ease-in-out infinite;
 }
 
 /* ===== ANIMACIONES ===== */
@@ -206,4 +201,30 @@
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* ===== ANIMACIÓN X+ NUEVA ===== */
+
+@keyframes redPulse {
+    0% {
+        text-shadow:
+            0 0 2px #ff0000,
+            0 0 6px #ff0000,
+            0 0 14px rgba(255, 0, 0, 0.9),
+            0 0 30px rgba(255, 0, 0, 0.8);
+    }
+    50% {
+        text-shadow:
+            0 0 4px #ff4444,
+            0 0 10px #ff4444,
+            0 0 22px rgba(255, 68, 68, 1),
+            0 0 45px rgba(255, 0, 0, 1);
+    }
+    100% {
+        text-shadow:
+            0 0 2px #ff0000,
+            0 0 6px #ff0000,
+            0 0 14px rgba(255, 0, 0, 0.9),
+            0 0 30px rgba(255, 0, 0, 0.8);
+    }
 }
