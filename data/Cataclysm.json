@@ -61,6 +61,12 @@
             "link": "https://www.youtube.com/watch?v=BQdQ566i0eY&list=PLnKoH0VZrkghSGV-CgaDloZUQpqNgZRDv",
             "percent": 100,
             "hz": 120
+        },
+        {
+            "user": "Ace",
+            "link": "https://www.youtube.com/watch?v=mZnSvYX_JlQ",
+            "percent": 100,
+            "hz": 240
         }
 		
     ]
