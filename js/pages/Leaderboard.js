@@ -234,12 +234,12 @@ export default {
 
             if (total >= 13000) return 'Rango X+';
             if (total >= 7000)  return 'Rango X';
-            if (total >= 6500)  return 'Rango 9';
-            if (total >= 5750)  return 'Rango 8';
-            if (total >= 5000)  return 'Rango 7';
-            if (total >= 4250)  return 'Rango 6';
-            if (total >= 3500)  return 'Rango 5';
-            if (total >= 2750)  return 'Rango 4';
+            if (total >= 6500)  return 'Rango IX';
+            if (total >= 5750)  return 'Rango VIII';
+            if (total >= 5000)  return 'Rango VII';
+            if (total >= 4250)  return 'Rango VI';
+            if (total >= 3500)  return 'Rango V';
+            if (total >= 2750)  return 'Rango IV';
             if (total >= 2000)  return 'Rango III';
             if (total >= 1250)  return 'Rango II';
             if (total >= 500)   return 'Rango I';
