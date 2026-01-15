@@ -214,7 +214,7 @@ export default {
         getNameClass(total) {
             total = Number(total) || 0;
 
-            if (total >= 14000) return 'rank-14000';
+            if (total >= 13000) return 'rank-13000';
             if (total >= 7000)  return 'rank-7000';
             if (total >= 6500)  return 'rank-6500';
             if (total >= 5750)  return 'rank-5750';
@@ -232,7 +232,7 @@ export default {
         getRankLabel(total) {
             total = Number(total) || 0;
 
-            if (total >= 14000) return 'Rango X+';
+            if (total >= 13000) return 'Rango X+';
             if (total >= 7000)  return 'Rango X';
             if (total >= 6500)  return 'Rango 9';
             if (total >= 5750)  return 'Rango 8';
@@ -240,11 +240,11 @@ export default {
             if (total >= 4250)  return 'Rango 6';
             if (total >= 3500)  return 'Rango 5';
             if (total >= 2750)  return 'Rango 4';
-            if (total >= 2000)  return 'Rango 3';
-            if (total >= 1250)  return 'Rango 2';
-            if (total >= 500)   return 'Rango 1';
+            if (total >= 2000)  return 'Rango III';
+            if (total >= 1250)  return 'Rango II';
+            if (total >= 500)   return 'Rango I';
 
-            return 'Rango 0';
+            return 'Sin Rango';
         },
     },
 };
