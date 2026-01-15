@@ -9,6 +9,12 @@
     "password": "Free To Copy",
     "records": [
         {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=fe2PtlN2_5s",
+            "percent": 100,
+            "hz": 60
+         },
+        {
             "user": "Zaidre",
             "link": "https://youtu.be/C9XUwY8O7TE",
             "percent": 100,
