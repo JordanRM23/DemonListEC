@@ -98,3 +98,26 @@
 							a.textContent = lvl.replace(/_/g, ' ');
 							
 							a.onclick = () => {
+							const index = levels.indexOf(lvl);
+								results.style.display = 'none';
+								input.value = '';
+
+								// Buscamos todos los botones de la lista en la pantalla
+								const buttons = document.querySelectorAll('.list button');
+								if (buttons[index]) {
+									buttons[index].click(); // Simula el clic real
+									buttons[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+								}
+							};
+							results.appendChild(a);
+						});
+					} else { results.style.display = 'none'; }
+				});
+
+				document.addEventListener('click', (e) => {
+					if (!input.contains(e.target)) results.style.display = 'none';
+				});
+			};
+            </script>
+    </body>
+</html>
