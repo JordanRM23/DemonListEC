@@ -46,7 +46,7 @@ export async function fetchEditors() {
     }
 }
 
-export async function fetchLeaderboard() {}
+export async function fetchLeaderboard() {
     const list = await fetchList();
 
     const scoreMap = {};
@@ -121,3 +121,4 @@ export async function fetchLeaderboard() {}
 
     // Sort by total score
     return [res.sort((a, b) => b.total - a.total), errs];
+}
