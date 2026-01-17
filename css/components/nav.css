@@ -7,7 +7,7 @@
     border-bottom: 4px solid transparent;
     display: flex;
     align-items: center;
-    padding-inline: 0.5rem;
+    padding-inline: 0.2rem;
     transition: border-color 100ms ease;
 }
 .nav .nav__tab.router-link-active {
@@ -24,7 +24,7 @@
 }
 .nav .nav__actions .nav__icon {
     height: 3rem;
-    width: 3rem;
+    width: 4rem;
     border: none;
     background-color: transparent;
     border-radius: 50%;
@@ -42,10 +42,10 @@
 }
 .nav .nav__actions .nav__cta {
     margin-left: 1rem;
-    padding: 1rem;
+    padding: 0.9rem;
     background-color: rgb(19, 19, 19);
     color: aliceblue;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     box-shadow: 0 1px 0.5rem 0 rgba(0, 0, 102, 0.5);
     transition: transform 100ms ease;
 }
