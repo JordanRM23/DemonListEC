@@ -121,4 +121,8 @@ export async function fetchLeaderboard() {
 
     // Sort by total score
     return [res.sort((a, b) => b.total - a.total), errs];
+
+    export async function fetchChangelog() {
+    const res = await fetch('/data/_changelog.json');
+    return await res.json();
 }
