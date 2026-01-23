@@ -21,6 +21,13 @@
             "hz": 60
         },
         {
+            "user": "MarioPro",
+            "link": "https://www.youtube.com/watch?v=JxtTjk-e5ZQ",
+            "percent": 100,
+            "hz": 60,
+            "mobile": true
+        },
+        {
             "user": "Zephyr",
             "link": "https://www.youtube.com/watch?v=e1kux35IVlA",
             "percent": 100,
