@@ -13,6 +13,13 @@
             "link": "https://www.youtube.com/watch?v=WYDU5AbnzCA&t=2s",
             "percent": 100,
             "hz": 360
+        },
+        {
+            "user": "MarioPro",
+            "link": "https://www.youtube.com/watch?v=MhZ3McaMph8",
+            "percent": 100,
+            "hz": 60
         }
     ]
+
 }
