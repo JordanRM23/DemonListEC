@@ -15,6 +15,12 @@
             "hz": 120
         },
         {
+            "user": "MarioPro",
+            "link": "https://www.youtube.com/watch?v=tTyelvBpiDc",
+            "percent": 100,
+            "hz": 60
+        },
+        {
             "user": "sk008",
             "link": "https://www.youtube.com/watch?v=olRMJBKPnQw",
             "percent": 100,
@@ -74,5 +80,6 @@
             "percent": 100,
             "hz": 240
         }
+        
     ]
 }
