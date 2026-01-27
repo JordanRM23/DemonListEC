@@ -3,10 +3,16 @@
     "name": "Moment",
     "author": "Lexycat",
     "creators": ["icedcave" , "Lexycat" , "Stormfly"],
-    "verifier": "Zaidre",
-    "verification": "https://youtu.be/-Ml4xS6ldSA",
+    "verifier": "MarioPro",
+    "verification": "https://www.youtube.com/watch?v=iYfyCr3NkFI",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Zaidre",
+            "link": "https://drive.google.com/file/d/1NiMq71tTSNnfgyokRL4dUGvDy_u2rLOB/edit",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }

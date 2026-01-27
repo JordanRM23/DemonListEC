@@ -3,11 +3,17 @@
     "name": "Niwa",
     "author": "Teno",
     "creators": ["KrazyGFX" , "Mrgm" , "peng" , "Blaze" , "Teno" , "Pedro" , "Aranda" , "BeClan" , "Titoalper" , "Asuith" , "Genoxide"],
-    "verifier": "Pachi",
-    "verification": "https://www.youtube.com/watch?v=ox73lW8be0c",
+    "verifier": "MarioPro",
+    "verification": "https://www.youtube.com/watch?v=R-oV3sDk6JQ",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "pachi",
+            "link": "https://www.youtube.com/watch?v=ox73lW8be0c",
+            "percent": 100,
+            "hz": 120
+        },
 		{
             "user": "Jampy12",
             "link": "https://www.youtube.com/watch?v=7peUigxg9KE",

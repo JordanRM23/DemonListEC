@@ -3,11 +3,17 @@
     "name": "Azurite (Sillow)",
     "author": "Sillow",
     "creators": ["Sillow"],
-    "verifier": "Zephyr",
-    "verification": "https://www.youtube.com/watch?v=KBdk1JN9mUo",
+    "verifier": "MarioPro",
+    "verification": "https://www.youtube.com/watch?v=MP4PVDcFSU0",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Zephyr",
+            "link": "https://www.youtube.com/watch?v=um6hgFtAl5M",
+            "percent": 100,
+            "hz": 360
+        },
         {
             "user": "Zaidre",
             "link": "https://drive.google.com/file/d/16yKzHP4vw8zmB4SGqilETp_dQchxb-Ja/view",

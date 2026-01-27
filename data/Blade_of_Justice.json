@@ -3,11 +3,17 @@
     "name": "Blade of Justice",
     "author": "Manix648",
     "creators": ["LazerBlitz" , "Panman" , "Manix648"],
-    "verifier": "Zaidre",
-    "verification": "https://youtu.be/YI4R9exfDB8",
+    "verifier": "MarioPro",
+    "verification": "https://www.youtube.com/watch?v=B91qd640_ks",
     "percentToQualify": "100",
     "password": "Not Copy",
     "records": [
+        {
+            "user": "Zaidre",
+            "link": "https://drive.google.com/file/d/1gigsCmvyx86OUxXVkfPBbY_wmtmphtH4/edit",
+            "percent": 100,
+            "hz": 240
+        },
 		{
             "user": "Jampy12",
             "link": "https://youtu.be/ri6lSRoVkkw?si=jzwG4T74Y_0uss_k",
