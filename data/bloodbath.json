@@ -27,6 +27,12 @@
             "hz": 360
         },
         {
+            "user": "JPnabo",
+            "link": "https://www.youtube.com/watch?v=HQBz0mzSvXU",
+            "percent": 100,
+            "hz": 144
+        },
+        {
             "user": "Jampy12",
             "link": "https://www.youtube.com/watch?v=GV6vZ2YLL5o",
             "percent": 100,
@@ -64,6 +70,7 @@
         }
     ]
 }
+
 
 
 
