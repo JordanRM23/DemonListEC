@@ -15,8 +15,14 @@
             "hz": 144
         },
         {
+            "user": "MarioPro",
+            "link": "https://youtu.be/3Ru_z6-pQH0?si=GVypIOrebvgukDCz",
+            "percent": 100,
+            "hz": 360
+        },
+        {
             "user": "Zaidre",
-            "link": "https://youtu.be/tcRihIMo3u4",
+            "link": "https://drive.google.com/file/d/1VhVPuDNdd72ybidH5wturEjpdusxGfrv/edit",
             "percent": 100,
             "hz": 240
         },
@@ -27,16 +33,17 @@
             "hz": 240
         },
         {
+            "user": "Victor71GD",
+            "link": "https://www.youtube.com/watch?v=4oyAkP3y4W8&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=1",
+            "percent": 100,
+            "hz": 120,
+            "mobile": true
+        },
+        {
             "user": "Jampy12",
             "link": "https://www.youtube.com/watch?v=UVWn-y5BWkc",
             "percent": 100,
             "hz": 240
-        },
-		{
-            "user": "MarioPro",
-            "link": "https://youtu.be/3Ru_z6-pQH0?si=GVypIOrebvgukDCz",
-            "percent": 100,
-            "hz": 360
         }
     ]
 }

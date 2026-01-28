@@ -3,10 +3,16 @@
     "name": "Heart Attack",
     "author": "Derpskull",
     "creators": ["Derpskull"],
-    "verifier": "Jampy12",
-    "verification": "https://youtu.be/UHgMxRHtuHI?si=aYoUCAjcG6RmguzX",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=MAt4ZugNKhI&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=8",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=UHgMxRHtuHI",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
