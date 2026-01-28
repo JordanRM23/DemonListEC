@@ -9,6 +9,12 @@
     "password": "Free to copy",
     "records": [
         {
+            "user": "MarioPro",
+            "link": "https://www.youtube.com/watch?v=YLIBI6LatRI",
+            "percent": 100,
+            "hz": 60
+        },
+        {
             "user": "venomioo",
             "link": "https://www.youtube.com/watch?v=PvQGrauj-as",
             "percent": 100,
