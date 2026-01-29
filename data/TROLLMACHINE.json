@@ -8,6 +8,12 @@
     "percentToQualify": "100",
     "password": "Free to play",
     "records": [
+        {
+            "user": "nicoreii",
+            "link": "https://www.youtube.com/watch?v=Ha4P8IJ5cII",
+            "percent": 100,
+            "hz": 240
+        },
 		{
             "user": "sk008",
             "link": "https://www.youtube.com/watch?v=g7XJRPVxyEI",
