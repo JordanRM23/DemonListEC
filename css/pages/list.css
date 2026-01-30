@@ -137,13 +137,12 @@
 
 /* mismas que usas en leaderboard para el dorado */
 @keyframes glowPulse {
-    0%, 100% { text-shadow: 0 0 4px rgba(255,255,255,0.3); }
-    50%      { text-shadow: 0 0 10px rgba(255,255,255,0.9); }
+    0%, 100% { text-shadow: 0 0 4px rgba(255,255,255,0.4); }
+    50%      { text-shadow: 0 0 6px rgba(255,255,255,0.7); }
 }
 @keyframes gradientHero {
     0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 @keyframes silverSweep {
@@ -156,24 +155,23 @@
 
 /* Top 1–50: EXACTAMENTE el mismo dorado que rank-10000 */
 .level-pos-top50 {
-    background: linear-gradient(
-        -45deg,
-        #FFFFFF,
-        #FFD700,
-        #FFFFFF,
-        #FFD700
-    );
-    background-size: 400% 400%;
+    background: linear-gradient(-45deg, #fff, #FFD700, #fff);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 
     text-shadow:
-        0 0 8px rgba(255,255,255,0.9),
-        0 0 18px rgba(255,215,0,0.9);
+        0 0 6px rgba(255,255,255,0.8),
+        0 0 14px rgba(255,215,0,0.8);
 
     font-weight: 700;
-    animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
+    animation:
+        gradientHero 3s linear infinite,
+        glowPulse 3s ease-in-out infinite;
+
+    will-change: background-position
+    
 }
 
 /* 51–100: “plata” (gris claro) con glow más suave */
