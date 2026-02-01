@@ -3,11 +3,17 @@
     "name": "Breakout",
     "author": "Surv",
     "creators": ["nwolc" , "Surv"],
-    "verifier": "Zephyr",
-    "verification": "https://www.youtube.com/watch?v=i5L0GflpPrY",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=mYaDJyYwsWo&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=16",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Zephyr",
+            "link": "https://www.youtube.com/watch?v=i5L0GflpPrY",
+            "percent": 100,
+            "hz": 360
+        },
         {
             "user": "venomioo",
             "link": "https://www.youtube.com/watch?v=Jt7XyBrL66U&t=1s",
