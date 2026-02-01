@@ -6,7 +6,6 @@ export default {
         <div v-else class="page-changelog">
             <div class="change">
                 <h2>01/02/2026</h2>
-                <h3>Placements</h3>
                 <p>Manic Machine has place at #91, above Libertas and below Niflheim, This Pushes Insaction into the Legacy List</p>
                 <p>Stellaluna has place at #115, above Tech Manifestation and below Broken Signal, This Pushes The Lost Existence into the Legacy List</p>
                 <p>EKO has place at #80, above cytokinesis and below Triple Six, This Pushes Forbidden Isle into the Legacy List</p>
