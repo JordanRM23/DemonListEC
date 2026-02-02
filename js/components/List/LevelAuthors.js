@@ -12,7 +12,7 @@ export default {
             type: String,
             required: true,
         },
-        description: {
+        descripcion: {
             type: String,
             required: true,
         },
@@ -53,9 +53,9 @@ export default {
                 <span>{{ author }}</span>
             </p>
         </div>
-            <div class="type-title-sm">description</div>
+            <div class="type-title-sm">descripcion</div>
                 <p class="type-body">
-                    <span>{{ description }}</span>
+                    <span>{{ descripcion }}</span>
                 </p>
             </div>
     `,

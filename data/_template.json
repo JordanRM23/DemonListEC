@@ -2,10 +2,10 @@
     "id": "912",
     "name": "name",
     "subtitle": "optional",
-    "description": "description",
     "publisher": "publisher",
     "creators": ["creator 1", "creator 2"],
     "verifier": "verifier",
+    "descripcion": "descripcion",
     /* "verification": "https://youtu.be/wq4k1V1K52g", */
     "videos": [
         {
