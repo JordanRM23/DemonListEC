@@ -55,7 +55,7 @@ export default {
         </div>
             <div class="type-title-sm">description</div>
                 <p class="type-body">
-                    <span>{{ rate }}</span>
+                    <span>{{ description }}</span>
                 </p>
             </div>
     `,
