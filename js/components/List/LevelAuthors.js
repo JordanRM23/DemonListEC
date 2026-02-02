@@ -12,7 +12,7 @@ export default {
             type: String,
             required: true,
         },
-        rate: {
+        description: {
             type: String,
             required: true,
         },
@@ -53,7 +53,7 @@ export default {
                 <span>{{ author }}</span>
             </p>
         </div>
-            <div class="type-title-sm">Rate</div>
+            <div class="type-title-sm">description</div>
                 <p class="type-body">
                     <span>{{ rate }}</span>
                 </p>
