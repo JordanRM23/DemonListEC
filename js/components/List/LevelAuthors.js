@@ -12,6 +12,10 @@ export default {
             type: String,
             required: true,
         },
+        rate: {
+            type: String,
+            required: true,
+        },
     },
     template: `
         <div class="level-authors">
@@ -49,6 +53,11 @@ export default {
                 <span>{{ author }}</span>
             </p>
         </div>
+            <div class="type-title-sm">Rate</div>
+                <p class="type-body">
+                    <span>{{ rate }}</span>
+                </p>
+            </div>
     `,
 
     computed: {

@@ -60,6 +60,7 @@ export default {
                         :author="level.author"
                         :creators="level.creators"
                         :verifier="level.verifier"
+                        :rate="level.rate"
                     ></LevelAuthors>
 
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
