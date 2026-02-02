@@ -6,10 +6,12 @@ export default {
         <div v-else class="page-changelog">
             <div class="change">
             </div>
+            <div class="change">
                 <h2>02/02/2026</h2>
                 <p>Se añadio descripción a los niveles</p>
                 <p>Se mejoro la visualizacion de la pestañas "Ruleta", ahora se ve mas limpio al momento de usarla</p>
             </div>
+            <div class="change">
                 <h2>01/02/2026</h2>
                 <p>Manic Machine has place at #91, above Libertas and below Niflheim, This Pushes Insaction into the Legacy List</p>
                 <p>Stellaluna has place at #115, above Tech Manifestation and below Broken Signal, This Pushes The Lost Existence into the Legacy List</p>
