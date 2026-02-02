@@ -5,6 +5,7 @@ export default {
         </main>
         <div v-else class="page-changelog">
             <div class="change">
+            </div>
                 <h2>02/02/2026</h2>
                 <p>Se añadio descripción a los niveles</p>
                 <p>Se mejoro la visualizacion de la pestañas "Ruleta", ahora se ve mas limpio al momento de usarla</p>
