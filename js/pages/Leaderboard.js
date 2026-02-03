@@ -192,6 +192,13 @@ export default {
         entry() {
             return this.leaderboard[this.selected];
         },
+        filteredLeaderboard() {
+            if (!this.searchQuery) {
+                return this.leaderboard;
+            }
+            const query = this.searchQuery.toLowerCase();
+            return this.leaderboard.filter(ientry => ientry?.user?.toLowerCase()?.includes(query));
+        },
     },
     async mounted() {
         const [leaderboard, err] = await fetchLeaderboard();
