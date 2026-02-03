@@ -3,10 +3,16 @@
     "name": "Reanimate",
     "author": "ilnm",
     "creators": ["ilnm"],
-    "verifier": "venomioo",
-    "verification": "https://www.youtube.com/watch?v=wjF3PENOORU",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=v9WQ7M4BRl0&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=31",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "venomioo",
+            "link": "https://www.youtube.com/watch?v=wjF3PENOORU",
+            "percent": 100,
+            "hz": 240
+         }
     ]
 }

@@ -3,10 +3,16 @@
     "name": "La LLorona",
     "author": "CherryTeam",
     "creators": ["CherryTeam"],
-    "verifier": "Jampy12",
-    "verification": "https://www.youtube.com/watch?v=QUNKscBL6zw",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=k05Sp4wGQ6M&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=35",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=QUNKscBL6zw",
+            "percent": 100,
+            "hz": 240
+        }    
     ]
 }

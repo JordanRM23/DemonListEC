@@ -9,8 +9,15 @@
     "password": "Free to copy",
     "records": [
         {
+            "user": "Victor71GD",
+            "link": "https://www.youtube.com/watch?v=W1SjsqwVEJE&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=38",
+            "percent": 100,
+            "hz": 120,
+            "mobile": true
+        },
+        {
             "user": "Zephyr",
-            "link": "https://www.youtube.com/watch?v=um6hgFtAl5M",
+            "link": "https://www.youtube.com/watch?v=KBdk1JN9mUo",
             "percent": 100,
             "hz": 360
         },

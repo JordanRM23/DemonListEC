@@ -3,11 +3,17 @@
     "name": "Retention",
     "author": "WOOGI1411",
     "creators": ["WOOGI1411"],
-    "verifier": "venomioo",
-    "verification": "https://www.youtube.com/watch?v=BNGWyRxIQOQ",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=crSy7dzdiJ4&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=40",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "venomioo",
+            "link": "https://www.youtube.com/watch?v=BNGWyRxIQOQ",
+            "percent": 100,
+            "hz": 240
+        },
         {
             "user": "Zephyr",
             "link": "https://www.youtube.com/watch?v=Gw_QBzgMHdc",

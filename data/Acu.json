@@ -13,13 +13,22 @@
             "user": "pachi",
             "link": "https://www.youtube.com/watch?v=PlmIxmV87SQ",
             "percent": 100,
-            "hz": 120
+            "hz": 120,
+            "mobile": true
         },
         {
             "user": "MarioPro",
             "link": "https://www.youtube.com/watch?v=tTyelvBpiDc",
             "percent": 100,
-            "hz": 60
+            "hz": 60,
+            "mobile": true
+        },
+        {
+            "user": "Victor71GD",
+            "link": "https://www.youtube.com/watch?v=fExHZ_0sAe8&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=49",
+            "percent": 100,
+            "hz": 60,
+            "mobile": true
         },
         {
             "user": "sk008",
@@ -34,16 +43,16 @@
             "hz": 60
         },
         {
-            "user": "venomioo",
-            "link": "https://www.youtube.com/watch?v=rA2cZS3SHCc",
-            "percent": 100,
-            "hz": 240
-        },
-        {
             "user": "Zephyr",
             "link": "https://www.youtube.com/watch?v=SPsjfUs4X5s",
             "percent": 100,
             "hz": 480
+        },
+        {
+            "user": "venomioo",
+            "link": "https://www.youtube.com/watch?v=rA2cZS3SHCc",
+            "percent": 100,
+            "hz": 240
         },
 		{
             "user": "ItzNixo",

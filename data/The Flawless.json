@@ -3,11 +3,17 @@
     "name": "The Flawless",
     "author": "Fin",
     "creators": ["Cripy creepz" , "raptorz" , "codly" , "Megaspeed" , "atheoz" , "Reverier" , "xevenfurious" , "fin"],
-    "verifier": "milo",
-    "verification": "https://www.youtube.com/watch?v=lRxPz8iFXPk",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=RC5nPeUfzmA&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=33",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "milo",
+            "link": "https://www.youtube.com/watch?v=lRxPz8iFXPk",
+            "percent": 100,
+            "hz": 120
+        },
         {
             "user": "Zephyr",
             "link": "https://www.youtube.com/watch?v=onwVhSBMWb0",

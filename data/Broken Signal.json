@@ -3,11 +3,17 @@
     "name": "Broken Signal",
     "author": "Grax",
     "creators": ["Grax"],
-    "verifier": "Zaidre",
-    "verification": "https://www.youtube.com/watch?v=d7Y3rNOgYkU",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=qbG0RF759UE&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=37",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "Zaidre",
+            "link": "https://www.youtube.com/watch?v=d7Y3rNOgYkU",
+            "percent": 100,
+            "hz": 240
+        },
         {
             "user": "Jampy12",
             "link": "https://www.youtube.com/watch?v=o6TjrI051cM",

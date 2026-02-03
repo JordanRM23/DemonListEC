@@ -3,10 +3,16 @@
     "name": "STRATUS",
     "author": "Woom",
     "creators": ["Woom"],
-    "verifier": "venomioo",
-    "verification": "https://www.youtube.com/watch?v=uh2PZbdsjNg",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=r1xMArxEEj4&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=29",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "venomioo",
+            "link": "https://www.youtube.com/watch?v=uh2PZbdsjNg",
+            "percent": 100,
+            "hz": 240
+         }
     ]
 }

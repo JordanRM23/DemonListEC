@@ -9,6 +9,13 @@
     "password": "Free To Copy",
     "records": [
         {
+            "user": "Victor71GD",
+            "link": "https://www.youtube.com/watch?v=OtfxmMqwWs8&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=44",
+            "percent": 100,
+            "hz": 120,
+            "mobile": true
+        },
+        {
             "user": "Jampy12",
             "link": "https://www.youtube.com/watch?v=fe2PtlN2_5s",
             "percent": 100,
@@ -16,7 +23,7 @@
          },
         {
             "user": "Zaidre",
-            "link": "https://youtu.be/C9XUwY8O7TE",
+            "link": "https://drive.google.com/file/d/1ZADt7MU8D0IuqoPDxZSnIIO_ETojBKG2/edit",
             "percent": 100,
             "hz": 240
          }

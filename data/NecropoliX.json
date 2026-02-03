@@ -3,10 +3,16 @@
     "name": "Necropolix",
     "author": "Namtar",
     "creators": ["Namtar"],
-    "verifier": "Jampy12",
-    "verification": "https://www.youtube.com/watch?v=EMid_3pb5NM",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=h6ZWc0Tg_IU&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=36",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=EMid_3pb5NM",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }

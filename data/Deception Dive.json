@@ -3,10 +3,16 @@
     "name": "Deception Dive",
     "author": "Rustam",
     "creators": ["Berke423" , "Rustam" , "ZenthicAlpha" , "Mazl" , "RealZober" , "REDACTED" , "Sharks" , "Lucasyecla99" , "Krampux" , "Disp" , "Platnuu" , "Ryder"],
-    "verifier": "Zaidre",
-    "verification": "https://drive.google.com/file/d/1TglNOjyVHKlqQtYywteQm6-4j0rAaoeP/view",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=94IDQHWRgik&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=27",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Zaidre",
+            "link": "https://drive.google.com/file/d/1TglNOjyVHKlqQtYywteQm6-4j0rAaoeP/edit",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }

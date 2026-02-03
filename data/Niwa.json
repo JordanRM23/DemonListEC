@@ -3,11 +3,17 @@
     "name": "Niwa",
     "author": "Teno",
     "creators": ["KrazyGFX" , "Mrgm" , "peng" , "Blaze" , "Teno" , "Pedro" , "Aranda" , "BeClan" , "Titoalper" , "Asuith" , "Genoxide"],
-    "verifier": "MarioPro",
-    "verification": "https://www.youtube.com/watch?v=R-oV3sDk6JQ",
+    "verifier": "Victor71GD",
+    "verification": "https://www.youtube.com/watch?v=sTyy9HQxF2Q&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=35",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "MarioPro",
+            "link": "https://www.youtube.com/watch?v=R-oV3sDk6JQ",
+            "percent": 100,
+            "hz": 177
+        },
         {
             "user": "pachi",
             "link": "https://www.youtube.com/watch?v=ox73lW8be0c",
@@ -20,17 +26,17 @@
             "percent": 100,
             "hz": 240
         },
-		{
-            "user": "ItzNixo",
-            "link": "https://www.youtube.com/watch?v=tpgVJ1wFa84",
-            "percent": 100,
-            "hz": 60
-        },
         {
             "user": "Zaidre",
             "link": "https://www.youtube.com/watch?v=ow3ieoHf81w",
             "percent": 100,
             "hz": 75
+        },
+		{
+            "user": "ItzNixo",
+            "link": "https://www.youtube.com/watch?v=tpgVJ1wFa84",
+            "percent": 100,
+            "hz": 60
         },
         {
             "user": "Wilson el Xd",
