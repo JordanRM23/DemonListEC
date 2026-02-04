@@ -3,10 +3,16 @@
     "name": "Sakupen Hell",
     "author": "TrusTa",
     "creators": ["Noobas"],
-    "verifier": "EABH",
-    "verification": "https://www.youtube.com/watch?v=8fhzKk5akqU",
+    "verifier": "RaymanNinja",
+    "verification": "https://www.youtube.com/watch?v=S7F89yvQjgQ&list=PLTAVj4jn6Ls8MUByyyaGgyEmm370Em-iK&index=7",
     "percentToQualify": "100",
     "password": "895562",
     "records": [
+        {
+            "user": "EABH",
+            "link": "https://www.youtube.com/watch?v=8fhzKk5akqU",
+            "percent": 100,
+            "hz": 120
+        }
     ]
 }

@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "RaymanNinja",
+            "link": "https://www.youtube.com/watch?v=lz1X5WwpIks&list=PLTAVj4jn6Ls8MUByyyaGgyEmm370Em-iK&index=15",
+            "percent": 100,
+            "hz": 280
+        }
     ]
 }

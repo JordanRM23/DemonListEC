@@ -10,6 +10,12 @@
     "descripcion": "Uno de los extremes más populares del juego y segundo nivel de la Apocalyptic Trilogy. En su momento fue considerado el top 1 por sus secciones de nave casi imposibles, y hoy sigue siendo un nivel bastante duro, con la parte de Michigun vista por muchos como la más complicada de todas. ",
     "records": [
         {
+            "user": "RaymanNinja",
+            "link": "https://www.youtube.com/watch?v=nAm4Pb-LHdw&list=PLTAVj4jn6Ls8MUByyyaGgyEmm370Em-iK&index=7",
+            "percent": 100,
+            "hz": 280
+        },
+        {
             "user": "KenethGD",
             "link": "https://www.youtube.com/watch?v=3FJZFnp1tCo",
             "percent": 100,
@@ -24,6 +30,12 @@
         {
             "user": "Danolex",
             "link": "https://www.youtube.com/watch?v=-Gpw2ZplDNk",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "MarioPro",
+            "link": "https://www.youtube.com/watch?v=nWfWd0yMbuI",
             "percent": 100,
             "hz": 360
         },
@@ -62,12 +74,6 @@
             "link": "https://www.youtube.com/watch?v=gibXHOdh3oM",
             "percent": 100,
             "hz": 120
-        },
-		{
-            "user": "MarioPro",
-            "link": "https://www.youtube.com/watch?v=nWfWd0yMbuI",
-            "percent": 100,
-            "hz": 360
         }
     ]
 }

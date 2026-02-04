@@ -3,10 +3,16 @@
     "name": "Glide",
     "author": "crohn44",
     "creators": ["crohn44"],
-    "verifier": "JPnabo",
-    "verification": "https://www.youtube.com/watch?v=T3q0xxyIy5A",
+    "verifier": "RaymanNinja",
+    "verification": "https://www.youtube.com/watch?v=zNX1UtkXd_w&list=PLTAVj4jn6Ls8MUByyyaGgyEmm370Em-iK&index=16",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "JPnabo",
+            "link": "https://www.youtube.com/watch?v=T3q0xxyIy5A",
+            "percent": 100,
+            "hz": 144
+        }
     ]
 }
