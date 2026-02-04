@@ -3,12 +3,18 @@
     "name": "Acu",
     "author": "Neigefeu",
     "creators": ["Neigefeu"],
-    "verifier": "OsitoLindoGD",
-    "verification": "https://www.youtube.com/watch?v=0Etgpp_PSZ4",
+    "verifier": "RaymanNinja",
+    "verification": "https://www.youtube.com/watch?v=aYz8784Z1WU&list=PLTAVj4jn6Ls8MUByyyaGgyEmm370Em-iK&index=4",
     "percentToQualify": "100",
     "password": "Free to copy",
     "descripcion": "El primer Extreme mas popular, por una buena razón. En general, extremadamente bien recibido por su jugabilidad accesible y divertida en todo momento. Notablemente muy amigable con 60 Hz, y la mayor parte de la dificultad está cerca del inicio y el final.",
     "records": [
+        {
+            "user": "OsitoLindoGD",
+            "link": "https://www.youtube.com/watch?v=0Etgpp_PSZ4",
+            "percent": 100,
+            "hz": 300
+        },
         {
             "user": "pachi",
             "link": "https://www.youtube.com/watch?v=PlmIxmV87SQ",

@@ -3,11 +3,18 @@
     "name": "Allegiance",
     "author": "Nikroplays",
     "creators": ["Nikroplays"],
-    "verifier": "Victor71GD",
-    "verification": "https://www.youtube.com/watch?v=FHrQFVvjP6A&list=PLr0qrv4wwHD-j207Pg7dT4_iKXlwcrrOH&index=39",
+    "verifier": "RaymanNinja",
+    "verification": "https://www.youtube.com/watch?v=TTqwNmR9p6I&list=PLTAVj4jn6Ls8MUByyyaGgyEmm370Em-iK&index=2",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Victor71GD",
+            "link": "https://www.youtube.com/watch?v=FHrQFVvjP6A",
+            "percent": 100,
+            "hz": 120,
+            "mobile": true
+        },
         {
             "user": "Pachi",
             "link": "https://www.youtube.com/watch?v=9veC4zEUmnY",
