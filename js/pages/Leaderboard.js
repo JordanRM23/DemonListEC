@@ -211,9 +211,12 @@ export default {
 
      getPlayerRole(user) {
     const roles = {
-        'Zephyr': 'Champion',
-        'JordanRM': 'Owner',
-        'Jampy12': 'tester',
+        'Zephyr': 'Hardest Ecuador',
+        'venomioo': 'EX-ECDL',
+        'Locked': 'EX-ECDL',
+        'RaymanNinja': 'EX-ECDL',
+        'Victor71GD': 'EX-ECDL',
+        'Edgar214 ': 'EX-ECDL',
     };
 
     return roles[user] || null;
