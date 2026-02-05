@@ -19,6 +19,12 @@
             "link": "https://www.youtube.com/watch?v=nEAFvEOfRks",
             "percent": 100,
             "hz": 120
+        },
+        {
+            "user": "BeClan",
+            "link": "https://www.youtube.com/watch?v=CnXbb7BMZ8M",
+            "percent": 100,
+            "hz": 180
         }
     ]
 }
