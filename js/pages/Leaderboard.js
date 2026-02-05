@@ -216,7 +216,8 @@ export default {
         'Locked': 'EX-ECDL',
         'RaymanNinja': 'EX-ECDL',
         'Victor71GD': 'EX-ECDL',
-        'Edgar214 ': 'EX-ECDL',
+        'Edgar214': 'EX-ECDL',
+        'Stevensitos999': 'EX-ECDL',
     };
 
     return roles[user] || null;
