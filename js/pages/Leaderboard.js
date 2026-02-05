@@ -73,17 +73,12 @@ export default {
                             </span>
                         </h1>
 
-                        <h4
+                       <div
     v-if="getPlayerRole(entry.user)"
-    class="player-role"
+    class="player-tag"
 >
-    <span
-        class="player-name"
-        :class="getNameClass(entry.total)"
-    >
-        {{ getPlayerRole(entry.user) }}
-    </span>
-</h4>
+    {{ getPlayerRole(entry.user) }}
+</div>
 
                         <h3>
                             <span
@@ -215,13 +210,14 @@ export default {
         localize,
 
      getPlayerRole(user) {
-     const roles = {
-        'Zephyr': 'GDEC TEAM',
-        'JordanRM': 'GDTEAM',
-        'Jampy12': 'se la come',
-     };
-     return roles[user] || null;
-     },
+    const roles = {
+        'Zephyr': 'Champion',
+        'JordanRM': 'Owner',
+        'Jampy12': 'tester',
+    };
+
+    return roles[user] || null;
+},
 
         getLevelPosClass(rank) {
             rank = Number(rank) || 0;
