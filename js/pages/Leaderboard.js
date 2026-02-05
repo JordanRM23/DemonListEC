@@ -211,7 +211,7 @@ export default {
 
      getPlayerRole(user) {
     const roles = {
-        'Zephyr': 'Hardest Ecuador',
+        'Zephyr': 'La cabra del six seven',
         'venomioo': 'EX-ECDL',
         'Locked': 'EX-ECDL',
         'RaymanNinja': 'EX-ECDL',

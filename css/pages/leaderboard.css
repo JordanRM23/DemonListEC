@@ -142,6 +142,13 @@
 }
 
 .player-tag {
+    font-family: "Arial Black", "Impact", system-ui, sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+
+.player-tag {
     display: inline-flex;
     align-items: center;
 
