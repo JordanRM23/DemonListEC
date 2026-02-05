@@ -8,7 +8,7 @@ export default {
             </div>
             <div class="change">
                 <h2>05/02/2026</h2>
-                <p>Se añadio etiquetas en los nombres, esta etiquetas solamente la tienen algunos jugadores selecionados.</p>
+                <p>Se añadio etiquetas en los nombres; esta etiquetas solamente la tienen algunos jugadores selecionados.</p>
             </div>
             <div class="change">
                 <h2>02/02/2026</h2>
