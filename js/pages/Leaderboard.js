@@ -218,6 +218,7 @@ export default {
         'Victor71GD': 'EX-ECDL',
         'Edgar214': 'EX-ECDL',
         'Stevensitos999': 'EX-ECDL',
+        'BeClan': 'Hijo del six seven'
     };
 
     return roles[user] || null;
