@@ -73,6 +73,15 @@ export default {
                             </span>
                         </h1>
 
+                        <h4 class="player-subtitle">
+    <span
+        class="player-name"
+        :class="getNameClass(entry.total)"
+    >
+        {{ getRankLabel(entry.total) }}
+    </span>
+</h4>
+
                         <h3>
                             <span
                                 class="player-name"
