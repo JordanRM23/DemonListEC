@@ -73,12 +73,15 @@ export default {
                             </span>
                         </h1>
 
-                        <h4 class="player-subtitle">
+                        <h4
+    v-if="getPlayerRole(entry.user)"
+    class="player-role"
+>
     <span
         class="player-name"
         :class="getNameClass(entry.total)"
     >
-        {{ getRankLabel(entry.total) }}
+        {{ getPlayerRole(entry.user) }}
     </span>
 </h4>
 
@@ -197,6 +200,16 @@ export default {
             </div>
         </main>
     `,
+    getPlayerRole(user) {
+    const roles = {
+        'Zephyr': 'GDEC TEAM',
+        'JordanRM': 'GDTEAM',
+        'Jampy12': 'se la come',
+    };
+
+    return roles[user] || null;
+},
+
     computed: {
         entry() {
             return this.leaderboard[this.selected];
