@@ -200,17 +200,7 @@ export default {
             </div>
         </main>
     `,
-    getPlayerRole(user) {
-    const roles = {
-        'Zephyr': 'GDEC TEAM',
-        'JordanRM': 'GDTEAM',
-        'Jampy12': 'se la come',
-    };
-
-    return roles[user] || null;
-},
-
-    computed: {
+     computed: {
         entry() {
             return this.leaderboard[this.selected];
         },
@@ -223,6 +213,15 @@ export default {
     },
     methods: {
         localize,
+
+     getPlayerRole(user) {
+     const roles = {
+        'Zephyr': 'GDEC TEAM',
+        'JordanRM': 'GDTEAM',
+        'Jampy12': 'se la come',
+     };
+     return roles[user] || null;
+     },
 
         getLevelPosClass(rank) {
             rank = Number(rank) || 0;
