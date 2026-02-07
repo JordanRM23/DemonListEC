@@ -265,3 +265,17 @@
     display: inline-block;
     padding: 0.2rem 0.4rem;
 }
+
+
+.player-list *:hover,
+.player-entry *:hover,
+.rank-text:hover,
+.player-name:hover,
+.player-score:hover {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+    text-shadow: inherit !important;
+    filter: none !important;
+}
+
