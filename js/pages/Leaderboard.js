@@ -73,12 +73,13 @@ export default {
                             </span>
                         </h1>
 
-                       <div
-    v-if="getPlayerRole(entry.user)"
-    class="player-tag"
->
-    {{ getPlayerRole(entry.user) }}
-</div>
+                        <div
+                            v-if="getPlayerRole(entry.user)"
+                            class="player-tag"
+                            :style="getRoleStyle(entry.user)"
+                        >
+                            {{ getPlayerRole(entry.user) }}
+                        </div>
 
                         <h3>
                             <span
@@ -195,7 +196,7 @@ export default {
             </div>
         </main>
     `,
-     computed: {
+    computed: {
         entry() {
             return this.leaderboard[this.selected];
         },
@@ -209,22 +210,38 @@ export default {
     methods: {
         localize,
 
-     getPlayerRole(user) {
-    const roles = {
-        'Zephyr': 'La cabra del six seven',
-        'venomioo': 'EX-ECDL',
-        'Locked': 'EX-ECDL',
-        'RaymanNinja': 'EX-ECDL',
-        'Victor71GD': 'EX-ECDL',
-        'Edgar214': 'EX-ECDL',
-        'Stevensitos999': 'EX-ECDL',
-        'BeClan': 'Hijo del six seven',
-        'milo': 'Furro',
-        'H3nkzx': 'Furro'
-    };
+        getPlayerRole(user) {
+            const roles = {
+                'Zephyr': 'La cabra del six seven',
+                'venomioo': 'EX-ECDL',
+                'Locked': 'EX-ECDL',
+                'RaymanNinja': 'EX-ECDL',
+                'Victor71GD': 'EX-ECDL',
+                'Edgar214': 'EX-ECDL',
+                'Stevensitos999': 'EX-ECDL',
+                'BeClan': 'Hijo del six seven',
+                'milo': 'Furro',
+                'H3nkzx': 'Furro'
+            };
 
-    return roles[user] || null;
-},
+            return roles[user] || null;
+        },
+
+        /* ⭐ NUEVO SISTEMA DE COLORES */
+        getRoleStyle(user) {
+            const roleColors = {
+                'milo': '#ff66ff',
+                'H3nkzx': '#66ffff',
+                'Zephyr': '#ff3333'
+            };
+
+            if (!roleColors[user]) return {};
+
+            return {
+                background: roleColors[user],
+                boxShadow: `0 0 8px ${roleColors[user]}`
+            };
+        },
 
         getLevelPosClass(rank) {
             rank = Number(rank) || 0;
