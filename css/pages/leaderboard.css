@@ -292,3 +292,18 @@
 .player-container .player {
     overflow: visible;
 }
+
+.page-leaderboard .board {
+    overflow: visible;
+}
+
+.page-leaderboard .board tr,
+.page-leaderboard .board td,
+.page-leaderboard .board .user {
+    overflow: visible;
+}
+
+.page-leaderboard .board .user button {
+    position: relative;
+    overflow: visible;
+}
