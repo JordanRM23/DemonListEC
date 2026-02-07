@@ -220,8 +220,6 @@ export default {
                 'Edgar214': 'EX-ECDL',
                 'Stevensitos999': 'EX-ECDL',
                 'BeClan': 'Hijo del six seven',
-                'milo': 'Furro',
-                'H3nkzx': 'Furro'
             };
 
             return roles[user] || null;
@@ -230,8 +228,6 @@ export default {
         /* ⭐ NUEVO SISTEMA DE COLORES */
         getRoleStyle(user) {
             const roleColors = {
-                'milo': '#ff66ff',
-                'H3nkzx': '#66ffff',
                 'Zephyr': '#ff3333'
             };
 
