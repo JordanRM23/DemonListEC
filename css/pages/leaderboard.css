@@ -147,7 +147,6 @@
     letter-spacing: 1px;
 }
 
-
 .player-tag {
     display: inline-flex;
     align-items: center;
@@ -213,7 +212,7 @@
     color: #8e24aa !important;
 }
 
-/* ===== RANGO 7000 (ahora dorado épico como el anterior 14000) ===== */
+/* ===== RANGO 7000 ===== */
 .rank-7000 {
     background: linear-gradient(
         -45deg,
@@ -235,7 +234,7 @@
     animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
 }
 
-/* ===== RANGO 14000 (ahora blanco con glow rojo épico) ===== */
+/* ===== RANGO 13000 ===== */
 @keyframes whiteRedPulse {
     0% {
         text-shadow:
@@ -260,8 +259,8 @@
     }
 }
 
-.rank-11000 {
-    color: #FFFFFF; /* blanco base */
+.rank-13000 {
+    color: #FFFFFF;
     font-weight: 800;
     letter-spacing: 0.04em;
     animation: whiteRedPulse 2s ease-in-out infinite;
@@ -273,4 +272,12 @@
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+
+/* ===== FIX PARA QUE EL GLOW NO SE CORTE ===== */
+/* >>> AGREGADO <<< */
+
+.player-container {
+    overflow: visible !important;
 }
