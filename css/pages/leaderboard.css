@@ -16,21 +16,15 @@
     overflow-y: auto;
 }
 
-/* ===== OCULTAR SCROLLBARS (SIN DESACTIVAR SCROLL) ===== */
+/* ===== OCULTAR SCROLLBARS ===== */
 
-/* Chrome, Edge, Safari */
 .page-leaderboard > div::-webkit-scrollbar {
     width: 0px;
     height: 0px;
 }
 
-/* Firefox */
 .page-leaderboard > div {
     scrollbar-width: none;
-}
-
-/* IE / Edge legacy */
-.page-leaderboard > div {
     -ms-overflow-style: none;
 }
 
@@ -104,30 +98,33 @@
     padding-right: 2rem;
 }
 
-.page-leaderboard .player .table {
-    table-layout: fixed;
+/* ===== PLAYER TAG NUEVO DINÁMICO ===== */
+
+.player-tag {
+    font-family: "Arial Black", "Impact", system-ui, sans-serif;
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+    max-width: max-content;
+
+    margin: 0.35rem 0 0.6rem;
+    padding: 0.25rem 0.9rem;
+
+    color: #fff;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+
+    border-radius: 999px;
+    text-transform: uppercase;
+
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-.page-leaderboard .player .table tr td:not(:last-child) {
-    padding-right: 2rem;
-}
-
-.page-leaderboard .player .table p,
-.page-leaderboard .player .table a {
-    padding-block: 1rem;
-}
-
-.page-leaderboard .player .table .rank p,
-.page-leaderboard .player .table .score p {
-    text-align: end;
-}
-
-.page-leaderboard .player .table .level {
-    width: 100%;
-}
-
-.page-leaderboard .player .table a:hover {
-    text-decoration: underline;
+.player-tag:hover {
+    transform: scale(1.05);
 }
 
 /* ===== NOMBRES ===== */
@@ -139,138 +136,4 @@
 
 .player-name:hover {
     transform: scale(1.03);
-}
-
-.player-tag {
-    font-family: "Arial Black", "Impact", system-ui, sans-serif;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-
-.player-tag {
-    display: inline-flex;
-    align-items: center;
-
-    width: fit-content;
-    max-width: max-content;
-
-    margin: 0.35rem 0 0.6rem;
-    padding: 0.25rem 0.9rem;
-
-    background: linear-gradient(180deg, #ff3b3b, #c80000);
-    color: #fff;
-
-    font-size: 0.85rem;
-    font-weight: 800;
-    letter-spacing: 0.6px;
-
-    border-radius: 999px;
-    box-shadow: 0 0 8px rgba(255, 0, 0, 0.55);
-
-    text-transform: uppercase;
-}
-
-/* ===== RANGOS (SIN GLOW) ===== */
-
-.rank-0 {
-    color: #b3e5fc !important;
-}
-
-.rank-500 {
-    color: #81d4fa !important;
-}
-
-.rank-1250 {
-    color: #4dd0e1 !important;
-}
-
-.rank-2000 {
-    color: #26a69a !important;
-}
-
-.rank-2750 {
-    color: #43a047 !important;
-}
-
-.rank-3500 {
-    color: #7cb342 !important;
-}
-
-.rank-4250 {
-    color: #fdd835 !important;
-}
-
-.rank-5000 {
-    color: #fb8c00 !important;
-}
-
-.rank-5750 {
-    color: #e53935 !important;
-}
-
-.rank-6500 {
-    color: #8e24aa !important;
-}
-
-/* ===== RANGO 7000 (ahora dorado épico como el anterior 14000) ===== */
-.rank-7000 {
-    background: linear-gradient(
-        -45deg,
-        #FFFFFF,
-        #FFD700,
-        #FFFFFF,
-        #FFD700
-    );
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-shadow:
-        0 0 8px rgba(255,255,255,0.9),
-        0 0 18px rgba(255,215,0,0.9);
-
-    font-weight: 700;
-    animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
-}
-
-/* ===== RANGO 14000 (ahora blanco con glow rojo épico) ===== */
-@keyframes whiteRedPulse {
-    0% {
-        text-shadow:
-            0 0 4px #ff0000,
-            0 0 10px #ff0000,
-            0 0 20px rgba(255,0,0,0.9),
-            0 0 40px rgba(255,0,0,0.8);
-    }
-    50% {
-        text-shadow:
-            0 0 8px #ff4444,
-            0 0 20px #ff4444,
-            0 0 40px rgba(255,68,68,1),
-            0 0 70px rgba(255,0,0,1);
-    }
-    100% {
-        text-shadow:
-            0 0 4px #ff0000,
-            0 0 10px #ff0000,
-            0 0 20px rgba(255,0,0,0.9),
-            0 0 40px rgba(255,0,0,0.8);
-    }
-}
-
-.rank-13000 {
-    color: #FFFFFF; /* blanco base */
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    animation: whiteRedPulse 2s ease-in-out infinite;
-}
-
-/* ===== ANIMACIONES ===== */
-
-@keyframes gradientHero {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
