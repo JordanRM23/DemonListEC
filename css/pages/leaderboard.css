@@ -266,7 +266,6 @@
     padding: 0.2rem 0.4rem;
 }
 
-
 .player-list *:hover,
 .player-entry *:hover,
 .rank-text:hover,
@@ -278,4 +277,15 @@
     text-shadow: inherit !important;
     filter: none !important;
 }
+
+.player-name,
+.player-score,
+.rank-text,
+.player-entry span,
+.player-entry {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+}
+
 
