@@ -76,15 +76,14 @@
 }
 
 .page-leaderboard .board .user button {
-    background-color: transparent;
-    color: inherit;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
     border: none;
     border-radius: 0.5rem;
     padding: 1rem;
     text-align: start;
     word-break: normal;
     overflow-wrap: anywhere;
-    transition: background-color 0.2s ease;
 }
 
 .page-leaderboard .board .user button:hover {
@@ -171,23 +170,57 @@
     text-transform: uppercase;
 }
 
-/* ===== RANGOS ===== */
+/* ===== RANGOS (SIN GLOW) ===== */
 
-.rank-0 { color: #b3e5fc !important; }
-.rank-500 { color: #81d4fa !important; }
-.rank-1250 { color: #4dd0e1 !important; }
-.rank-2000 { color: #26a69a !important; }
-.rank-2750 { color: #43a047 !important; }
-.rank-3500 { color: #7cb342 !important; }
-.rank-4250 { color: #fdd835 !important; }
-.rank-5000 { color: #fb8c00 !important; }
-.rank-5750 { color: #e53935 !important; }
-.rank-6500 { color: #8e24aa !important; }
+.rank-0 {
+    color: #b3e5fc !important;
+}
+
+.rank-500 {
+    color: #81d4fa !important;
+}
+
+.rank-1250 {
+    color: #4dd0e1 !important;
+}
+
+.rank-2000 {
+    color: #26a69a !important;
+}
+
+.rank-2750 {
+    color: #43a047 !important;
+}
+
+.rank-3500 {
+    color: #7cb342 !important;
+}
+
+.rank-4250 {
+    color: #fdd835 !important;
+}
+
+.rank-5000 {
+    color: #fb8c00 !important;
+}
+
+.rank-5750 {
+    color: #e53935 !important;
+}
+
+.rank-6500 {
+    color: #8e24aa !important;
+}
 
 /* ===== RANGO 7000 ===== */
-
 .rank-7000 {
-    background: linear-gradient(-45deg,#FFFFFF,#FFD700,#FFFFFF,#FFD700);
+    background: linear-gradient(
+        -45deg,
+        #FFFFFF,
+        #FFD700,
+        #FFFFFF,
+        #FFD700
+    );
     background-size: 400% 400%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -202,7 +235,6 @@
 }
 
 /* ===== RANGO 13000 ===== */
-
 @keyframes whiteRedPulse {
     0% {
         text-shadow:
@@ -242,36 +274,10 @@
     100% { background-position: 0% 50%; }
 }
 
+
 /* ===== FIX PARA QUE EL GLOW NO SE CORTE ===== */
-
-.page-leaderboard > div {
-    overflow-y: auto;
-    overflow-x: visible;
-}
-
-.page-leaderboard .board-container {
-    overflow: visible;
-}
-
-.page-leaderboard .board {
-    overflow: visible;
-}
-
-.page-leaderboard .board .user {
-    overflow: visible;
-    padding-block: 0.3rem;
-}
-
-.page-leaderboard .board .user button {
-    position: relative;
-    z-index: 1;
-}
+/* >>> AGREGADO <<< */
 
 .player-container {
-    overflow-y: auto;
-    overflow-x: visible;
-}
-
-.player-container .player {
-    overflow: visible;
+    overflow: visible !important;
 }
