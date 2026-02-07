@@ -330,3 +330,26 @@
     position: relative;
     z-index: 1;
 }
+
+.page-leaderboard .board-container .board,
+.page-leaderboard .board-container table,
+.page-leaderboard .board-container tbody,
+.page-leaderboard .board-container tr,
+.page-leaderboard .board-container td,
+.page-leaderboard .board-container .user,
+.page-leaderboard .board-container .user button {
+    overflow: visible !important;
+}
+
+.page-leaderboard .player-container .player,
+.page-leaderboard .player-container table,
+.page-leaderboard .player-container tbody,
+.page-leaderboard .player-container tr,
+.page-leaderboard .player-container td {
+    overflow: visible !important;
+}
+
+.page-leaderboard .board .user button {
+    position: relative;
+    z-index: 1;
+}
