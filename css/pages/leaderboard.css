@@ -268,5 +268,10 @@
 }
 
 .player-container {
-    overflow: visible !important;
+    overflow-y: auto;
+    overflow-x: visible;
+}
+
+.player-container .player {
+    overflow: visible;
 }
