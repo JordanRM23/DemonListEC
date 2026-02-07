@@ -14,6 +14,11 @@
 
 .page-leaderboard > div {
     overflow-y: auto;
+    overflow-x: visible;
+}
+
+.page-leaderboard {
+    overflow: visible;
 }
 
 /* ===== OCULTAR SCROLLBARS (SIN DESACTIVAR SCROLL) ===== */
