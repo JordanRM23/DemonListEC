@@ -60,18 +60,16 @@ export default {
 
                         <h1>
                             <span class="player-name" :class="getNameClass(entry.total)">
-                                #{{ selected + 1 }} {{ entry.user }} ({{ getRankLabel(entry.total) }})
+                                #{{ selected + 1 }} {{ entry.user }}
                             </span>
                         </h1>
 
-                        <!-- ROLE TAG -->
+                        <!-- TAG -->
                         <div
                             v-if="role"
                             class="player-tag"
-                            :style="{
-                                backgroundColor: role.color,
-                                boxShadow: role.glow
-                            }"
+                            :class="role.class"
+                            :style="role.style"
                         >
                             {{ role.name }}
                         </div>
@@ -95,9 +93,14 @@ export default {
         },
 
         role() {
-            return this.entry
-                ? this.getPlayerRole(this.entry.user)
-                : null;
+            if (!this.entry) return null;
+
+            const customRole = this.getPlayerRole(this.entry.user);
+
+            if (customRole) return customRole;
+
+            // Si no tiene rol custom, usa rango
+            return this.getRankRole(this.entry.total);
         }
     },
 
@@ -112,43 +115,75 @@ export default {
 
         localize,
 
+        /* ===== ROLES PERSONALIZADOS ===== */
+
         getPlayerRole(user) {
+
             const roles = {
 
                 Zephyr: {
                     name: 'La cabra del six seven',
-                    color: '#ffaa00',
-                    glow: '0 0 8px rgba(255,170,0,0.7)'
+                    style: {
+                        backgroundColor: '#ffaa00',
+                        boxShadow: '0 0 8px rgba(255,170,0,0.7)'
+                    }
                 },
 
                 venomioo: {
                     name: 'EX-ECDL',
-                    color: '#00c3ff',
-                    glow: '0 0 8px rgba(0,195,255,0.7)'
+                    style: {
+                        backgroundColor: '#00c3ff',
+                        boxShadow: '0 0 8px rgba(0,195,255,0.7)'
+                    }
                 },
 
                 BeClan: {
                     name: 'Hijo del six seven',
-                    color: '#ff4444',
-                    glow: '0 0 8px rgba(255,68,68,0.7)'
+                    style: {
+                        backgroundColor: '#ff4444',
+                        boxShadow: '0 0 8px rgba(255,68,68,0.7)'
+                    }
                 },
 
                 milo: {
                     name: 'Furro',
-                    color: '#ff66cc',
-                    glow: '0 0 8px rgba(255,102,204,0.7)'
+                    style: {
+                        backgroundColor: '#ff66cc',
+                        boxShadow: '0 0 8px rgba(255,102,204,0.7)'
+                    }
                 },
 
                 H3nkzx: {
                     name: 'Furro',
-                    color: '#ff66cc',
-                    glow: '0 0 8px rgba(255,102,204,0.7)'
+                    style: {
+                        backgroundColor: '#ff66cc',
+                        boxShadow: '0 0 8px rgba(255,102,204,0.7)'
+                    }
                 }
 
             };
 
             return roles[user] || null;
         },
+
+        /* ===== ROLES POR RANGO ===== */
+
+        getRankRole(total) {
+
+            total = Number(total) || 0;
+
+            if (total >= 7000) return { name: 'Rango X', class: 'rango-x' };
+            if (total >= 6500) return { name: 'Rango IX', class: 'rango-ix' };
+            if (total >= 5000) return { name: 'Rango VII', class: 'rango-vii' };
+            if (total >= 3500) return { name: 'Rango V', class: 'rango-v' };
+            if (total >= 2750) return { name: 'Rango IV', class: 'rango-iv' };
+            if (total >= 1250) return { name: 'Rango II', class: 'rango-ii' };
+            if (total >= 500) return { name: 'Rango I', class: 'rango-i' };
+
+            return null;
+        },
+
+        /* ===== COLORES DE NOMBRE ===== */
 
         getNameClass(total) {
             total = Number(total) || 0;
