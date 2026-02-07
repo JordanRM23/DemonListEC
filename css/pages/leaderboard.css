@@ -90,7 +90,6 @@
 
 .page-leaderboard .board .user button:hover {
     background-color: var(--color-background-hover);
-    color: var(--color-on-background-hover);
     cursor: pointer;
 }
 
