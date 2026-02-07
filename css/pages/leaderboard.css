@@ -16,7 +16,7 @@
     overflow-y: auto;
 }
 
-/* ===== OCULTAR SCROLLBARS ===== */
+/* ===== OCULTAR SCROLL ===== */
 
 .page-leaderboard > div::-webkit-scrollbar {
     width: 0px;
@@ -49,35 +49,51 @@
     padding-inline: 1rem;
 }
 
+/* ===== ARREGLO DE TABLA ===== */
+
 .page-leaderboard .board {
-    table-layout: auto;
-    display: block;
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.35rem;
 }
 
+/* ===== FILAS ===== */
+
+.page-leaderboard .board tr {
+    vertical-align: middle;
+}
+
+.page-leaderboard .board td {
+    padding: 0.4rem 0.5rem;
+}
+
+/* ===== COLUMNAS ===== */
+
 .page-leaderboard .board .rank {
-    padding-block: 1rem;
     text-align: end;
+    white-space: nowrap;
 }
 
 .page-leaderboard .board .total {
-    padding: 1rem;
     text-align: end;
+    white-space: nowrap;
 }
 
 .page-leaderboard .board .user {
     width: 100%;
 }
 
+/* ===== BOTON PLAYER ===== */
+
 .page-leaderboard .board .user button {
+    width: 100%;
     background-color: var(--color-background);
     color: var(--color-on-background);
     border: none;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 0.9rem 1rem;
     text-align: start;
-    word-break: normal;
-    overflow-wrap: anywhere;
+    transition: 0.15s;
 }
 
 .page-leaderboard .board .user button:hover {
@@ -91,6 +107,8 @@
     color: var(--color-on-primary);
 }
 
+/* ===== PLAYER PANEL ===== */
+
 .page-leaderboard .player {
     display: flex;
     flex-direction: column;
@@ -98,7 +116,7 @@
     padding-right: 2rem;
 }
 
-/* ===== PLAYER TAG NUEVO DINÁMICO ===== */
+/* ===== PLAYER TAG BASE ===== */
 
 .player-tag {
     font-family: "Arial Black", "Impact", system-ui, sans-serif;
@@ -106,13 +124,10 @@
     align-items: center;
 
     width: fit-content;
-    max-width: max-content;
-
     margin: 0.35rem 0 0.6rem;
     padding: 0.25rem 0.9rem;
 
-    color: #fff;
-
+    color: white;
     font-size: 0.85rem;
     font-weight: 800;
     letter-spacing: 0.6px;
@@ -127,7 +142,17 @@
     transform: scale(1.05);
 }
 
-/* ===== NOMBRES ===== */
+/* ===== COLORES DE RANGO ===== */
+
+.rango-x { background: linear-gradient(45deg, #ff3b3b, #ff8a00); }
+.rango-ix { background: linear-gradient(45deg, #ffb347, #ffcc33); }
+.rango-vii { background: linear-gradient(45deg, #a86bff, #6b5cff); }
+.rango-v { background: linear-gradient(45deg, #33cfff, #0066ff); }
+.rango-iv { background: linear-gradient(45deg, #3bff8a, #00c853); }
+.rango-ii { background: linear-gradient(45deg, #ffffff, #cfcfcf); }
+.rango-i { background: linear-gradient(45deg, #ff7a18, #ffb347); }
+
+/* ===== PLAYER NAME ===== */
 
 .player-name {
     color: inherit !important;
