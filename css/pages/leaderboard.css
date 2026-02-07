@@ -23,18 +23,15 @@
 
 /* ===== OCULTAR SCROLLBARS (SIN DESACTIVAR SCROLL) ===== */
 
-/* Chrome, Edge, Safari */
 .page-leaderboard > div::-webkit-scrollbar {
     width: 0px;
     height: 0px;
 }
 
-/* Firefox */
 .page-leaderboard > div {
     scrollbar-width: none;
 }
 
-/* IE / Edge legacy */
 .page-leaderboard > div {
     -ms-overflow-style: none;
 }
@@ -175,57 +172,21 @@
     text-transform: uppercase;
 }
 
-/* ===== RANGOS (SIN GLOW) ===== */
+/* ===== RANGOS ===== */
 
-.rank-0 {
-    color: #b3e5fc !important;
-}
+.rank-0 { color: #b3e5fc !important; }
+.rank-500 { color: #81d4fa !important; }
+.rank-1250 { color: #4dd0e1 !important; }
+.rank-2000 { color: #26a69a !important; }
+.rank-2750 { color: #43a047 !important; }
+.rank-3500 { color: #7cb342 !important; }
+.rank-4250 { color: #fdd835 !important; }
+.rank-5000 { color: #fb8c00 !important; }
+.rank-5750 { color: #e53935 !important; }
+.rank-6500 { color: #8e24aa !important; }
 
-.rank-500 {
-    color: #81d4fa !important;
-}
-
-.rank-1250 {
-    color: #4dd0e1 !important;
-}
-
-.rank-2000 {
-    color: #26a69a !important;
-}
-
-.rank-2750 {
-    color: #43a047 !important;
-}
-
-.rank-3500 {
-    color: #7cb342 !important;
-}
-
-.rank-4250 {
-    color: #fdd835 !important;
-}
-
-.rank-5000 {
-    color: #fb8c00 !important;
-}
-
-.rank-5750 {
-    color: #e53935 !important;
-}
-
-.rank-6500 {
-    color: #8e24aa !important;
-}
-
-/* ===== RANGO 7000 ===== */
 .rank-7000 {
-    background: linear-gradient(
-        -45deg,
-        #FFFFFF,
-        #FFD700,
-        #FFFFFF,
-        #FFD700
-    );
+    background: linear-gradient(-45deg,#FFFFFF,#FFD700,#FFFFFF,#FFD700);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -236,10 +197,9 @@
         0 0 18px rgba(255,215,0,0.9);
 
     font-weight: 700;
-    animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
+    animation: gradientHero 2s linear infinite;
 }
 
-/* ===== RANGO 13000 ===== */
 @keyframes whiteRedPulse {
     0% {
         text-shadow:
@@ -271,24 +231,37 @@
     animation: whiteRedPulse 2s ease-in-out infinite;
 }
 
-/* ===== ANIMACIONES ===== */
-
 @keyframes gradientHero {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-
-/* ===== FIX PARA QUE EL GLOW NO SE CORTE ===== */
-/* >>> AGREGADO <<< */
+/* ===== FIX SCROLL Y GLOW ===== */
 
 .player-container {
     overflow-y: auto;
     overflow-x: visible;
 }
 
-
 .player-container .player {
     overflow: visible;
+}
+
+/* FIX TABLAS GLOW */
+.page-leaderboard table,
+.page-leaderboard tr,
+.page-leaderboard td {
+    overflow: visible !important;
+}
+
+/* FIX BOTONES */
+.page-leaderboard .board .user button {
+    overflow: visible !important;
+}
+
+/* ESPACIO EXTRA PARA EL GLOW */
+.player-name {
+    display: inline-block;
+    padding: 0.2rem 0.4rem;
 }
