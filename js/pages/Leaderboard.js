@@ -51,11 +51,19 @@ export default {
                             <td class="user" :class="{ 'active': selected == i }">
                                 <button @click="selected = i">
                                     <span
-                                        class="type-label-lg player-name"
-                                        :class="getNameClass(ientry.total)"
-                                    >
-                                        {{ ientry.user }} ({{ getRankLabel(ientry.total) }})
-                                    </span>
+  class="type-label-lg player-name"
+  :class="getNameClass(ientry.total)"
+>
+  <img
+    class="province-flag"
+    :src="assets/flags/${getPlayerProvince(ientry.user)}.png"
+    :title="getPlayerProvince(ientry.user)"
+    loading="lazy"
+  >
+
+  {{ ientry.user }} ({{ getRankLabel(ientry.total) }})
+</span>
+
                                 </button>
                             </td>
                         </tr>
@@ -65,12 +73,19 @@ export default {
                 <div class="player-container">
                     <div class="player" v-if="entry">
                         <h1>
-                            <span
-                                class="player-name"
-                                :class="getNameClass(entry.total)"
-                            >
-                                #{{ selected + 1 }} {{ entry.user }} ({{ getRankLabel(entry.total) }})
-                            </span>
+                           <span
+  class="player-name"
+  :class="getNameClass(entry.total)"
+>
+  <img
+    class="province-flag"
+    :src="assets/flags/${getPlayerProvince(entry.user)}.png"
+    :title="getPlayerProvince(entry.user)"
+  >
+
+  #{{ selected + 1 }} {{ entry.user }} ({{ getRankLabel(entry.total) }})
+</span>
+
                         </h1>
 
                         <div
@@ -209,6 +224,16 @@ export default {
     },
     methods: {
         localize,
+
+        getPlayerProvince(user) {
+         const provinces = {
+        'BeClan': 'guayas',
+        'JordanRM': 'guayas',
+    };
+
+    return provinces[user] || 'ecuador';
+},
+
 
         getPlayerRole(user) {
             const roles = {
