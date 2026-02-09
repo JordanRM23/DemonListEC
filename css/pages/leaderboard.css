@@ -239,36 +239,25 @@
     animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
 }
 
-/* ===== RANGO 13000 ===== */
-@keyframes whiteRedPulse {
-    0% {
-        text-shadow:
-            0 0 4px #ff0000,
-            0 0 10px #ff0000,
-            0 0 20px rgba(255,0,0,0.9),
-            0 0 40px rgba(255,0,0,0.8);
-    }
-    50% {
-        text-shadow:
-            0 0 8px #ff4444,
-            0 0 20px #ff4444,
-            0 0 40px rgba(255,68,68,1),
-            0 0 70px rgba(255,0,0,1);
-    }
-    100% {
-        text-shadow:
-            0 0 4px #ff0000,
-            0 0 10px #ff0000,
-            0 0 20px rgba(255,0,0,0.9),
-            0 0 40px rgba(255,0,0,0.8);
-    }
-}
-
 .rank-11000 {
-    color: #FFFFFF;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    animation: whiteRedPulse 2s ease-in-out infinite;
+background: linear-gradient(
+        -1000deg,
+        #e6ff00,
+        #ff0000,
+        #ffffff,
+        #ffffff
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #ffffff00;
+
+    text-shadow:
+        0 0 8px rgb(116 209 163 / 90%),
+        0 0 18px rgb(255 214 1 / 90%);
+
+    font-weight: 700;
+    animation: gradientHero 2s linear infinite, glowPulse 2s ease-in-out infinite;
 }
 
 /* ===== ANIMACIONES ===== */
