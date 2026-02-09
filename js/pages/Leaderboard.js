@@ -50,20 +50,12 @@ export default {
                             </td>
                             <td class="user" :class="{ 'active': selected == i }">
                                 <button @click="selected = i">
-                                    <span
-  class="type-label-lg player-name"
-  :class="getNameClass(ientry.total)"
->
-  <img
-    class="province-flag"
-    :src="assets/flags/${getPlayerProvince(ientry.user)}.png"
-    :title="getPlayerProvince(ientry.user)"
-    loading="lazy"
-  >
-
-  {{ ientry.user }} ({{ getRankLabel(ientry.total) }})
-</span>
-
+                                 <span
+                                    class="type-label-lg player-name"
+                                        :class="getNameClass(ientry.total)"
+                                    >
+                                        {{ ientry.user }} ({{ getRankLabel(ientry.total) }})
+                                    </span>
                                 </button>
                             </td>
                         </tr>
