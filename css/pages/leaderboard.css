@@ -268,3 +268,39 @@ background: linear-gradient(
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+.name-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.province-flag {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.player-name-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffd5d5;
+}
+
+.player-badge {
+    margin-top: 0.4rem;
+    display: inline-block;
+    background: #ff2d2d;
+    color: white;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.player-points {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+    color: #ffb3b3;
+}
