@@ -228,7 +228,7 @@ export default {
  /* Nota para los list helpers */
   /* si un tag esta fuera de su lugar o un bug visual contactar a @JordanRM23 */
    /* nadie tiene permitido añadir un tag sin consentimiento */
-   
+
         getPlayerTags(user) {
     const tags = {
         'Zephyr': [
@@ -245,7 +245,7 @@ export default {
             { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
         ],
         'Victor71GD': [
-            { text: 'Ex-ECDL', class: 'tag-Ex-ECDLr' },
+            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
         ],
         'RaymanNinja': [
             { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
