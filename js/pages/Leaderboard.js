@@ -225,15 +225,39 @@ export default {
     return provinces[user] || 'ecuador';
 },
 
-
+ /* Nota para los list helpers */
+  /* si un tag esta fuera de su lugar o un bug visual contactar a @JordanRM23 */
+   /* nadie tiene permitido añadir un tag sin consentimiento */
+   
         getPlayerTags(user) {
     const tags = {
         'Zephyr': [
-            { text: 'Champion', class: 'tag-champion' },
+            { text: 'La Cabra del six seven', class: 'tag-LCDSS' },
             { text: 'Hardest Ecuador', class: 'tag-hardest' },
         ],
         'JordanRM': [
-            { text: 'Founder', class: 'tag-founder' },
+            { text: 'owner', class: 'tag-owner' },
+        ],
+        'Stevensitos999': [
+            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
+        ],
+        'venomioo': [
+            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
+        ],
+        'Victor71GD': [
+            { text: 'Ex-ECDL', class: 'tag-Ex-ECDLr' },
+        ],
+        'RaymanNinja': [
+            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
+        ],
+        'Locked': [
+            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
+        ],
+        'Edgar214': [
+            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
+        ],
+        'BeClan': [
+            { text: 'El hijo del six seven', class: 'tag-EHDSS' },
         ],
     };
 

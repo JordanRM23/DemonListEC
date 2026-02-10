@@ -170,7 +170,17 @@
 
 }
 
-.tag-champion {
+.tag-LCDSS {
+    background: linear-gradient(180deg, #ff3b3b, #c80000);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.tag-Ex-ECDL {
+    background: linear-gradient(180deg, #ff3b3b, #c80000);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.tag-EHDSS {
     background: linear-gradient(180deg, #ff3b3b, #c80000);
     box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
 }
@@ -180,7 +190,7 @@
     box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
 }
 
-.tag-founder {
+.tag-owner {
     background: linear-gradient(180deg, #ffd700, #c9a000);
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
 }
