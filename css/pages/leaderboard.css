@@ -149,32 +149,35 @@
 
 .player-tags {
     display: flex;
-    gap: 0.4rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
-    margin: 0.35rem 0 0.6rem;
+    margin: 0 0.6rem;
 }
 
 .player-tag {
+    font-family: "Arial Black", "Impact", system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    font-size: 0.8rem;
+
     display: inline-flex;
     align-items: center;
+    width: fit-content;
+
     padding: 0.25rem 0.85rem;
-
-    font-family: 'Bebas Neue', 'Impact', sans-serif;
-    font-size: 0.85rem;
-    letter-spacing: 1.2px;
-
-    color: #fff;
     border-radius: 999px;
     text-transform: uppercase;
+
 }
+
 .tag-champion {
     background: linear-gradient(180deg, #ff3b3b, #c80000);
     box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
 }
 
 .tag-hardest {
-    background: linear-gradient(180deg, #8a2be2, #4b0082);
-    box-shadow: 0 0 8px rgba(138, 43, 226, 0.6);
+    background: linear-gradient(180deg, #ff3b3b, #c80000);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
 }
 
 .tag-founder {
