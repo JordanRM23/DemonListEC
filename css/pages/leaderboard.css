@@ -192,8 +192,8 @@
 }
 
 .tag-owner {
-    background: linear-gradient(180deg, #ffd700, #c9a000);
-    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    background: linear-gradient(180deg, #000000, #000000);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 
