@@ -74,13 +74,18 @@ export default {
                         </h1>
 
                         <div
-                            v-if="getPlayerRole(entry.user)"
-                            class="player-tag"
-                            :style="getRoleStyle(entry.user)"
-                        >
-                            {{ getPlayerRole(entry.user) }}
-                        </div>
-
+    v-if="getPlayerTags(entry.user).length"
+    class="player-tags"
+>
+    <span
+        v-for="(tag, index) in getPlayerTags(entry.user)"
+        :key="index"
+        class="player-tag"
+        :class="tag.class"
+    >
+        {{ tag.text }}
+    </span>
+</div>
                         <h3>
                             <span
                                 class="player-name"
@@ -210,6 +215,7 @@ export default {
     methods: {
         localize,
 
+        /* No Tocar */
         getPlayerProvince(user) {
          const provinces = {
         'BeClan': 'guayas',
@@ -220,20 +226,20 @@ export default {
 },
 
 
-        getPlayerRole(user) {
-            const roles = {
-                'Zephyr': 'La cabra del six seven',
-                'venomioo': 'EX-ECDL',
-                'Locked': 'EX-ECDL',
-                'RaymanNinja': 'EX-ECDL',
-                'Victor71GD': 'EX-ECDL',
-                'Edgar214': 'EX-ECDL',
-                'Stevensitos999': 'EX-ECDL',
-                'BeClan': 'Hijo del six seven',
-            };
+        getPlayerTags(user) {
+    const tags = {
+        'Zephyr': [
+            { text: 'Champion', class: 'tag-champion' },
+            { text: 'Hardest Ecuador', class: 'tag-hardest' },
+        ],
+        'JordanRM': [
+            { text: 'Founder', class: 'tag-founder' },
+        ],
+    };
 
-            return roles[user] || null;
-        },
+    return tags[user] || [];
+},
+
 
         /* ⭐ NUEVO SISTEMA DE COLORES */
         getRoleStyle(user) {

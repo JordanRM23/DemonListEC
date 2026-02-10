@@ -147,34 +147,41 @@
     transform: scale(1.03);
 }
 
-.player-tag {
-    font-family: "Arial Black", "Impact", system-ui, sans-serif;
-    font-weight: 900;
-    letter-spacing: 1px;
+.player-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin: 0.35rem 0 0.6rem;
 }
 
 .player-tag {
     display: inline-flex;
     align-items: center;
+    padding: 0.25rem 0.85rem;
 
-    width: fit-content;
-    max-width: max-content;
-
-    margin: 0.35rem 0 0.6rem;
-    padding: 0.25rem 0.9rem;
-
-    background: linear-gradient(180deg, #ff3b3b, #c80000);
-    color: #fff;
-
+    font-family: 'Bebas Neue', 'Impact', sans-serif;
     font-size: 0.85rem;
-    font-weight: 800;
-    letter-spacing: 0.6px;
+    letter-spacing: 1.2px;
 
+    color: #fff;
     border-radius: 999px;
-    box-shadow: 0 0 8px rgba(255, 0, 0, 0.55);
-
     text-transform: uppercase;
 }
+.tag-champion {
+    background: linear-gradient(180deg, #ff3b3b, #c80000);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.tag-hardest {
+    background: linear-gradient(180deg, #8a2be2, #4b0082);
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.6);
+}
+
+.tag-founder {
+    background: linear-gradient(180deg, #ffd700, #c9a000);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
 
 /* ===== RANGOS (SIN GLOW) ===== */
 
