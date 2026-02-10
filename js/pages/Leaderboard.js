@@ -65,19 +65,12 @@ export default {
                 <div class="player-container">
                     <div class="player" v-if="entry">
                         <h1>
-                           <span
-  class="player-name"
-  :class="getNameClass(entry.total)"
->
-  <img
-    class="province-flag"
-    :src="assets/flags/${getPlayerProvince(entry.user)}.png"
-    :title="getPlayerProvince(entry.user)"
-  >
-
-  #{{ selected + 1 }} {{ entry.user }} ({{ getRankLabel(entry.total) }})
-</span>
-
+                            <span
+                                class="player-name"
+                                :class="getNameClass(entry.total)"
+                            >
+                                #{{ selected + 1 }} {{ entry.user }} ({{ getRankLabel(entry.total) }})
+                            </span>
                         </h1>
 
                         <div
