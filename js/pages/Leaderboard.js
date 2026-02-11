@@ -11,6 +11,7 @@ export default {
         leaderboard: [],
         loading: true,
         selected: 0,
+        selectedLevel: null,
         err: [],
     }),
     template: `
@@ -64,6 +65,18 @@ export default {
 
                 <div class="player-container">
                     <div class="player" v-if="entry">
+                    <div v-if="selectedLevel" class="level-preview">
+    <img :src="getLevelThumbnail(selectedLevel.level)" class="preview-img">
+
+    <iframe
+        v-if="getLevelVideo(selectedLevel.level)"
+        :src="getLevelVideo(selectedLevel.level)"
+        frameborder="0"
+        allowfullscreen
+        class="preview-video"
+    ></iframe>
+</div>
+
                         <h1>
                             <span
                                 class="player-name"
@@ -147,11 +160,11 @@ export default {
                                 </td>
                                 <td class="level">
                                     <a
-                                        class="type-label-lg"
-                                        :class="getLevelPosClass(score.rank)"
-                                        target="_blank"
-                                        :href="score.link"
-                                    >
+    class="type-label-lg"
+    :class="getLevelPosClass(score.rank)"
+    target="_blank"
+    :href="score.link"
+>
                                         {{ score.level }}
                                     </a>
                                 </td>
@@ -181,11 +194,11 @@ export default {
                                 </td>
                                 <td class="level">
                                     <a
-                                        class="type-label-lg"
-                                        :class="getLevelPosClass(score.rank)"
-                                        target="_blank"
-                                        :href="score.link"
-                                    >
+    class="type-label-lg"
+    :class="getLevelPosClass(score.rank)"
+    target="_blank"
+    :href="score.link"
+>
                                         {{ score.percent }}% {{ score.level }}
                                     </a>
                                 </td>
@@ -214,6 +227,19 @@ export default {
     },
     methods: {
         localize,
+
+ selectLevel(score) {
+    this.selectedLevel = score;
+},
+
+getLevelVideo(level) {
+    const videos = {
+        'LIMBO': 'https://www.youtube.com/watch?v=88wi122Bu44&t=14s',
+        'IRIS': 'https://www.youtube.com/watch?v=TY9Wk_ZXUBY',
+    };
+
+    return videos[level] || null;
+},
 
         /* No Tocar */
         getPlayerProvince(user) {
