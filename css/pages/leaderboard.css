@@ -197,8 +197,8 @@
 }
 
 .tag-EMS {
-    background: linear-gradient(180deg, #8e24aa, #8e24aa);
-    box-shadow: 0 0 8px rgba(90, 2, 252, 0.874);
+    background: linear-gradient(180deg, #4e24a7, #6c14cf);
+    box-shadow: 0 0 8px rgb(90 0 255 / 87%);
 }
 
 /* ===== RANGOS (SIN GLOW) ===== */
