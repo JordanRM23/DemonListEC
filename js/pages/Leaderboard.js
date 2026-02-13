@@ -259,6 +259,9 @@ export default {
         'BeClan': [
             { text: 'El hijo del six seven', class: 'tag-EHDSS' },
         ],
+        'JPnabo': [
+            { text: 'El mas salado', class: 'tag-EMS' },
+        ],
     };
 
     return tags[user] || [];
