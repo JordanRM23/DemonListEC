@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "EABH",
+            "link": "https://youtu.be/gghXy_SCbrg",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
