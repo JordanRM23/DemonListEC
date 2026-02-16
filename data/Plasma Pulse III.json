@@ -13,6 +13,12 @@
             "link": "https://www.youtube.com/watch?v=PQU07aaztrw",
             "percent": 100,
             "hz": 480
+        },
+        {    
+            "user": "Pachi",
+            "link": "https://youtu.be/8_Ib8abQp6o",
+            "percent": 100,
+            "hz": 144
         }
     ]
 }
