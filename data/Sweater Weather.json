@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "milo",
+            "link": "https://www.youtube.com/watch?v=QPJfHEcpGKY",
+            "percent": 100,
+            "hz": 120
+        }
     ]
 }
