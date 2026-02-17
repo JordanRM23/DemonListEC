@@ -40,6 +40,12 @@
             "hz": 244
         },
         {
+            "user": "Blue",
+            "link": "https://www.youtube.com/watch?v=z9pDJsxUhxo",
+            "percent": 100,
+            "hz": 240
+        },
+        {
             "user": "MarioPro",
             "link": "https://www.youtube.com/watch?v=nWfWd0yMbuI",
             "percent": 100,
@@ -83,6 +89,7 @@
         }
     ]
 }
+
 
 
 
