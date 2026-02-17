@@ -3,10 +3,16 @@
     "name": "Tech Manifestation",
     "author": "Pleoslim",
     "creators": ["MakFeed" , "Pleoslim"],
-    "verifier": "Jampy12",
-    "verification": "https://youtu.be/dEzeRNhjbSc",
+    "verifier": "Blue",
+    "verification": "https://www.youtube.com/watch?v=Me4-cTJQaio",
     "percentToQualify": "100",
     "password": "Free to copy",
     "records": [
+        {
+            "user": "Jampy12",
+            "link": "https://www.youtube.com/watch?v=dEzeRNhjbSc",
+            "percent": 100,
+            "hz": 360
+        },
     ]
 }
