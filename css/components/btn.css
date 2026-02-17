@@ -8,10 +8,7 @@
     color: var(--color-on-primary);
     border-radius: 0.5rem;
     box-shadow: 0 1px 0.5rem 0 rgba(0, 0, 102, 0.5);
-    transition: transform 100ms ease, opacity 200ms ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    transition: transform 100ms ease;
 }
 
 .btn:disabled {
@@ -21,21 +18,4 @@
 
 .btn:not(:disabled):hover:not(:active) {
     transform: translateY(-2px);
-}
-
-.btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--color-on-background);
-    border: 2px solid var(--color-background);
-    box-shadow: none;
-}
-
-.btn-secondary:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
 }
