@@ -1,126 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=1024" />
-        <title>GDEcuador</title>
+        <title>GDEcuador - Sistema de Records</title>
+
         <link rel="icon" href="/list_icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500;700&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" type="text/css" href="/css/reset.css" />
         <link rel="stylesheet" type="text/css" href="/css/typography.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
         <link rel="stylesheet" type="text/css" href="/css/pages/list.css" />
-        <link rel="stylesheet" type="text/css" href="/css/pages/submit.css" />
-        <link rel="stylesheet" type="text/css" href="/css/pages/leaderboard.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/css/pages/leaderboard.css"
+        />
         <link rel="stylesheet" type="text/css" href="/css/pages/roulette.css" />
-		<link rel="stylesheet" type="text/css" href="/css/pages/changelog.css" />
+        <!-- Nuevos estilos -->
+        <link rel="stylesheet" type="text/css" href="/css/pages/auth.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/submit.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/nav.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/btn.css" />
-        <link rel="stylesheet" type="text/css" href="/css/components/tabs.css" />
-        <style>
-            .search-container { position: relative; margin: 0 15px; display: flex; align-items: center; }
-            .search-input { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 6px 12px; border-radius: 4px; outline: none; font-family: 'Lexend Deca', sans-serif; width: 160px; }
-            .search-results { position: absolute; top: 45px; left: 0; right: 0; background: #000; border: 1px solid #444; border-radius: 4px; max-height: 250px; overflow-y: auto; z-index: 9999; display: none; }
-            .search-item { padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #222; display: block; text-decoration: none; color: #fff; font-size: 13px; }
-            .search-item:hover { background: #333; }
-        </style>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/css/components/tabs.css"
+        />
         <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
         <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
         <script type="module" src="/js/main.js"></script>
     </head>
     <body id="app">
-        <header>
+        <header :class="{ dark: store.dark }">
             <div class="logo">
                 <img src="/list_icon.png" width="50" height="50">
                 <h2 style="line-height: 4rem;">DLEC</h2>
-                <p style="line-height: 4rem;">v1.1.0</p>
+                <p style="line-height: 4rem;">v1.0.0</p>
             </div>
-			<nav class="nav">
-				<router-link class="nav__tab" to="/">
-					<span class="type-label-lg">Lista</span>
-				</router-link>
-				<router-link class="nav__tab" to="/leaderboard">
-					<span class="type-label-lg">Jugadores</span>
-				</router-link>
-				<router-link class="nav__tab" to="/roulette">
-					<span class="type-label-lg">Ruleta</span>
-				</router-link>
-				 <router-link class="nav__tab" to="/changelog">
-                    <span class="type-label-lg">Changelog</span>
+            <nav class="nav">
+                <router-link class="nav__tab" to="/">
+                    <span class="type-label-lg">Lista</span>
                 </router-link>
-				<div class="search-container">
-					<input type="text" placeholder="Buscar..." id="levelSearch" class="search-input" autocomplete="off">
-					<div id="searchResults" class="search-results"></div>
-				</div>
-
-				<div class="Spinner"></div>
-
-				<div class="nav__actions">
-					<a class="nav__icon" href="https://discord.gg/JskKyjzmws" target="_blank">
-						<img src="/assets/discord.svg" alt="Discord Logo" />
-					</a>
-					<a class="nav__cta type-label-lg" href="https://discord.gg/JskKyjzmws" target="_blank">
-						Enviar Records
-
-					<a
-                        class="nav__cta type-label-lg"  href="#">
-						Login
-						
-					</a>
-				</div>
-			</nav>
+                <router-link class="nav__tab" to="/leaderboard">
+                    <span class="type-label-lg">Jugadores</span>
+                </router-link>
+                <router-link class="nav__tab" to="/roulette">
+                    <span class="type-label-lg">Ruleta</span>
+                </router-link>
+                <!-- Mostrar solo si está autenticado -->
+                <router-link class="nav__tab" to="/submit" v-if="store.isAuthenticated">
+                    <span class="type-label-lg">Enviar Record</span>
+                </router-link>
+                
+                <div class="nav__actions">
+                    <button
+                        class="nav__icon"
+                        @click.prevent="store.toggleDark()"
+                    >
+                        <img
+                            :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'"
+                            alt=""
+                        />
+                    </button>
+                    
+                    <a class="nav__icon" href="https://discord.gg/JskKyjzmws">
+                        <img src="/assets/discord.svg" alt="Discord Logo" />
+                    </a>
+                    
+                    <!-- User Menu o Login -->
+                    <div v-if="store.isAuthenticated" class="user-menu">
+                        <div class="user-avatar">{{ userInitials }}</div>
+                        <span class="user-name type-label-md">{{ store.user?.username }}</span>
+                        <button class="btn-logout type-label-sm" @click="store.logout">Salir</button>
+                    </div>
+                    
+                    <router-link v-else class="nav__cta type-label-lg" to="/login">
+                        Iniciar Sesión
+                    </router-link>
+                </div>
+            </nav>
         </header>
-        <router-view></router-view>
-		<script>
-			window.onload = async () => {
-				const input = document.getElementById('levelSearch');
-				const results = document.getElementById('searchResults');
-				if (!input || !results) return;
-
-				let levels = [];
-				try {
-					const res = await fetch('./data/_list.json');
-					levels = await res.json();
-				} catch (e) {}
-
-				input.addEventListener('input', (e) => {
-					const val = e.target.value.toLowerCase().trim();
-					results.innerHTML = '';
-					if (val.length < 1) { results.style.display = 'none'; return; }
-
-					const filtered = levels.filter(n => n.toLowerCase().replace(/_/g, ' ').includes(val));
-
-					if (filtered.length > 0) {
-						results.style.display = 'block';
-						filtered.forEach(lvl => {
-							const a = document.createElement('a');
-							a.className = 'search-item';
-							a.href = 'javascript:void(0)';
-							a.textContent = lvl.replace(/_/g, ' ');
-							
-							a.onclick = () => {
-							const index = levels.indexOf(lvl);
-								results.style.display = 'none';
-								input.value = '';
-
-								// Buscamos todos los botones de la lista en la pantalla
-								const buttons = document.querySelectorAll('.list button');
-								if (buttons[index]) {
-									buttons[index].click(); // Simula el clic real
-									buttons[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
-								}
-							};
-							results.appendChild(a);
-						});
-					} else { results.style.display = 'none'; }
-				});
-
-				document.addEventListener('click', (e) => {
-					if (!input.contains(e.target)) results.style.display = 'none';
-				});
-			};
-            </script>
+        <router-view :class="{ dark: store.dark }"></router-view>
     </body>
 </html>
