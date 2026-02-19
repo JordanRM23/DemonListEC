@@ -26,27 +26,18 @@ export default {
                     </p>
                 </div>
 
-                <!-- ===== BUSCADOR ===== -->
-                <div class="search-container">
-                    <div class="search-wrapper">
-                        <input 
-                            type="text" 
-                            v-model="searchQuery" 
-                            placeholder="Buscar jugador..." 
-                            class="search-input"
-                        />
-                        <span class="search-icon">🔍</span>
-                    </div>
-                    <!-- Mensaje flotante en lugar de en el flujo -->
-                    <div v-if="searchQuery && filteredLeaderboard.length === 0" class="search-no-results">
-                        No se encontraron jugadores
-                    </div>
+                <!-- Buscador simple -->
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        v-model="searchQuery" 
+                        placeholder="Buscar jugador..." 
+                    />
                 </div>
 
                 <div class="board-container">
-                    <!-- Mensaje dentro del contenedor scrolleable cuando está vacío -->
-                    <div v-if="filteredLeaderboard.length === 0" class="empty-state">
-                        <p>No hay jugadores para mostrar</p>
+                    <div v-if="filteredLeaderboard.length === 0" class="no-results">
+                        No se encontraron jugadores
                     </div>
                     <table class="board" v-else>
                         <tr v-for="(ientry, i) in filteredLeaderboard" :key="ientry.user" @click="selected = getOriginalIndex(ientry.user)">
@@ -225,7 +216,6 @@ export default {
     `,
     computed: {
         entry() {
-            // Si no hay resultados, mantener el último seleccionado o null
             if (!this.leaderboard[this.selected]) {
                 return this.leaderboard[0] || null;
             }
@@ -305,7 +295,6 @@ export default {
 },
 
 
-        /* ⭐ NUEVO SISTEMA DE COLORES */
         getRoleStyle(user) {
             const roleColors = {
                 'Zephyr': '#ff3333'

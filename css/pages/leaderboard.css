@@ -293,84 +293,45 @@ background: linear-gradient(
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-/* ===== BUSCADOR ===== */
 
-.search-container {
+/* ===== BUSCADOR SIMPLE ===== */
+
+.search-box {
     grid-row: 1;
     grid-column: 1;
-    padding: 1rem;
-    padding-top: 2rem;
-    position: relative; /* Para posicionar el mensaje de no results */
+    padding: 0.2rem 1rem 0.3rem;
+    margin: 0;
 }
 
-.search-wrapper {
-    position: relative;
+.search-box input {
     width: 100%;
-}
-
-.search-input {
-    width: 100%;
-    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    padding: 0.4rem 0.8rem;
     background-color: var(--color-surface, #1a1a2e);
-    border: 2px solid var(--color-primary, #4e24a7);
-    border-radius: 0.5rem;
+    border: 1px solid var(--color-primary, #4e24a7);
+    border-radius: 0.4rem;
     color: var(--color-on-surface, #ffffff);
     font-family: "Lexend Deca", sans-serif;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    font-size: 0.85rem;
     outline: none;
 }
 
-.search-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.search-input:focus {
+.search-box input:focus {
     border-color: var(--color-primary-hover, #6c14cf);
-    box-shadow: 0 0 15px rgba(78, 36, 167, 0.4);
+    box-shadow: 0 0 10px rgba(78, 36, 167, 0.3);
 }
 
-.search-icon {
-    position: absolute;
-    left: 0.8rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1rem;
-    opacity: 0.7;
-    pointer-events: none;
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
-/* Mensaje flotante absolute para no empujar contenido */
-.search-no-results {
-    position: absolute;
-    top: 100%;
-    left: 1rem;
-    right: 1rem;
-    margin-top: 0.5rem;
-    padding: 0.5rem;
+.no-results {
+    padding: 2rem;
     text-align: center;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
-    font-style: italic;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0.3rem;
-    z-index: 100;
-    pointer-events: none; /* No interfiere con clicks */
-}
-
-/* Estado vacío dentro del board-container */
-.empty-state {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-height: 200px;
     color: rgba(255, 255, 255, 0.5);
     font-style: italic;
-    text-align: center;
 }
 
-/* Ajuste grid para que el buscador no afecte el layout */
+/* Grid ajustado */
 .page-leaderboard .error-container {
     grid-row: 1;
     grid-column: 2;
