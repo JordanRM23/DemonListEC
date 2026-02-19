@@ -12,7 +12,7 @@ export default {
         loading: true,
         selected: 0,
         err: [],
-        searchQuery: '', // Nuevo: query de búsqueda
+        searchQuery: '',
     }),
     template: `
         <main v-if="loading">
@@ -37,13 +37,18 @@ export default {
                         />
                         <span class="search-icon">🔍</span>
                     </div>
+                    <!-- Mensaje flotante en lugar de en el flujo -->
                     <div v-if="searchQuery && filteredLeaderboard.length === 0" class="search-no-results">
                         No se encontraron jugadores
                     </div>
                 </div>
 
                 <div class="board-container">
-                    <table class="board">
+                    <!-- Mensaje dentro del contenedor scrolleable cuando está vacío -->
+                    <div v-if="filteredLeaderboard.length === 0" class="empty-state">
+                        <p>No hay jugadores para mostrar</p>
+                    </div>
+                    <table class="board" v-else>
                         <tr v-for="(ientry, i) in filteredLeaderboard" :key="ientry.user" @click="selected = getOriginalIndex(ientry.user)">
                             <td class="rank">
                                 <p class="type-label-lg">
@@ -220,9 +225,12 @@ export default {
     `,
     computed: {
         entry() {
+            // Si no hay resultados, mantener el último seleccionado o null
+            if (!this.leaderboard[this.selected]) {
+                return this.leaderboard[0] || null;
+            }
             return this.leaderboard[this.selected];
         },
-        // Nuevo: filtrar leaderboard basado en búsqueda
         filteredLeaderboard() {
             if (!this.searchQuery) return this.leaderboard;
             const query = this.searchQuery.toLowerCase();
@@ -240,7 +248,6 @@ export default {
     methods: {
         localize,
 
-        // Nuevo: obtener índice original para mantener referencias correctas
         getOriginalIndex(user) {
             return this.leaderboard.findIndex(entry => entry.user === user);
         },

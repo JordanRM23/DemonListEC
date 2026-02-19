@@ -300,7 +300,7 @@ background: linear-gradient(
     grid-column: 1;
     padding: 1rem;
     padding-top: 2rem;
-    z-index: 10;
+    position: relative; /* Para posicionar el mensaje de no results */
 }
 
 .search-wrapper {
@@ -340,16 +340,46 @@ background: linear-gradient(
     pointer-events: none;
 }
 
+/* Mensaje flotante absolute para no empujar contenido */
 .search-no-results {
+    position: absolute;
+    top: 100%;
+    left: 1rem;
+    right: 1rem;
     margin-top: 0.5rem;
     padding: 0.5rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
     font-style: italic;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.3rem;
+    z-index: 100;
+    pointer-events: none; /* No interfiere con clicks */
 }
 
-/* Ajuste para que el error-container ocupe solo la columna 2 cuando hay buscador */
+/* Estado vacío dentro del board-container */
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 200px;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Ajuste grid para que el buscador no afecte el layout */
 .page-leaderboard .error-container {
+    grid-row: 1;
     grid-column: 2;
+}
+
+.page-leaderboard .board-container {
+    grid-row: 2;
+}
+
+.page-leaderboard .player-container {
+    grid-row: 2;
 }
