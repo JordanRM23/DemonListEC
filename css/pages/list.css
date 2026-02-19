@@ -279,6 +279,14 @@
 }
 
 /* ==== COLORES POR POSICIÓN (TOP / LEGACY) ==== */
+.level-pos-top50,
+.level-pos-51-100,
+.level-pos-101-150 {
+    display: inline-block; /* Necesario para que el padding funcione */
+    padding: 0.4rem 0.5rem; /* Espacio extra para el glow */
+    margin: -0.2rem -0.4rem; /* Compensar el padding */
+    border-radius: 0.25rem; /* Suavizar bordes */
+}
 
 /* Top 1–50: EXACTAMENTE el mismo dorado que rank-10000 */
 .level-pos-top50 {
@@ -289,19 +297,19 @@
     -webkit-text-fill-color: transparent;
 
     text-shadow:
-        0 0 5px rgba(255,255,255,0.7),
-        0 0 12px rgba(255,215,0,0.7);
+        0 0 8px rgba(255,255,255,0.8),   /* Aumentado de 5px a 8px */
+        0 0 16px rgba(255,215,0,0.8),    /* Aumentado de 12px a 16px */
+        0 0 24px rgba(255,215,0,0.4);    /* Nuevo - glow más extendido */
 
     font-weight: 700;
     animation:
         gradientHero 4s linear infinite,
         glowPulse 3s ease-in-out infinite;
 
-    will-change: background-position
-
+    will-change: background-position, text-shadow; /* Optimización */
 }
 
-/* 51–100: “plata” (gris claro) con glow más suave */
+/* 51–100: "plata" con glow más suave */
 .level-pos-51-100 {
     background: linear-gradient(
         90deg,
@@ -315,12 +323,14 @@
     -webkit-text-fill-color: transparent;
 
     text-shadow:
-        0 0 6px rgba(240, 240, 240, 0.6),
-        0 0 10px rgba(200, 200, 200, 0.7);
+        0 0 8px rgba(240, 240, 240, 0.7),   /* Aumentado */
+        0 0 14px rgba(200, 200, 200, 0.8),  /* Aumentado */
+        0 0 20px rgba(200, 200, 200, 0.4);  /* Nuevo */
 
     font-weight: 600;
     animation: silverSweep 5s linear infinite, glowPulse 2s ease-in-out infinite;
 }
+
 
 /* 101–150: bronce simple (sin tanto brillo) */
 .level-pos-101-150 {
