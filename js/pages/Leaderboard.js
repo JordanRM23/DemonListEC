@@ -12,6 +12,7 @@ export default {
         loading: true,
         selected: 0,
         err: [],
+        searchQuery: '', // Nuevo: query de búsqueda
     }),
     template: `
         <main v-if="loading">
@@ -25,16 +26,32 @@ export default {
                     </p>
                 </div>
 
+                <!-- ===== BUSCADOR ===== -->
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <input 
+                            type="text" 
+                            v-model="searchQuery" 
+                            placeholder="Buscar jugador..." 
+                            class="search-input"
+                        />
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div v-if="searchQuery && filteredLeaderboard.length === 0" class="search-no-results">
+                        No se encontraron jugadores
+                    </div>
+                </div>
+
                 <div class="board-container">
                     <table class="board">
-                        <tr v-for="(ientry, i) in leaderboard" :key="ientry.user">
+                        <tr v-for="(ientry, i) in filteredLeaderboard" :key="ientry.user" @click="selected = getOriginalIndex(ientry.user)">
                             <td class="rank">
                                 <p class="type-label-lg">
                                     <span
                                         class="player-name"
                                         :class="getNameClass(ientry.total)"
                                     >
-                                        #{{ i + 1 }}
+                                        #{{ getOriginalIndex(ientry.user) + 1 }}
                                     </span>
                                 </p>
                             </td>
@@ -48,8 +65,8 @@ export default {
                                     </span>
                                 </p>
                             </td>
-                            <td class="user" :class="{ 'active': selected == i }">
-                                <button @click="selected = i">
+                            <td class="user" :class="{ 'active': selected == getOriginalIndex(ientry.user) }">
+                                <button @click="selected = getOriginalIndex(ientry.user)">
                                  <span
                                     class="type-label-lg player-name"
                                         :class="getNameClass(ientry.total)"
@@ -205,6 +222,14 @@ export default {
         entry() {
             return this.leaderboard[this.selected];
         },
+        // Nuevo: filtrar leaderboard basado en búsqueda
+        filteredLeaderboard() {
+            if (!this.searchQuery) return this.leaderboard;
+            const query = this.searchQuery.toLowerCase();
+            return this.leaderboard.filter(entry => 
+                entry.user.toLowerCase().includes(query)
+            );
+        },
     },
     async mounted() {
         const [leaderboard, err] = await fetchLeaderboard();
@@ -214,6 +239,11 @@ export default {
     },
     methods: {
         localize,
+
+        // Nuevo: obtener índice original para mantener referencias correctas
+        getOriginalIndex(user) {
+            return this.leaderboard.findIndex(entry => entry.user === user);
+        },
 
         /* No Tocar */
         getPlayerProvince(user) {
