@@ -57,13 +57,7 @@ export default {
                 <table class="list" v-if="filteredList.length > 0">
                     <tr v-for="([level, err], i) in filteredList" :key="level?.path || i">
                         <td class="rank">
-                            <p v-if="getOriginalRank(level) <= 150" class="type-label-lg">#{{ getOriginalRank(level) }}</p>
-                            <span
-                                    v-if="i + 1 <= 150"
-                                    :class="getLevelPosClass(i + 1)"
-                                >
-                                    #{{ i + 1 }}
-                                </span>
+                            <p v-if="getOriginalRank(level) <= 150" class="type-label-lg" :class="getLevelPosClass(i + 1)">#{{ i + 1 }} #{{ getOriginalRank(level) }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
                         <td class="level" :class="{ 'active': selected == getOriginalIndex(level), 'error': !level }">
@@ -82,8 +76,7 @@ export default {
             </div>
             
             <div class="level-container">
-                <div class="level" v-if="level">
-                :class="getLevelPosClass(selected + 1)"
+                <div class="level" v-if="level" :class="getLevelPosClass(selected + 1)">
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier" :descripcion="level.descripcion"></LevelAuthors>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
@@ -117,14 +110,7 @@ export default {
                                 <p>{{ record.percent }}%</p>
                             </td>
                             <td class="user">
-                                <a
-                                    :href="record.link"
-                                    target="_blank"
-                                    class="type-label-lg"
-                                    :class="getLevelPosClass(selected + 1)"
-                                >
-                                    {{ record.user }}
-                                </a>
+                                <a :href="record.link" target="_blank" class="type-label-lg" :class="getLevelPosClass(selected + 1)">{{ record.user }}</a>
                             </td>
                             <td class="mobile">
                                 <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">
@@ -279,6 +265,12 @@ export default {
     methods: {
         embed,
         score,
+        getLevelPosClass(pos) {
+            if (pos >= 1 && pos <= 50) return 'level-pos-top50';
+            if (pos >= 51 && pos <= 100) return 'level-pos-51-100';
+            if (pos >= 101 && pos <= 150) return 'level-pos-101-150';
+            return 'level-pos-151plus';
+        },
         // Obtener el ranking original del nivel (no el filtrado)
         getOriginalRank(level) {
             if (!level) return 0;
@@ -300,11 +292,5 @@ export default {
             this.filterType = 'all';
             this.sortBy = 'rank';
         },
-        getLevelPosClass(pos) {
-            if (pos >= 1 && pos <= 50) return 'level-pos-top50';
-            if (pos >= 51 && pos <= 100) return 'level-pos-51-100';
-            if (pos >= 101 && pos <= 150) return 'level-pos-101-150';
-            return 'level-pos-151plus';
-        }
     }
 };
