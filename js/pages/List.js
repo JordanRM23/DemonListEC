@@ -57,7 +57,7 @@ export default {
                 <table class="list" v-if="filteredList.length > 0">
                     <tr v-for="([level, err], i) in filteredList" :key="level?.path || i">
                         <td class="rank">
-                            <p v-if="getOriginalRank(level) <= 150" class="type-label-lg" :class="getLevelPosClass(i + 1)">#{{ i + 1 }} #{{ getOriginalRank(level) }}</p>
+                            <p v-if="getOriginalRank(level) <= 150" class="type-label-lg" :class="getLevelPosClass(i + 1)">#{{ getOriginalRank(level) }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
                         <td class="level" :class="{ 'active': selected == getOriginalIndex(level), 'error': !level }">
