@@ -9,42 +9,13 @@ export const store = Vue.reactive({
 });
 
 const app = Vue.createApp({
-    data() {
-        return {
-            store,
-            isMobile: window.innerWidth <= 1023,
-            menuOpen: false
-        };
-    },
-    methods: {
-        toggleMenu() {
-            this.menuOpen = !this.menuOpen;
-        },
-        closeMenu() {
-            this.menuOpen = false;
-        },
-        checkMobile() {
-            this.isMobile = window.innerWidth <= 1023;
-            if (!this.isMobile) {
-                this.menuOpen = false;
-            }
-        }
-    },
-    mounted() {
-        this.checkMobile();
-        window.addEventListener('resize', this.checkMobile);
-        
-        // Cerrar menú al cambiar de ruta
-        this.$router.afterEach(() => {
-            this.menuOpen = false;
-        });
-    }
+    data: () => ({ store }),
 });
-
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
     routes,
 });
 
 app.use(router);
+
 app.mount('#app');
