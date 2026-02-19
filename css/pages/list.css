@@ -1,3 +1,4 @@
+/* Estilos existentes... */
 .page-list .list-container,
 .page-list .level-container,
 .page-list .meta-container {
@@ -10,6 +11,116 @@
     padding-right: 2rem;
 }
 
+/* NUEVOS ESTILOS - Sistema de Búsqueda y Filtros */
+.search-filter-container {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-background-hover);
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 2px solid var(--color-background);
+    border-radius: 0.5rem;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: inherit;
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(252, 209, 22, 0.2);
+}
+
+.search-input::placeholder {
+    color: var(--color-on-background);
+    opacity: 0.5;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    flex: 1;
+    min-width: 140px;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--color-background);
+    border-radius: 0.5rem;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 200ms ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.results-info {
+    color: var(--color-on-background);
+    opacity: 0.6;
+    text-align: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--color-background);
+}
+
+/* Indicador de nivel popular */
+.record-badge {
+    margin-left: 0.5rem;
+    font-size: 0.9em;
+}
+
+/* No resultados */
+.no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--color-on-background);
+    opacity: 0.7;
+}
+
+.btn-reset {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 100ms ease, opacity 200ms ease;
+}
+
+.btn-reset:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Estilos existentes... */
 .page-list .list {
     table-layout: auto;
 }
@@ -17,12 +128,6 @@
     text-align: end;
     padding-right: 1rem;
 }
-/* dar espacio para que no se “corten” los números */
-.page-list .list .rank .type-label-lg {
-    min-width: 4.5rem;
-    display: inline-block;
-}
-
 .page-list .list .level {
     width: 100%;
 }
@@ -36,6 +141,10 @@
     word-break: normal;
     overflow-wrap: anywhere;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 .page-list .list .level.error button {
     color: var(--color-error);
@@ -133,89 +242,13 @@
     text-decoration: underline;
 }
 
-/* ==== ANIMACIONES PARA BRILLOS ==== */
-
-/* mismas que usas en leaderboard para el dorado */
-@keyframes glowPulse {
-    0%, 100% { text-shadow: 0 0 4px rgba(255,255,255,0.4); }
-    50%      { text-shadow: 0 0 6px rgba(255,255,255,0.7); }
-}
-@keyframes gradientHero {
-    0%   { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
-
-@keyframes silverSweep {
-    0%   { background-position: 100% 50%; }
-    50%  { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
-
-/* ==== COLORES POR POSICIÓN (TOP / LEGACY) ==== */
-
-/* Top 1–50: EXACTAMENTE el mismo dorado que rank-10000 */
-.level-pos-top50 {
-    background: linear-gradient(-45deg, #fff, #FFD700, #fff);
-    background-size: 250% 250%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-shadow:
-        0 0 5px rgba(255,255,255,0.7),
-        0 0 12px rgba(255,215,0,0.7);
-
-    font-weight: 700;
-    animation:
-        gradientHero 4s linear infinite,
-        glowPulse 3s ease-in-out infinite;
-
-    will-change: background-position
+/* Responsive para filtros */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
     
-}
-
-/* 51–100: “plata” (gris claro) con glow más suave */
-.level-pos-51-100 {
-    background: linear-gradient(
-        90deg,
-        #b0b0b0,
-        #f5f5f5,
-        #d0d0d0
-    );
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    text-shadow:
-        0 0 6px rgba(240, 240, 240, 0.6),
-        0 0 10px rgba(200, 200, 200, 0.7);
-
-    font-weight: 600;
-    animation: silverSweep 5s linear infinite, glowPulse 2s ease-in-out infinite;
-}
-
-/* 101–150: bronce simple (sin tanto brillo) */
-.level-pos-101-150 {
-    color: #cd7f32;
-    font-weight: 700;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
-}
-
-/* 151+: blanco / color por defecto */
-.level-pos-151plus {
-    color: inherit;
-    text-shadow: none;
-}
-
-/* ===== Títulos de secciones de la lista ===== */
-
-.list-section-row td {
-    padding: 0.75rem 0 0.25rem;
-}
-
-.list-section-title {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    .filter-select {
+        width: 100%;
+    }
 }
