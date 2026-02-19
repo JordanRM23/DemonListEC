@@ -299,15 +299,17 @@ background: linear-gradient(
 .search-box {
     grid-row: 1;
     grid-column: 1;
-    padding: 0.2rem 1rem 0.3rem;
-    margin: 0;
+    padding: 0.5rem 1rem 0.3rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    position: relative;
 }
 
 .search-box input {
     width: 100%;
-    padding: 0.4rem 0.8rem;
-    background-color: var(--color-surface, #1a1a2e);
-    border: 1px solid var(--color-primary, #4e24a7);
+    padding: 0.8rem 0.8rem;
+    background-color: hsl(0deg 0.35% 45.04% / 21%);
+    border: 1px solid #ffffffa3;
     border-radius: 0.4rem;
     color: var(--color-on-surface, #ffffff);
     font-family: "Lexend Deca", sans-serif;
@@ -316,8 +318,8 @@ background: linear-gradient(
 }
 
 .search-box input:focus {
-    border-color: var(--color-primary-hover, #6c14cf);
-    box-shadow: 0 0 10px rgba(78, 36, 167, 0.3);
+    border-color: var(--color-primary-hover, #2a2b286b);
+    box-shadow: 0 0 10px rgb(43 47 44 / 30%);
 }
 
 .search-box input::placeholder {
