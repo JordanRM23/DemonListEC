@@ -77,13 +77,20 @@ export default {
             
             <div class="level-container">
                 <div class="level" v-if="level">
+                :class="getLevelPosClass(selected + 1)"
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier" :descripcion="level.descripcion"></LevelAuthors>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Puntos al completar</div>
-                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                           <p>
+                                {{
+                                    selected + 1 <= 150
+                                        ? score(selected + 1, 100, level.percentToQualify)
+                                        : 0
+                                }}
+                            </p>
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
@@ -104,7 +111,14 @@ export default {
                                 <p>{{ record.percent }}%</p>
                             </td>
                             <td class="user">
-                                <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
+                                <a
+                                    :href="record.link"
+                                    target="_blank"
+                                    class="type-label-lg"
+                                    :class="getLevelPosClass(selected + 1)"
+                                >
+                                    {{ record.user }}
+                                </a>
                             </td>
                             <td class="mobile">
                                 <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">
@@ -259,12 +273,6 @@ export default {
     methods: {
         embed,
         score,
-         getLevelPosClass(pos) {
-            if (pos >= 1 && pos <= 50) return 'level-pos-top50';
-            if (pos >= 51 && pos <= 100) return 'level-pos-51-100';
-            if (pos >= 101 && pos <= 150) return 'level-pos-101-150';
-            return 'level-pos-151plus';
-        },
         // Obtener el ranking original del nivel (no el filtrado)
         getOriginalRank(level) {
             if (!level) return 0;
@@ -285,6 +293,12 @@ export default {
             this.searchQuery = '';
             this.filterType = 'all';
             this.sortBy = 'rank';
+        },
+        getLevelPosClass(pos) {
+            if (pos >= 1 && pos <= 50) return 'level-pos-top50';
+            if (pos >= 51 && pos <= 100) return 'level-pos-51-100';
+            if (pos >= 101 && pos <= 150) return 'level-pos-101-150';
+            return 'level-pos-151plus';
         }
     }
 };
