@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=1024" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <title>GDEcuador</title>
         <link rel="icon" href="/list_icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,55 +12,58 @@
         <link rel="stylesheet" type="text/css" href="/css/typography.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
         <link rel="stylesheet" type="text/css" href="/css/pages/list.css" />
-        <link rel="stylesheet" type="text/css" href="/css/pages/submit.css" />
         <link rel="stylesheet" type="text/css" href="/css/pages/leaderboard.css" />
         <link rel="stylesheet" type="text/css" href="/css/pages/roulette.css" />
-		<link rel="stylesheet" type="text/css" href="/css/pages/changelog.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/changelog.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/nav.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/btn.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/tabs.css" />
+        <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
         <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
         <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
         <script type="module" src="/js/main.js"></script>
     </head>
-    <body id="app">
-        <header>
-            <div class="logo">
-                <img src="/list_icon.png" width="50" height="50">
-                <h2 style="line-height: 4rem;">DLEC</h2>
-                <p style="line-height: 4rem;">v1.1.0</p>
-            </div>
-			<nav class="nav">
-				<router-link class="nav__tab" to="/">
-					<span class="type-label-lg">Lista</span>
-				</router-link>
-				<router-link class="nav__tab" to="/leaderboard">
-					<span class="type-label-lg">Jugadores</span>
-				</router-link>
-				<router-link class="nav__tab" to="/roulette">
-					<span class="type-label-lg">Ruleta</span>
-				</router-link>
-				 <router-link class="nav__tab" to="/changelog">
-                    <span class="type-label-lg">Changelog</span>
-                </router-link>
+    <body>
+        <div id="app">
+            <header>
+                <div class="logo">
+                    <img src="/list_icon.png" width="50" height="50">
+                    <h2 style="line-height: 4rem;">DLEC</h2>
+                    <p style="line-height: 4rem;">v1.1.0</p>
+                </div>
+                
+                <!-- Componente móvil -->
+                <MobileNav v-if="isMobile"></MobileNav>
+                
+                <!-- Nav desktop -->
+                <nav class="nav" v-else>
+                    <router-link class="nav__tab" to="/">
+                        <span class="type-label-lg">Lista</span>
+                    </router-link>
+                    <router-link class="nav__tab" to="/leaderboard">
+                        <span class="type-label-lg">Jugadores</span>
+                    </router-link>
+                    <router-link class="nav__tab" to="/roulette">
+                        <span class="type-label-lg">Ruleta</span>
+                    </router-link>
+                    <router-link class="nav__tab" to="/changelog">
+                        <span class="type-label-lg">Changelog</span>
+                    </router-link>
 
-				<div class="Spinner"></div>
-
-				<div class="nav__actions">
-					<a class="nav__icon" href="https://discord.gg/JskKyjzmws" target="_blank">
-						<img src="/assets/discord.svg" alt="Discord Logo" />
-					</a>
-					<a class="nav__cta type-label-lg" href="https://discord.gg/JskKyjzmws" target="_blank">
-						Enviar Records
-
-					<a
-                        class="nav__cta type-label-lg"  href="#">
-						Login
-						
-					</a>
-				</div>
-			</nav>
-        </header>
-        <router-view></router-view>
+                    <div class="nav__actions">
+                        <a class="nav__icon" href="https://discord.gg/JskKyjzmws" target="_blank">
+                            <img src="/assets/discord.svg" alt="Discord Logo" />
+                        </a>
+                        <a class="nav__cta type-label-lg" href="https://discord.gg/JskKyjzmws" target="_blank">
+                            Enviar Records
+                        </a>
+                        <a class="nav__cta type-label-lg" href="#">
+                            Login
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <router-view></router-view>
+        </div>
     </body>
 </html>

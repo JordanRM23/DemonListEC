@@ -1,0 +1,529 @@
+/* ============================================
+   RESPONSIVE DESIGN - DEMON LIST EC
+   ============================================ */
+
+/* ============================================
+   MOBILE FIRST (hasta 1023px)
+   ============================================ */
+
+/* Viewport fix */
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+/* Header móvil */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    min-height: 4rem;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+header .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+header .logo h2 {
+    font-size: 1.5rem;
+    line-height: 2rem !important;
+}
+
+header .logo p {
+    font-size: 0.875rem;
+    line-height: 2rem !important;
+    opacity: 0.8;
+}
+
+/* Botón hamburguesa */
+.mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
+    padding: 0;
+}
+
+.hamburger {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: currentColor;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transition: transform 0.3s;
+}
+
+.hamburger::before {
+    top: -6px;
+}
+
+.hamburger::after {
+    top: 6px;
+}
+
+.hamburger.open {
+    background: transparent;
+}
+
+.hamburger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Menú móvil */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--color-background);
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 1.5rem 1.5rem;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+}
+
+.mobile-nav__tab {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-background-hover);
+    color: var(--color-on-background);
+    text-decoration: none;
+    display: block;
+}
+
+.mobile-nav__tab.router-link-active {
+    color: var(--color-primary);
+    border-left: 4px solid var(--color-primary);
+    padding-left: calc(1rem - 4px);
+    background: var(--color-background-hover);
+}
+
+.mobile-nav__actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-background-hover);
+}
+
+.mobile-nav__cta {
+    padding: 0.875rem 1rem;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 140;
+}
+
+/* Ocultar nav desktop en móvil */
+.nav {
+    display: none;
+}
+
+/* Main layout móvil */
+main {
+    display: block;
+    height: auto;
+    min-height: calc(100vh - 4rem);
+}
+
+/* Lista de niveles móvil */
+.page-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-list .list-container {
+    padding: 0.75rem;
+    order: 2;
+}
+
+/* Detalle del nivel móvil - sticky arriba */
+.page-list .level-container {
+    padding: 0.75rem;
+    order: 1;
+    position: sticky;
+    top: 4rem;
+    background: var(--color-background);
+    z-index: 50;
+    max-height: 50vh;
+    overflow-y: auto;
+    border-bottom: 2px solid var(--color-background-hover);
+}
+
+.page-list .level-container .level {
+    padding-right: 0;
+    gap: 1rem;
+}
+
+.page-list .level-container .level h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+/* Video responsive */
+.page-list .level-container .level .video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    min-height: 200px;
+}
+
+/* Stats en grid para móvil */
+.page-list .level-container .level .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    font-size: 0.875rem;
+}
+
+/* Tabla de records scrollable horizontal */
+.page-list .level-container .level .records {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.page-list .level-container .level .records tr {
+    display: table-row;
+}
+
+/* Meta info móvil */
+.page-list .meta-container {
+    padding: 0.75rem;
+    order: 3;
+}
+
+/* Búsqueda y filtros móvil */
+.search-filter-container {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.filters {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-select {
+    width: 100%;
+    min-width: auto;
+    padding: 0.625rem;
+}
+
+.search-input {
+    font-size: 16px; /* Previene zoom en iOS */
+}
+
+/* Leaderboard móvil */
+.page-leaderboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-leaderboard .board-container {
+    padding: 0.75rem;
+    order: 2;
+}
+
+.page-leaderboard .player-container {
+    padding: 0.75rem;
+    order: 1;
+    position: sticky;
+    top: 4rem;
+    background: var(--color-background);
+    z-index: 50;
+    border-bottom: 2px solid var(--color-background-hover);
+}
+
+/* Tablas scrollables */
+.page-leaderboard .board,
+.page-leaderboard .player .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Roulette móvil */
+.page-roulette {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-roulette .sidebar {
+    padding: 0.75rem;
+    order: 2;
+}
+
+.page-roulette .levels-container {
+    padding: 0.75rem;
+    order: 1;
+}
+
+.page-roulette .levels .level {
+    grid-template-columns: 1fr;
+}
+
+.page-roulette .levels .level .video {
+    aspect-ratio: 16/9;
+}
+
+/* Changelog móvil */
+.page-changelog {
+    padding: 0.75rem;
+}
+
+/* Touch-friendly */
+button, 
+select, 
+input,
+a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Prevenir zoom en inputs iOS */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    font-size: 16px;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prevenir selección accidental */
+button,
+.mobile-menu-toggle {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Transiciones menú */
+.slide-enter-active,
+.slide-leave-active {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* ============================================
+   TABLET (768px - 1023px)
+   ============================================ */
+@media screen and (min-width: 768px) {
+    header {
+        padding: 0.5rem 1.5rem;
+    }
+    
+    .page-list .list-container,
+    .page-list .level-container,
+    .page-list .meta-container {
+        padding: 1rem;
+    }
+    
+    .page-list .level-container {
+        position: static;
+        max-height: none;
+        border-bottom: none;
+    }
+    
+    .filters {
+        flex-direction: row;
+    }
+    
+    .filter-select {
+        flex: 1;
+    }
+}
+
+/* ============================================
+   DESKTOP (1024px+)
+   ============================================ */
+@media screen and (min-width: 1024px) {
+    /* Ocultar elementos móviles */
+    .mobile-menu-toggle,
+    .mobile-nav,
+    .mobile-overlay {
+        display: none !important;
+    }
+    
+    /* Mostrar nav desktop */
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        flex: 1;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16rem, 1fr);
+        column-gap: 2rem;
+        padding-inline: calc(25vw - 10rem);
+        height: 4.5rem;
+    }
+    
+    header .logo {
+        justify-self: end;
+    }
+    
+    header .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    header .logo h2 {
+        font-size: 2rem;
+        line-height: 4rem !important;
+    }
+    
+    header .logo p {
+        line-height: 4rem !important;
+    }
+    
+    /* Layout desktop 3 columnas */
+    main {
+        display: grid;
+        grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16rem, 1fr);
+        column-gap: 2rem;
+        height: 0;
+        flex: 1;
+    }
+    
+    .page-list {
+        display: grid;
+        grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16rem, 1fr);
+    }
+    
+    .page-list .list-container {
+        order: 1;
+        padding-inline: 1rem;
+    }
+    
+    .page-list .level-container {
+        order: 2;
+        position: static;
+        max-height: none;
+        border-bottom: none;
+        padding-block: 2rem;
+    }
+    
+    .page-list .meta-container {
+        order: 3;
+        padding-right: 2rem;
+        display: block;
+    }
+    
+    .page-list .level-container .level {
+        padding-right: 2rem;
+        max-width: 48rem;
+    }
+    
+    /* Leaderboard desktop */
+    .page-leaderboard {
+        display: grid;
+        grid-template-columns: minmax(24rem, 2fr) 3fr;
+        grid-template-rows: max-content 1fr;
+    }
+    
+    .page-leaderboard .board-container {
+        order: 1;
+        grid-row: 2;
+    }
+    
+    .page-leaderboard .player-container {
+        order: 2;
+        position: static;
+        border-bottom: none;
+    }
+    
+    /* Roulette desktop */
+    .page-roulette {
+        display: grid;
+        grid-template-columns: minmax(16rem, 1fr) 2fr 1fr;
+    }
+    
+    .page-roulette .sidebar {
+        order: 1;
+        padding: 2rem;
+    }
+    
+    .page-roulette .levels-container {
+        order: 2;
+        grid-column: 2;
+    }
+}
+
+/* ============================================
+   LARGE DESKTOP (1366px+)
+   ============================================ */
+@media screen and (min-width: 1366px) {
+    header {
+        padding-inline: 0;
+    }
+    
+    .page-roulette .levels-container {
+        grid-column: 2;
+        padding-right: 0;
+    }
+}

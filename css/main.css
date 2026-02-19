@@ -103,16 +103,34 @@ input[type="checkbox"] {
     cursor: pointer;
     margin: 0;
 }
-/* codigo para testear, no tocar por ahora */
-/* Estilos por defecto para móvil */
-.container { width: 100%; }
-
-/* Estilos para pantallas más grandes (ej. tabletas) */
-@media (min-width: 768px) {
-  .container { width: 750px; }
+/* Botones más grandes para touch */
+button, 
+select, 
+input,
+.nav__tab {
+    min-height: 44px; /* Recomendado por Apple */
+    min-width: 44px;
 }
 
-/* Estilos para pantallas grandes (ej. escritorio) */
-@media (min-width: 992px) {
-  .container { width: 970px; }
+/* Prevenir zoom en inputs en iOS */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    font-size: 16px; /* Previene zoom en focus */
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
+}
+
+/* Prevenir selección accidental en botones */
+button {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
