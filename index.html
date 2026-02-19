@@ -26,17 +26,23 @@
     <body>
         <div id="app">
             <header>
-                <div class="logo">
-                    <img src="/list_icon.png" width="50" height="50">
-                    <h2 style="line-height: 4rem;">DLEC</h2>
-                    <p style="line-height: 4rem;">v1.1.0</p>
+                <div class="header-left">
+                    <div class="logo">
+                        <img src="/list_icon.png" width="40" height="40">
+                        <div class="logo-text">
+                            <h2>DLEC</h2>
+                            <p>v1.1.0</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Componente móvil -->
-                <MobileNav v-if="isMobile"></MobileNav>
+                <!-- Botón menú móvil -->
+                <button class="mobile-menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" v-if="isMobile">
+                    <span class="hamburger" :class="{ 'open': mobileMenuOpen }"></span>
+                </button>
                 
                 <!-- Nav desktop -->
-                <nav class="nav" v-else>
+                <nav class="nav" v-if="!isMobile">
                     <router-link class="nav__tab" to="/">
                         <span class="type-label-lg">Lista</span>
                     </router-link>
@@ -62,7 +68,43 @@
                         </a>
                     </div>
                 </nav>
+                
+                <!-- Menú móvil -->
+                <transition name="slide">
+                    <div class="mobile-menu" v-if="isMobile && mobileMenuOpen">
+                        <nav class="mobile-nav">
+                            <router-link class="mobile-nav__tab" to="/" @click="mobileMenuOpen = false">
+                                <span class="type-label-lg">Lista</span>
+                            </router-link>
+                            <router-link class="mobile-nav__tab" to="/leaderboard" @click="mobileMenuOpen = false">
+                                <span class="type-label-lg">Jugadores</span>
+                            </router-link>
+                            <router-link class="mobile-nav__tab" to="/roulette" @click="mobileMenuOpen = false">
+                                <span class="type-label-lg">Ruleta</span>
+                            </router-link>
+                            <router-link class="mobile-nav__tab" to="/changelog" @click="mobileMenuOpen = false">
+                                <span class="type-label-lg">Changelog</span>
+                            </router-link>
+                        </nav>
+                        
+                        <div class="mobile-actions">
+                            <a class="mobile-btn" href="https://discord.gg/JskKyjzmws" target="_blank">
+                                💬 Discord
+                            </a>
+                            <a class="mobile-btn primary" href="https://discord.gg/JskKyjzmws" target="_blank">
+                                📝 Enviar Records
+                            </a>
+                            <a class="mobile-btn" href="#">
+                                🔑 Login
+                            </a>
+                        </div>
+                    </div>
+                </transition>
+                
+                <!-- Overlay -->
+                <div class="mobile-overlay" v-if="isMobile && mobileMenuOpen" @click="mobileMenuOpen = false"></div>
             </header>
+            
             <router-view></router-view>
         </div>
     </body>

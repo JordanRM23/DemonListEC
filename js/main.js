@@ -1,5 +1,4 @@
 import routes from './routes.js';
-import MobileNav from './components/MobileNav.js';
 
 export const store = Vue.reactive({
     dark: JSON.parse(localStorage.getItem('dark')) || false,
@@ -13,15 +12,22 @@ const app = Vue.createApp({
     data() {
         return {
             store,
-            isMobile: window.innerWidth < 1024
+            isMobile: window.innerWidth < 1024,
+            mobileMenuOpen: false
         };
-    },
-    components: {
-        MobileNav
     },
     mounted() {
         window.addEventListener('resize', () => {
-            this.isMobile = window.innerWidth < 1024;
+            const newIsMobile = window.innerWidth < 1024;
+            if (this.isMobile !== newIsMobile) {
+                this.isMobile = newIsMobile;
+                this.mobileMenuOpen = false;
+            }
+        });
+        
+        // Cerrar menú al cambiar de ruta
+        this.$router.afterEach(() => {
+            this.mobileMenuOpen = false;
         });
     }
 });
