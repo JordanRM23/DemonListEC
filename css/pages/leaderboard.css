@@ -318,7 +318,7 @@ background: linear-gradient(
 }
 
 .search-box input:focus {
-    border-color: var(--color-primary-hover, #2a2b286b);
+    border-color: var(--color-primary-hover, #27262c96);
     box-shadow: 0 0 10px rgb(43 47 44 / 30%);
 }
 
