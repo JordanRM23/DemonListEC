@@ -28,10 +28,10 @@ export default {
                         <input 
                             type="text" 
                             v-model="searchQuery" 
-                            placeholder="Buscar nivel o creador..."
+                            placeholder="Buscar nivel"
                             class="type-body search-input"
                         />
-                        <span class="search-icon">🔍</span>
+                        <span class="search-icon"></span>
                     </div>
                     
                     <div class="filters">
@@ -141,13 +141,14 @@ export default {
                     <h3>Reglas para los Records</h3>
                     <p>Ser Ecuatoriano</p>
                     <p>Para enviar un récord, el jugador necesita un vídeo para demostrar su legitimidad.</p>
-                    <p>Se requerirán clics para TODOS los registros de Extreme Demon; las dificultades Insane Demon y inferiores no requerirán clics.</p>
-                    <p>Si se descubre que un jugador hace trampa, será eliminado de la lista y eventualmente podrá hablar con un moderador al respecto.</p>
-                    <p>El porcentaje mínimo para tener un registro aceptado en cualquier nivel de la lista se refleja en cada nivel.</p>
-                    <p>Si tu record ya está aceptado en Pointercrate o en la AREDL, te aceptaremos el record.</p>
-                    <p>No utilices secret way ni bugs que genere la completion de algun nivel.</p>
-                    <p>Completar el nivel en una version más fácil, nerfeada, o con un LDM exagerado que haga el nivel mas fácil no está permitido.</p>
-                    <p>Si tiene alguna pregunta, comuníquese con un miembro del staff de GDEC en Discord.</p>
+                    <p>Los récords no serán aceptados si no tienen clics audibles claros en todo momento.</p>
+                    <p>Si se descubre que un jugador hace trampa, será eliminado de la lista.</p>
+                    <p>El porcentaje mínimo se refleja en cada nivel.</p>
+                    <p>Videos después del 1/1/2026 deben incluir cheats indicator obligatorio.</p>
+                    <p>Records ya aceptados en Pointercrate, AREDL o GDL pueden aceptarse.</p>
+                    <p>No utilices secret way ni bugs.</p>
+                    <p>No completar versiones nerfeadas o LDM exagerado.</p>
+                    <p>Para dudas, contacta al staff de GDEC en Discord.</p>
                     <h3>Leaderboard</h3>
                     <p>#1 - EduChavez | 277,461 Stars</p>
                     <div class="og">

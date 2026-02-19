@@ -128,6 +128,13 @@
     text-align: end;
     padding-right: 1rem;
 }
+
+/* dar espacio para que no se “corten” los números */
+.page-list .list .rank .type-label-lg {
+    min-width: 4.5rem;
+    display: inline-block;
+}
+
 .page-list .list .level {
     width: 100%;
 }
@@ -251,4 +258,91 @@
     .filter-select {
         width: 100%;
     }
+}
+
+/* ==== ANIMACIONES PARA BRILLOS ==== */
+
+/* mismas que usas en leaderboard para el dorado */
+@keyframes glowPulse {
+    0%, 100% { text-shadow: 0 0 4px rgba(255,255,255,0.4); }
+    50%      { text-shadow: 0 0 6px rgba(255,255,255,0.7); }
+}
+@keyframes gradientHero {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes silverSweep {
+    0%   { background-position: 100% 50%; }
+    50%  { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* ==== COLORES POR POSICIÓN (TOP / LEGACY) ==== */
+
+/* Top 1–50: EXACTAMENTE el mismo dorado que rank-10000 */
+.level-pos-top50 {
+    background: linear-gradient(-45deg, #fff, #FFD700, #fff);
+    background-size: 250% 250%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.7),
+        0 0 12px rgba(255,215,0,0.7);
+
+    font-weight: 700;
+    animation:
+        gradientHero 4s linear infinite,
+        glowPulse 3s ease-in-out infinite;
+
+    will-change: background-position
+
+}
+
+/* 51–100: “plata” (gris claro) con glow más suave */
+.level-pos-51-100 {
+    background: linear-gradient(
+        90deg,
+        #b0b0b0,
+        #f5f5f5,
+        #d0d0d0
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 6px rgba(240, 240, 240, 0.6),
+        0 0 10px rgba(200, 200, 200, 0.7);
+
+    font-weight: 600;
+    animation: silverSweep 5s linear infinite, glowPulse 2s ease-in-out infinite;
+}
+
+/* 101–150: bronce simple (sin tanto brillo) */
+.level-pos-101-150 {
+    color: #cd7f32;
+    font-weight: 700;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+/* 151+: blanco / color por defecto */
+.level-pos-151plus {
+    color: inherit;
+    text-shadow: none;
+}
+
+/* ===== Títulos de secciones de la lista ===== */
+
+.list-section-row td {
+    padding: 0.75rem 0 0.25rem;
+}
+
+.list-section-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
