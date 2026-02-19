@@ -25,87 +25,63 @@
     </head>
     <body>
         <div id="app">
-            <header>
-                <div class="header-left">
+            <!-- HEADER -->
+            <header class="site-header">
+                <div class="header-content">
+                    <!-- Logo -->
                     <div class="logo">
-                        <img src="/list_icon.png" width="40" height="40">
-                        <div class="logo-text">
-                            <h2>DLEC</h2>
-                            <p>v1.1.0</p>
+                        <img src="/list_icon.png" alt="DLEC" />
+                        <div class="brand">
+                            <span class="brand-name">DLEC</span>
+                            <span class="brand-version">v1.1.0</span>
                         </div>
+                    </div>
+                    
+                    <!-- Desktop Nav -->
+                    <nav class="desktop-nav" v-if="!isMobile">
+                        <router-link to="/" class="nav-link">Lista</router-link>
+                        <router-link to="/leaderboard" class="nav-link">Jugadores</router-link>
+                        <router-link to="/roulette" class="nav-link">Ruleta</router-link>
+                        <router-link to="/changelog" class="nav-link">Changelog</router-link>
+                        
+                        <div class="nav-actions">
+                            <a href="https://discord.gg/JskKyjzmws" target="_blank" class="btn-icon">
+                                <img src="/assets/discord.svg" alt="Discord" />
+                            </a>
+                            <a href="https://discord.gg/JskKyjzmws" target="_blank" class="btn-primary">Enviar Records</a>
+                            <a href="#" class="btn-secondary">Login</a>
+                        </div>
+                    </nav>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button v-if="isMobile" class="menu-btn" @click="toggleMenu" :class="{ 'active': menuOpen }">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div v-if="isMobile && menuOpen" class="mobile-menu">
+                    <router-link to="/" @click="closeMenu" class="mobile-link">Lista</router-link>
+                    <router-link to="/leaderboard" @click="closeMenu" class="mobile-link">Jugadores</router-link>
+                    <router-link to="/roulette" @click="closeMenu" class="mobile-link">Ruleta</router-link>
+                    <router-link to="/changelog" @click="closeMenu" class="mobile-link">Changelog</router-link>
+                    
+                    <div class="mobile-actions">
+                        <a href="https://discord.gg/JskKyjzmws" target="_blank" class="mobile-btn">Discord</a>
+                        <a href="https://discord.gg/JskKyjzmws" target="_blank" class="mobile-btn highlight">Enviar Records</a>
                     </div>
                 </div>
                 
-                <!-- Botón menú móvil -->
-                <button class="mobile-menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" v-if="isMobile">
-                    <span class="hamburger" :class="{ 'open': mobileMenuOpen }"></span>
-                </button>
-                
-                <!-- Nav desktop -->
-                <nav class="nav" v-if="!isMobile">
-                    <router-link class="nav__tab" to="/">
-                        <span class="type-label-lg">Lista</span>
-                    </router-link>
-                    <router-link class="nav__tab" to="/leaderboard">
-                        <span class="type-label-lg">Jugadores</span>
-                    </router-link>
-                    <router-link class="nav__tab" to="/roulette">
-                        <span class="type-label-lg">Ruleta</span>
-                    </router-link>
-                    <router-link class="nav__tab" to="/changelog">
-                        <span class="type-label-lg">Changelog</span>
-                    </router-link>
-
-                    <div class="nav__actions">
-                        <a class="nav__icon" href="https://discord.gg/JskKyjzmws" target="_blank">
-                            <img src="/assets/discord.svg" alt="Discord Logo" />
-                        </a>
-                        <a class="nav__cta type-label-lg" href="https://discord.gg/JskKyjzmws" target="_blank">
-                            Enviar Records
-                        </a>
-                        <a class="nav__cta type-label-lg" href="#">
-                            Login
-                        </a>
-                    </div>
-                </nav>
-                
-                <!-- Menú móvil -->
-                <transition name="slide">
-                    <div class="mobile-menu" v-if="isMobile && mobileMenuOpen">
-                        <nav class="mobile-nav">
-                            <router-link class="mobile-nav__tab" to="/" @click="mobileMenuOpen = false">
-                                <span class="type-label-lg">Lista</span>
-                            </router-link>
-                            <router-link class="mobile-nav__tab" to="/leaderboard" @click="mobileMenuOpen = false">
-                                <span class="type-label-lg">Jugadores</span>
-                            </router-link>
-                            <router-link class="mobile-nav__tab" to="/roulette" @click="mobileMenuOpen = false">
-                                <span class="type-label-lg">Ruleta</span>
-                            </router-link>
-                            <router-link class="mobile-nav__tab" to="/changelog" @click="mobileMenuOpen = false">
-                                <span class="type-label-lg">Changelog</span>
-                            </router-link>
-                        </nav>
-                        
-                        <div class="mobile-actions">
-                            <a class="mobile-btn" href="https://discord.gg/JskKyjzmws" target="_blank">
-                                💬 Discord
-                            </a>
-                            <a class="mobile-btn primary" href="https://discord.gg/JskKyjzmws" target="_blank">
-                                📝 Enviar Records
-                            </a>
-                            <a class="mobile-btn" href="#">
-                                🔑 Login
-                            </a>
-                        </div>
-                    </div>
-                </transition>
-                
                 <!-- Overlay -->
-                <div class="mobile-overlay" v-if="isMobile && mobileMenuOpen" @click="mobileMenuOpen = false"></div>
+                <div v-if="isMobile && menuOpen" class="menu-overlay" @click="closeMenu"></div>
             </header>
             
-            <router-view></router-view>
+            <!-- MAIN CONTENT -->
+            <main>
+                <router-view></router-view>
+            </main>
         </div>
     </body>
 </html>

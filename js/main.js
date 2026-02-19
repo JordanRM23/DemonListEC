@@ -12,22 +12,31 @@ const app = Vue.createApp({
     data() {
         return {
             store,
-            isMobile: window.innerWidth < 1024,
-            mobileMenuOpen: false
+            isMobile: window.innerWidth <= 1023,
+            menuOpen: false
         };
     },
-    mounted() {
-        window.addEventListener('resize', () => {
-            const newIsMobile = window.innerWidth < 1024;
-            if (this.isMobile !== newIsMobile) {
-                this.isMobile = newIsMobile;
-                this.mobileMenuOpen = false;
+    methods: {
+        toggleMenu() {
+            this.menuOpen = !this.menuOpen;
+        },
+        closeMenu() {
+            this.menuOpen = false;
+        },
+        checkMobile() {
+            this.isMobile = window.innerWidth <= 1023;
+            if (!this.isMobile) {
+                this.menuOpen = false;
             }
-        });
+        }
+    },
+    mounted() {
+        this.checkMobile();
+        window.addEventListener('resize', this.checkMobile);
         
         // Cerrar menú al cambiar de ruta
         this.$router.afterEach(() => {
-            this.mobileMenuOpen = false;
+            this.menuOpen = false;
         });
     }
 });
