@@ -7,6 +7,10 @@ export default {
             <div class="change">
             </div>
             <div class="change">
+                <h2>19/02/2026</h2>
+                <p>Se añadio busqueda de niveles y jugadores generales</p>            
+                </div>
+            <div class="change">
                 <h2>05/02/2026</h2>
                 <p>Se añadio etiquetas en los nombres; esta etiquetas solamente la tienen algunos jugadores selecionados.</p>
             </div>
