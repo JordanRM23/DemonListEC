@@ -57,12 +57,12 @@ export default {
                 <table class="list" v-if="filteredList.length > 0">
                     <tr v-for="([level, err], i) in filteredList" :key="level?.path || i">
                         <td class="rank">
-                            <p v-if="getOriginalRank(level) <= 150" class="type-label-lg" :class="getLevelPosClass(i + 1)">#{{ getOriginalRank(level) }}</p>
+                           <p v-if="getOriginalRank(level) <= 150" class="type-label-lg" :class="getLevelPosClass(getOriginalRank(level))">#{{ getOriginalRank(level) }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
                         <td class="level" :class="{ 'active': selected == getOriginalIndex(level), 'error': !level }">
                             <button @click="selected = getOriginalIndex(level)">
-                                <span class="type-label-lg" :class="getLevelPosClass(i + 1)">{{ level?.name || \`Error (\${err}.json)\` }}</span>
+                                <span class="type-label-lg" :class="getLevelPosClass(getOriginalRank(level))">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                                 <span v-if="level && hasManyRecords(level)" class="record-badge">🔥</span>
                             </button>
                         </td>
