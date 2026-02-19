@@ -259,6 +259,12 @@ export default {
     methods: {
         embed,
         score,
+         getLevelPosClass(pos) {
+            if (pos >= 1 && pos <= 50) return 'level-pos-top50';
+            if (pos >= 51 && pos <= 100) return 'level-pos-51-100';
+            if (pos >= 101 && pos <= 150) return 'level-pos-101-150';
+            return 'level-pos-151plus';
+        },
         // Obtener el ranking original del nivel (no el filtrado)
         getOriginalRank(level) {
             if (!level) return 0;
