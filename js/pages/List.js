@@ -260,10 +260,10 @@ export default {
         embed,
         score,
         getLevelPosClass(pos) {
-            if (pos >= 1 && pos <= 75) return 'level-pos-top50';
-            if (pos >= 76 && pos <= 150) return 'level-pos-51-100';
-            if (pos >= 151) return 'level-pos-151plus';
-            return '';
+    if (pos >= 1 && pos <= 75) return 'level-pos-top75';
+    if (pos >= 76 && pos <= 150) return 'level-pos-76-150';
+    if (pos >= 151) return 'level-pos-151plus';
+    return '';
         },
         getOriginalRank(level) {
             if (!level) return 0;
