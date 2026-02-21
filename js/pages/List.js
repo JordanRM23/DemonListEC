@@ -172,7 +172,6 @@ export default {
         errors: [],
         roleIconMap,
         store,
-        // Nuevos datos para búsqueda y filtros
         searchQuery: '',
         filterType: 'all',
         sortBy: 'rank'
@@ -192,11 +191,9 @@ export default {
                     : this.level.verification
             );
         },
-        // Lista filtrada y ordenada
         filteredList() {
             let result = [...this.list];
             
-            // Filtro por tipo (main/extended/legacy)
             if (this.filterType !== 'all') {
                 result = result.filter(([level, err], index) => {
                     const rank = index + 1;
@@ -207,7 +204,6 @@ export default {
                 });
             }
             
-            // Filtro por búsqueda
             if (this.searchQuery.trim()) {
                 const query = this.searchQuery.toLowerCase().trim();
                 result = result.filter(([level, err]) => {
@@ -220,7 +216,6 @@ export default {
                 });
             }
             
-            // Ordenamiento
             if (this.sortBy === 'name') {
                 result.sort((a, b) => {
                     const nameA = a[0]?.name?.toLowerCase() || '';
@@ -231,10 +226,9 @@ export default {
                 result.sort((a, b) => {
                     const recordsA = a[0]?.records?.length || 0;
                     const recordsB = b[0]?.records?.length || 0;
-                    return recordsB - recordsA; // Mayor a menor
+                    return recordsB - recordsA;
                 });
             }
-            // Si es por rank, mantener el orden original
             
             return result;
         }
@@ -266,27 +260,23 @@ export default {
         embed,
         score,
         getLevelPosClass(pos) {
-            if (pos >= 1 && pos <= 50) return 'level-pos-top50';
-            if (pos >= 51 && pos <= 100) return 'level-pos-51-100';
-            if (pos >= 101 && pos <= 150) return 'level-pos-101-150';
-            return 'level-pos-151plus';
+            if (pos >= 1 && pos <= 75) return 'level-pos-top50';
+            if (pos >= 76 && pos <= 150) return 'level-pos-51-100';
+            if (pos >= 151) return 'level-pos-151plus';
+            return '';
         },
-        // Obtener el ranking original del nivel (no el filtrado)
         getOriginalRank(level) {
             if (!level) return 0;
             const index = this.list.findIndex(([l]) => l?.path === level.path);
             return index + 1;
         },
-        // Obtener el índice original para mantener selección correcta
         getOriginalIndex(level) {
             if (!level) return 0;
             return this.list.findIndex(([l]) => l?.path === level.path);
         },
-        // Verificar si un nivel tiene muchos records (indicador visual)
         hasManyRecords(level) {
             return level.records && level.records.length >= 5;
         },
-        // Resetear filtros
         resetFilters() {
             this.searchQuery = '';
             this.filterType = 'all';
