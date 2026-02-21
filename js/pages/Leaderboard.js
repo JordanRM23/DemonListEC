@@ -311,9 +311,9 @@ export default {
         getLevelPosClass(rank) {
             rank = Number(rank) || 0;
 
-            if (rank >= 1 && rank <= 75) return 'level-pos-top50';
-            if (rank >= 76 && rank <= 150) return 'level-pos-51-100';
-            if (rank >= 151) return 'level-pos-101-150';
+            if (rank >= 1 && rank <= 50) return 'level-pos-top50';
+            if (rank >= 51 && rank <= 100) return 'level-pos-51-100';
+            if (rank >= 101 && rank <= 150) return 'level-pos-101-150';
             return 'level-pos-151plus';
         },
 
