@@ -26,7 +26,6 @@ export default {
                     </p>
                 </div>
 
-                <!-- Buscador simple -->
                 <div class="search-box">
                     <input 
                         type="text" 
@@ -87,18 +86,19 @@ export default {
                         </h1>
 
                         <div
-    v-if="getPlayerTags(entry.user).length"
-    class="player-tags"
->
-    <span
-        v-for="(tag, index) in getPlayerTags(entry.user)"
-        :key="index"
-        class="player-tag"
-        :class="tag.class"
-    >
-        {{ tag.text }}
-    </span>
-</div>
+                            v-if="getPlayerTags(entry.user).length"
+                            class="player-tags"
+                        >
+                            <span
+                                v-for="(tag, index) in getPlayerTags(entry.user)"
+                                :key="index"
+                                class="player-tag"
+                                :class="tag.class"
+                            >
+                                {{ tag.text }}
+                            </span>
+                        </div>
+
                         <h3>
                             <span
                                 class="player-name"
@@ -242,78 +242,11 @@ export default {
             return this.leaderboard.findIndex(entry => entry.user === user);
         },
 
-        /* No Tocar */
-        getPlayerProvince(user) {
-         const provinces = {
-        'BeClan': 'guayas',
-        'JordanRM': 'guayas',
-    };
-
-    return provinces[user] || 'ecuador';
-},
-
- /* Nota para los list helpers */
-  /* si un tag esta fuera de su lugar o un bug visual contactar a @JordanRM23 */
-   /* nadie tiene permitido añadir un tag sin consentimiento */
-
-        getPlayerTags(user) {
-    const tags = {
-        'Zephyr': [
-            { text: 'La Cabra del six seven', class: 'tag-LCDSS' },
-            { text: 'Hardest Ecuador', class: 'tag-hardest' },
-        ],
-        'JordanRM': [
-            { text: 'owner', class: 'tag-owner' },
-        ],
-        'Stevensitos999': [
-            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
-        ],
-        'venomioo': [
-            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
-        ],
-        'Victor71GD': [
-            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
-        ],
-        'RaymanNinja': [
-            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
-        ],
-        'Locked': [
-            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
-        ],
-        'Edgar214': [
-            { text: 'Ex-ECDL', class: 'tag-Ex-ECDL' },
-        ],
-        'BeClan': [
-            { text: 'El hijo del six seven', class: 'tag-EHDSS' },
-        ],
-        'JPnabo': [
-            { text: 'El mas salado', class: 'tag-EMS' },
-        ],
-    };
-
-    return tags[user] || [];
-},
-
-
-        getRoleStyle(user) {
-            const roleColors = {
-                'Zephyr': '#ff3333'
-            };
-
-            if (!roleColors[user]) return {};
-
-            return {
-                background: roleColors[user],
-                boxShadow: `0 0 8px ${roleColors[user]}`
-            };
-        },
-
         getLevelPosClass(rank) {
             rank = Number(rank) || 0;
 
-            if (rank >= 1 && rank <= 50) return 'level-pos-top50';
-            if (rank >= 51 && rank <= 100) return 'level-pos-51-100';
-            if (rank >= 101 && rank <= 150) return 'level-pos-101-150';
+            if (rank >= 1 && rank <= 75) return 'level-pos-top75';
+            if (rank >= 76 && rank <= 150) return 'level-pos-76-150';
             return 'level-pos-151plus';
         },
 
